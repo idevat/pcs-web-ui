@@ -22,5 +22,15 @@ pcs-web-ui-node-modules-*.tar.xz
 .npmrc
 .eslintcache
 
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+missing
+install-sh
+
 /.dev
 /.tmp
