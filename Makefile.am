@@ -50,7 +50,7 @@ build:
 	  cp $(srcdir)/packages/app/package*.json ${abs_top_builddir}/packages/app; \
 	fi
 	if [ ! -d ${abs_top_builddir}/packages/app/node_modules ]; then \
-	  npm ci --prefix ${abs_top_builddir}/packages/app; \
+		cp -r /home/idevat/projects/pcs-web-ui/.dev/node_modules ${abs_top_builddir}/packages/app/; \
 	fi
 	$(srcdir)/packages/app/.bin/check-assumptions.sh
 	$(srcdir)/packages/app/.bin/build.sh ${abs_top_builddir}

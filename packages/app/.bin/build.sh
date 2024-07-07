@@ -25,14 +25,13 @@ prepare_build_dir() {
   build_dir=$1
   public_dir=$2
 
-  echo "~~PUBILIC DIR: $public_dir"
-
   mkdir -p "$build_dir"
   # Using :? will cause the command to fail if the variable is null or unset.
   # This prevents deleting everything in the system's root directory when
   # `build_dir` variable is empty.
   rm -rf "${build_dir:?}/"*
   cp -r "${public_dir:?}/"* "$build_dir"
+  find "$build_dir" -type d -exec chmod ug+w {} +
 }
 
 inject_built_assets() {
