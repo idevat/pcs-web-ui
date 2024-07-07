@@ -1,6 +1,38 @@
 AUTOMAKE_OPTIONS = foreign
 
-SUBDIRS = .
+SUBDIRS = . packages/app/ packages/test/
+MAINTAINERCLEANFILES	= \
+			  aclocal.m4 \
+			  autoconf \
+			  autoheader \
+			  automake \
+			  autoscan.log \
+			  compile \
+			  config.guess \
+			  config.sub \
+			  configure \
+			  configure.scan \
+			  depcomp \
+			  install-sh \
+			  libtool \
+			  libtoolize \
+			  ltmain.sh \
+			  Makefile.in \
+			  missing
+
+EXTRA_DIST		= \
+			  autogen.sh \
+			  .bin/check-no-nexus.sh \
+			  .bin/init_nexus.sh \
+			  .bin/init.sh \
+			  .bin/lint.sh \
+			  .bin/npm_install.sh \
+			  .bin/pre-commit.sh \
+			  .browserslistrc \
+			  COPYING \
+			  .gitlab-ci.yml \
+			  README.md \
+			  typos.toml 
 
 NEXUS = "https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org"
 PROJECT_DIR = $(shell pwd)
@@ -13,8 +45,15 @@ app:
 	@./packages/dev/.bin/dev-server.sh
 
 build:
-	./packages/app/.bin/check-assumptions.sh
-	@cd ./packages/app && .bin/build.sh ${PROJECT_DIR}
+	echo "=== ABS TOP BUILDDIR === ${abs_top_builddir}"
+	if [ "${abs_top_builddir}" != "${abs_top_srcdir}" ]; then \
+	  cp $(srcdir)/packages/app/package*.json ${abs_top_builddir}/packages/app; \
+	fi
+	if [ ! -d ${abs_top_builddir}/packages/app/node_modules ]; then \
+	  npm ci --prefix ${abs_top_builddir}/packages/app; \
+	fi
+	$(srcdir)/packages/app/.bin/check-assumptions.sh
+	$(srcdir)/packages/app/.bin/build.sh ${abs_top_builddir}
 
 # prepare tarball with node modules that are necessary to build the application
 modules-pack:

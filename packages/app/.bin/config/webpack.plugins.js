@@ -46,12 +46,12 @@ module.exports = {
   }),
 
   // TypeScript type checking
-  forkTsChecker: ({async, sourceMap}) =>
+  forkTsChecker: ({async, sourceMap, nodeModulesPath}) =>
     new ForkTsCheckerPlugin({
       async,
       typescript: {
         typescriptPath: resolve.sync("typescript", {
-          basedir: paths.appNodeModules,
+          basedir: nodeModulesPath,
         }),
         configFile: paths.appTsConfig,
         configOverwrite: {
@@ -90,14 +90,14 @@ module.exports = {
       // },
     }),
 
-  eslint: ({failOnError}) =>
+  eslint: ({failOnError, nodeModulesPath}) =>
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
       eslintPath: require.resolve("eslint"),
       failOnError,
       context: paths.appSrc,
       cache: true,
-      cacheLocation: path.resolve(paths.appNodeModules, ".cache/.eslintcache"),
+      cacheLocation: path.resolve(nodeModulesPath, ".cache/.eslintcache"),
       // ESLint class options
       cwd: paths.appPath,
       resolvePluginsRelativeTo: __dirname,

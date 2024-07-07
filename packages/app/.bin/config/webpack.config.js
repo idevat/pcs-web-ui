@@ -25,7 +25,11 @@ if (!buildDir) {
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = (
-  {publicPath, enableProfiling} = {publicPath: "/", enableProfiling: false},
+  {publicPath, enableProfiling, nodeModulesPath} = {
+    publicPath: "/",
+    enableProfiling: false,
+    nodeModulesPath: "",
+  },
 ) => ({
   target: ["browserslist"],
   // Webpack noise constrained to errors and warnings
@@ -38,8 +42,8 @@ module.exports = (
   entry: paths.appIndexJs,
   // Where to emit the bundles it creates and how to name these files.
   output: {
-    // Place to write generated assets. No files are written in the case of dev
-    // server if it is not explicitly set by `writeToDisk` option.
+    // Place to write generated assets. No files are written in the case of
+    // dev server if it is not explicitly set by `writeToDisk` option.
     path: buildDir,
     // Include comments in bundles with info about the contained modules.
     pathinfo: false,
@@ -79,10 +83,11 @@ module.exports = (
       new TerserPlugin({
         terserOptions: {
           parse: {
-            // We want terser to parse ecma 8 code. However, we don't want it to
-            // apply any minification steps that turns valid ecma 5 code into
-            // invalid ecma 5 code. This is why the 'compress' and 'output'
-            // sections only apply transformations that are ecma 5 safe
+            // We want terser to parse ecma 8 code. However, we don't want it
+            // to apply any minification steps that turns valid ecma 5 code
+            // into invalid ecma 5 code. This is why the 'compress' and
+            // 'output' sections only apply transformations that are ecma 5
+            // safe
             // https://github.com/facebook/create-react-app/pull/4234
             ecma: 8,
           },
@@ -110,8 +115,8 @@ module.exports = (
           output: {
             ecma: 5,
             comments: false,
-            // Turned on because emoji and regex is not minified properly using
-            // default
+            // Turned on because emoji and regex is not minified properly
+            // using default
             // https://github.com/facebook/create-react-app/issues/2488
             ascii_only: true,
           },
@@ -127,7 +132,7 @@ module.exports = (
     // We placed these paths second because we want `node_modules` to "win"
     // if there are any conflicts. This matches Node resolution mechanism.
     // https://github.com/facebook/create-react-app/issues/253
-    modules: ["node_modules", paths.appNodeModules, paths.appSrc],
+    modules: ["node_modules", nodeModulesPath, paths.appSrc],
     extensions: [".js", ".ts", ".tsx", ".json", ".jsx"],
     alias: {
       src: paths.appSrc,
@@ -175,8 +180,12 @@ module.exports = (
   plugins: [
     plugins.environmentVariables,
     plugins.miniCssExtract,
-    plugins.forkTsChecker({async: false, sourceMap: shouldUseSourceMap}),
-    plugins.eslint({failOnError: true}),
+    plugins.forkTsChecker({
+      async: false,
+      sourceMap: shouldUseSourceMap,
+      nodeModulesPath,
+    }),
+    plugins.eslint({failOnError: true, nodeModulesPath}),
   ],
   // Turn off performance processing because we utilize
   // our own hints via the FileSizeReporter

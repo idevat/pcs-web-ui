@@ -1,17 +1,4 @@
 #!/bin/sh
-#
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 DIRECTORY" >&2
-  exit 1
-fi
-if ! [ -e "$1" ]; then
-  echo "$1 not found" >&2
-  exit 1
-fi
-if ! [ -d "$1" ]; then
-  echo "$1 not a directory" >&2
-  exit 1
-fi
 
 bin="$(dirname "$0")"
 
@@ -24,8 +11,6 @@ bin="$(dirname "$0")"
 prepare_build_dir() {
   build_dir=$1
   public_dir=$2
-
-  echo "~~PUBILIC DIR: $public_dir"
 
   mkdir -p "$build_dir"
   # Using :? will cause the command to fail if the variable is null or unset.
@@ -126,6 +111,9 @@ adapt_for_environment() {
 }
 
 # Expression `eval echo $dir` is there to expand any `~` character.
+NODE_PATH="$(realpath "$(dirname "$0")"/..)"
+export NODE_PATH
+project_dir=$(realpath "$(eval echo "${1:-"$(pwd)"}")")
 use_current_node_modules=${BUILD_USE_CURRENT_NODE_MODULES:-"false"}
 build_for_cockpit=${BUILD_FOR_COCKPIT:-"false"}
 if [ "$build_for_cockpit" != "true" ]; then
@@ -133,35 +121,31 @@ if [ "$build_for_cockpit" != "true" ]; then
 else
   url_prefix=${PCSD_BUILD_URL_PREFIX:-"."}
 fi
-# node_modules=$(get_path "appNodeModules")
-# echo *****node_modules**"${node_modules}"
-builddir=$(realpath "$(eval echo "${1:-"$(pwd)"}")")
-echo "BUILDDIR: $builddir"
-export BUILD_DIR="$builddir"/build
+node_modules=$(get_path "appNodeModules")
+echo *****node_modules**"${node_modules}"
+export BUILD_DIR="${BUILD_DIR:-"$project_dir"/build}"
 
-# if [ "$use_current_node_modules" = "true" ] && [ ! -d "$node_modules" ]; then
-#   echo "Current node modules should be used but directory $node_modules does" \
-#     "not exist"
-#   exit 1
-# fi
-#
-# echo "Starting build"
+if [ "$use_current_node_modules" = "true" ] && [ ! -d "$node_modules" ]; then
+  echo "Current node modules should be used but directory $node_modules does" \
+    "not exist"
+  exit 1
+fi
 
-# echo Prepareing node modules: "$node_modules"
-# if [ "$use_current_node_modules" != "true" ]; then
-#   "$bin"/modules-prepare.sh "$node_modules"
-# fi
-#
-# echo "Node modules prepared: ${node_modules}."
+echo "Starting build"
+
+echo Prepareing node modules: "$node_modules"
+if [ "$use_current_node_modules" != "true" ]; then
+  "$bin"/modules-prepare.sh "$node_modules"
+fi
+
+echo "Node modules prepared: ${node_modules}."
 
 prepare_build_dir "$BUILD_DIR" "$(get_path "appPublic")"
 
 echo "Build dir prepared: ${BUILD_DIR}."
 echo "Going to build assets."
 
-export NODE_PATH="$builddir/packages/app/node_modules"
 node "$bin"/build.js
-exit 1
 
 node "$bin"/minify-css.js "$(ls "$BUILD_DIR"/static/css/main.*.css)"
 

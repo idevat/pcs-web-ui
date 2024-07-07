@@ -38,7 +38,8 @@ AC_PROG_MKDIR_P
 PKG_CHECK_VAR([PCSD_WEBUI_DIR], [pcs], [webui_dir])
 AC_SUBST([PCSD_WEBUI_DIR])
 
-
 AC_CONFIG_FILES([Makefile
-                 ])
+		 packages/app/Makefile
+		 packages/test/Makefile])
+# AC_CONFIG_FILES([packages/app/.bin/check-assumptions.sh], [chmod +x pcs/pcs_internal])
 AC_OUTPUT
