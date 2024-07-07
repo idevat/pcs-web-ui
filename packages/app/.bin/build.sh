@@ -31,7 +31,8 @@ prepare_build_dir() {
   # `build_dir` variable is empty.
   rm -rf "${build_dir:?}/"*
   cp -r "${public_dir:?}/"* "$build_dir"
-  find "$build_dir" -type d -exec chmod ug+w {} +
+  # find "$build_dir" -type d -exec chmod ug+w {} +
+  chmod --recursive ug+w "$build_dir"
 }
 
 inject_built_assets() {
@@ -87,9 +88,10 @@ fix_asset_paths() {
 }
 
 minimize_adapter() {
-  adapter_path=$1
+  node_path=$1
+  adapter_path=$2
 
-  npx terser "$adapter_path" \
+  "$node_path"/.bin/terser "$adapter_path" \
     --compress ecma=5,warnings=false,comparisons=false,inline=2 \
     --output "$adapter_path"
 }
@@ -160,7 +162,6 @@ echo "Going to build assets."
 
 export NODE_PATH="$builddir/packages/app/node_modules"
 node "$bin"/build.js
-exit 1
 
 node "$bin"/minify-css.js "$(ls "$BUILD_DIR"/static/css/main.*.css)"
 
@@ -190,7 +191,7 @@ fix_asset_paths "$BUILD_DIR"/index.html "$url_prefix" \
 
 echo "Prefixed asset paths: '${url_prefix}'."
 
-minimize_adapter "$BUILD_DIR"/static/js/adapter.js
+minimize_adapter "$NODE_PATH" "$BUILD_DIR"/static/js/adapter.js
 
 echo "Environment adapter minimized"
 
@@ -200,8 +201,8 @@ node "$bin"/merge-test-marks.js \
 
 echo "Marks prepared"
 
-if [ "$use_current_node_modules" != "true" ]; then
-  "$bin"/modules-restore.sh "$node_modules"
-fi
+# if [ "$use_current_node_modules" != "true" ]; then
+#   "$bin"/modules-restore.sh "$node_modules"
+# fi
 
 printf "\n%s\n" "$(print_bundle_sizes "$BUILD_DIR")"
