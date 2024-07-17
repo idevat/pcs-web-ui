@@ -1,9 +1,11 @@
 const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 
 const appConfigPath = "../../../app/.bin/config";
+const paths = require("../../../app/.bin/paths");
 
 const plugins = require(`${appConfigPath}/webpack.plugins`);
 const rules = require(`${appConfigPath}/webpack.rules`);
@@ -89,7 +91,20 @@ module.exports = (
       // See https://github.com/facebook/create-react-app/issues/240
       new CaseSensitivePathsPlugin(),
       plugins.forkTsChecker({async: true, sourceMap: true}),
-      plugins.eslint({failOnError: !emitErrorsAsWarnings}),
+      new ESLintPlugin({
+        extensions: ["js", "jsx", "ts", "tsx"],
+        eslintPath: require.resolve("eslint"),
+        failOnError: !emitErrorsAsWarnings,
+        context: paths.appSrc,
+        cache: true,
+        cacheLocation: path.resolve(paths.appNodeModules, ".cache/.eslintcache"),
+        // ESLint class options
+        cwd: paths.appPath,
+        resolvePluginsRelativeTo: __dirname,
+        // baseConfig: {
+        //   extends: [require.resolve("eslint-config-react-app/base")],
+        // },
+      }),
     ],
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter

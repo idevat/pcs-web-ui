@@ -35,6 +35,7 @@ AC_PROG_MKDIR_P
 
 # this will catch both ID and ID_LIKE from os-release
 
+# PKG_CHECK_MODULES([pcs], [pcs])
 PKG_CHECK_VAR([PCSD_WEBUI_DIR], [pcs], [webui_dir])
 AC_SUBST([PCSD_WEBUI_DIR])
 

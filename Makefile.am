@@ -113,12 +113,21 @@ fmt:
 	packages/app/node_modules/.bin/eslint --fix --ext .js,.ts,.tsx packages/app/src/
 
 install-exec-local:
-	mkdir -p $(PCSD_WEBUI_DIR)/ui
-	cp -r build/* $(PCSD_WEBUI_DIR)
+	if [ "x${PCSD_WEBUI_DIR}" != "x" ]; then \
+		mkdir -p ${PCSD_WEBUI_DIR}; \
+		cp -r build/* ${PCSD_WEBUI_DIR}; \
+	else \
+		echo "No install location found, skipping installation"; \
+	fi
 
 npm_install:
 	@.bin/npm_install.sh ./packages
 
 all: build
+
+clean-local:
+	if [ "${abs_top_builddir}" != "${abs_top_srcdir}" ]; then \
+		rm -rf ${abs_top_builddir}/packages/app/node_modules; \
+	fi
 
 .PHONY: test build
