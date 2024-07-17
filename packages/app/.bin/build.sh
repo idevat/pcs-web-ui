@@ -1,17 +1,19 @@
 #!/bin/sh
-#
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 DIRECTORY" >&2
-  exit 1
-fi
-if ! [ -e "$1" ]; then
-  echo "$1 not found" >&2
-  exit 1
-fi
-if ! [ -d "$1" ]; then
-  echo "$1 not a directory" >&2
-  exit 1
-fi
+
+set -e
+
+# if [ "$#" -ne 1 ]; then
+#   echo "Usage: $0 DIRECTORY" >&2
+#   exit 1
+# fi
+# if ! [ -e "$1" ]; then
+#   echo "$1 not found" >&2
+#   exit 1
+# fi
+# if ! [ -d "$1" ]; then
+#   echo "$1 not a directory" >&2
+#   exit 1
+# fi
 
 bin="$(dirname "$0")"
 
@@ -127,7 +129,7 @@ adapt_for_environment() {
 }
 
 # Expression `eval echo $dir` is there to expand any `~` character.
-use_current_node_modules=${BUILD_USE_CURRENT_NODE_MODULES:-"false"}
+# use_current_node_modules=${BUILD_USE_CURRENT_NODE_MODULES:-"false"}
 build_for_cockpit=${BUILD_FOR_COCKPIT:-"false"}
 if [ "$build_for_cockpit" != "true" ]; then
   url_prefix=${PCSD_BUILD_URL_PREFIX:-"/ui"}

@@ -185,7 +185,6 @@ module.exports = (
       sourceMap: shouldUseSourceMap,
       nodeModulesPath,
     }),
-    // plugins.eslint({failOnError: true, nodeModulesPath}),
   ],
   // Turn off performance processing because we utilize
   // our own hints via the FileSizeReporter
