@@ -119,7 +119,7 @@ init:
 		.bin/init.sh
 	fi
 
-check_sources:
+prevent_dev_mistakes:
 	@.bin/check-no-nexus.sh
 
 lint:
@@ -151,6 +151,7 @@ clean-local:
 		rm -rf ${abs_top_builddir}/packages/app/node_modules; \
 		rm -rf ${abs_top_builddir}/packages/app/package*.json; \
 		rm -rf ${abs_top_builddir}/build; \
+		rm -f ${abs_top_builddir}/.version; \
 	fi
 
 generate-package-build:
@@ -179,6 +180,8 @@ $(SPEC): $(SPEC).in .version config.status
 	chmod a-w $@-t
 	mv $@-t $@
 	rm -f $@-t*
+	echo $@
+	cat $@
 
 RPMBUILDOPTS    = \
 			--define "_sourcedir $(RPM_DIR)" \
