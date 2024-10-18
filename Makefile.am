@@ -95,6 +95,8 @@ test:
 
 test-modules-prepare:
 	@cd ./packages/test && npx npm ci
+
+dev-modules-prepare: test-modules-prepare
 	@cd ./packages/dev-backend && npx npm ci
 
 ci-cluster-test:

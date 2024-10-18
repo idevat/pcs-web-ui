@@ -12,16 +12,16 @@ variables:
 .parallel:
   parallel:
     matrix:
-      # - COMPOSE_ALIAS: "PcsRhel10Next"
-      #   PCS_BRANCH: "main"
-      #   OS_TAG: "centos10"
+      - COMPOSE_ALIAS: "PcsRhel10Next"
+        PCS_BRANCH: "main"
+        OS_TAG: "centos10"
       # - COMPOSE_ALIAS: "PcsFedoraCurrentRelease"
       #   PCS_BRANCH: "main"
       #   OS_TAG: "generic"
       # - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease", "PcsRhel9Next"]
-      - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease"]
-        PCS_BRANCH: "pcs-0.11"
-        OS_TAG: [""]
+      # - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease"]
+      #   PCS_BRANCH: "pcs-0.11"
+      #   OS_TAG: [""]
   rules:
     # WORKERAOUND URL to a specific artifacts by a job id in case of failed pcs pipeline
     # - if: $OS_TAG == "centos10"
@@ -102,7 +102,12 @@ rpm_build:
     #
     - dnf install -y autoconf automake pkgconf-pkg-config bzip2 rpm-build
     - ./autogen.sh
-    - ./configure --with-pcsd-webui-dir=/usr/lib64/pcsd/public
+    # TODO this is a temporary hack to be able work with older pcs (without
+    # pkg-conf). For a newer pcs version (with pkg-conf) it is necessary to deal
+    # with missing dependencies (see failed pipeline
+    # https://gitlab.cee.redhat.com/pcs/pcs-web-ui/-/jobs/28013807)
+    - ./configure --with-pcsd-webui-dir=/usr/lib64/pcsd/public/ui
+    - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
     - make rpm/pcs-web-ui.spec
     - dnf builddep -y rpm/pcs-web-ui.spec
     - rpmbuild --version
@@ -116,118 +121,117 @@ rpm_build:
     paths:
       - rpms
 
-# pcsd_integration_test:
-#   extends: .parallel
-#   script:
-#     #
-#     #
-#     # install playwright dependencies
-#     #
-#     - dnf install -y
-#       alsa-lib
-#       atk
-#       at-spi2-atk
-#       at-spi2-core
-#       cairo
-#       cups-libs
-#       libdrm
-#       libwayland-client
-#       libX11
-#       libxcb
-#       libXcomposite
-#       libXdamage
-#       libXext
-#       libXfixes
-#       libxkbcommon
-#       libXrandr
-#       mesa-libgbm
-#       pango
-#     #
-#     #
-#     # install other dependencies
-#     #
-#     - dnf install -y
-#       npm
-#       cockpit-bridge
-#       fence-agents-all
-#     #
-#     #
-#     # install current version of pcs
-#     #
-#     # https://docs.gitlab.com/ee/api/job_artifacts.html#download-the-artifacts-archive
-#     - "curl --fail-with-body --location --insecure --output artifacts.zip --header \"JOB-TOKEN: ${CI_JOB_TOKEN}\" \"${PCS_ARTIFACTS_URL}\""
-#     - unzip artifacts.zip
-#     - "dnf install -y rpms/pcs-*.rpm"
-#     - rm -rf rpms/ artifacts.zip
-#     #
-#     #
-#     # build and install webui
-#     #
-#     - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
-#     - make modules-prepare
-#     - make modules-patch
-#     - export BUILD_USE_CURRENT_NODE_MODULES=true
-#     #
-#     - export BUILD_DIR="$(pwd)"/build-standalone
-#     - make build
-#     - mv "$BUILD_DIR" /usr/lib64/pcsd/public/ui
-#     #
-#     - export BUILD_FOR_COCKPIT=true
-#     - export BUILD_DIR="$(pwd)"/build-cockpit
-#     - make build
-#     - mv "$BUILD_DIR" /usr/share/cockpit/ha-cluster
-#     #
-#     #
-#     # prepare environment for test (all)
-#     #
-#     - make test-modules-prepare
-#     - export PCSD_PROTOCOL_1=https
-#     - export PCSD_HOST_1=localhost
-#     - export PCSD_NODE_1=wuitest
-#     - export PCSD_USERNAME_1="hacluster"
-#     - export PCSD_PASSWORD_1=hh
-#     - export PCS_WUI_TESTS_HEADLESS=true
-#     - export PCS_WUI_TESTS_VIDEO_DIR=.test-records
-#     - export PCS_WUI_TEST_TIMEOUT=1000000
-#     - systemctl enable pcsd --now
-#     # hacluster user should already exists
-#     - echo "$PCSD_PASSWORD_1" | passwd "$PCSD_USERNAME_1" --stdin
-#     # tests expects that pcs is authenticated against the node
-#     - echo "127.0.0.1 $PCSD_NODE_1" >> /etc/hosts
-#     - pcs host auth "$PCSD_NODE_1" -u "$PCSD_USERNAME_1" -p "$PCSD_PASSWORD_1"
-#     - mkdir "$PCS_WUI_TESTS_VIDEO_DIR"
-#     - ln /var/log/pcsd/pcsd.log "$PCS_WUI_TESTS_VIDEO_DIR/pcsd.log"
-#     #
-#     #
-#     # test (standalone)
-#     #
-#     - export PCS_WUI_TEST_TYPE="standalone"
-#     - export PCSD_PORT_1=2224
-#     - make ci-cluster-test
-#     #
-#     #
-#     # test (cockpit)
-#     #
-#     # It is disabled for now. The main reason is that tests require to wait for
-#     # a response e.g. `await page.waitForResponse(/.*\/imported-cluster-list$/)`
-#     # after cluster setup before continue. These responses are encapsulated in
-#     # cockpit mechanism, so are invisible for playwright. There are more options
-#     # how to deal with it:
-#     # 1) introduce extra events for cockpit (and playwright will wait for it)
-#     # 2) rewrite test to eliminate a need to wait for a response if it is
-#     # feasible (e.g. when something appear in the page).
-#     #
-#     # - systemctl enable cockpit --now
-#     # - usermod --shell /bin/bash "$PCSD_USERNAME_1"
-#     # - export PCS_WUI_TEST_TYPE="cockpit"
-#     # - export PCSD_PORT_1=9090
-#     # - make ci-cluster-test
-#
-#   artifacts:
-#     when: on_failure
-#     paths:
-#       - .test-records/
-#     exclude:
-#       - node_modules/
-#       - .npmrc
-#     expire_in: 1 week
+pcsd_integration_test:
+  extends: .parallel
+  stage: stage2
+  needs:
+    - rpm_build
+  script:
+    #
+    #
+    # install playwright dependencies
+    #
+    - dnf install -y
+      alsa-lib
+      atk
+      at-spi2-atk
+      at-spi2-core
+      cairo
+      cups-libs
+      libdrm
+      libwayland-client
+      libX11
+      libxcb
+      libXcomposite
+      libXdamage
+      libXext
+      libXfixes
+      libxkbcommon
+      libXrandr
+      mesa-libgbm
+      pango
+    #
+    #
+    # install other dependencies
+    #
+    - dnf install -y
+      npm
+      cockpit-bridge
+      fence-agents-all
+    #
+    #
+    # install current version of pcs
+    #
+    # https://docs.gitlab.com/ee/api/job_artifacts.html#download-the-artifacts-archive
+    - >
+        curl \
+          --fail-with-body \
+          --location \
+          --insecure \
+          --output artifacts.zip \
+          --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+          "${PCS_ARTIFACTS_URL}"
+    - unzip artifacts.zip
+    - dnf install -y rpms/pcs-*.rpm
+    - rm -rf rpms/ artifacts.zip
+    #
+    #
+    # install webui
+    #
+    - dnf install -y rpms/pcs-web-ui*.rpm
+    #
+    #
+    # prepare environment for test (all)
+    #
+    - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
+    - make test-modules-prepare
+    - export PCSD_PROTOCOL_1=https
+    - export PCSD_HOST_1=localhost
+    - export PCSD_NODE_1=wuitest
+    - export PCSD_USERNAME_1="hacluster"
+    - export PCSD_PASSWORD_1=hh
+    - export PCS_WUI_TESTS_HEADLESS=true
+    - export PCS_WUI_TESTS_VIDEO_DIR=.test-records
+    - export PCS_WUI_TEST_TIMEOUT=1000000
+    - systemctl enable pcsd --now
+    # hacluster user should already exists
+    - echo "$PCSD_PASSWORD_1" | passwd "$PCSD_USERNAME_1" --stdin
+    # tests expects that pcs is authenticated against the node
+    - echo "127.0.0.1 $PCSD_NODE_1" >> /etc/hosts
+    - pcs host auth "$PCSD_NODE_1" -u "$PCSD_USERNAME_1" -p "$PCSD_PASSWORD_1"
+    - mkdir "$PCS_WUI_TESTS_VIDEO_DIR"
+    - ln /var/log/pcsd/pcsd.log "$PCS_WUI_TESTS_VIDEO_DIR/pcsd.log"
+    #
+    #
+    # test (standalone)
+    #
+    - export PCS_WUI_TEST_TYPE="standalone"
+    - export PCSD_PORT_1=2224
+    - make ci-cluster-test
+    #
+    #
+    # test (cockpit)
+    #
+    # It is disabled for now. The main reason is that tests require to wait for
+    # a response e.g. `await page.waitForResponse(/.*\/imported-cluster-list$/)`
+    # after cluster setup before continue. These responses are encapsulated in
+    # cockpit mechanism, so are invisible for playwright. There are more options
+    # how to deal with it:
+    # 1) introduce extra events for cockpit (and playwright will wait for it)
+    # 2) rewrite test to eliminate a need to wait for a response if it is
+    # feasible (e.g. when something appear in the page).
+    #
+    # - systemctl enable cockpit --now
+    # - usermod --shell /bin/bash "$PCSD_USERNAME_1"
+    # - export PCS_WUI_TEST_TYPE="cockpit"
+    # - export PCSD_PORT_1=9090
+    # - make ci-cluster-test
+
+  artifacts:
+    when: on_failure
+    paths:
+      - .test-records/
+    exclude:
+      - node_modules/
+      - .npmrc
+    expire_in: 1 week
