@@ -119,7 +119,7 @@ init:
 		.bin/init.sh
 	fi
 
-check_sources:
+prevent_dev_mistakes:
 	@.bin/check-no-nexus.sh
 
 lint:
