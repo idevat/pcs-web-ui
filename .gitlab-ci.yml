@@ -1,3 +1,11 @@
+default:
+  before_script:
+    # The annotated tags are fetched from upstream here for autotools to be able
+    # generate version.
+    - git remote add upstream https://github.com/ClusterLabs/pcs-web-ui.git
+    - git fetch upstream
+    - export MAX_LOG_SIZE=52428800
+
 variables:
   BASE_IMAGE_NAME: "web-ui"
 
@@ -7,12 +15,13 @@ variables:
       - COMPOSE_ALIAS: "PcsRhel10Next"
         PCS_BRANCH: "main"
         OS_TAG: "centos10"
-      - COMPOSE_ALIAS: "PcsFedoraCurrentRelease"
-        PCS_BRANCH: "main"
-        OS_TAG: "generic"
-      - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease", "PcsRhel9Next"]
-        PCS_BRANCH: "pcs-0.11"
-        OS_TAG: [""]
+      # - COMPOSE_ALIAS: "PcsFedoraCurrentRelease"
+      #   PCS_BRANCH: "main"
+      #   OS_TAG: "generic"
+      # - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease", "PcsRhel9Next"]
+      # - COMPOSE_ALIAS: ["PcsRhel9CurrentRelease"]
+      #   PCS_BRANCH: "pcs-0.11"
+      #   OS_TAG: [""]
   rules:
     # WORKERAOUND URL to a specific artifacts by a job id in case of failed pcs pipeline
     # - if: $OS_TAG == "centos10"
@@ -25,6 +34,10 @@ variables:
       variables:
         PCS_ARTIFACTS_URL: "${CI_API_V4_URL}/projects/pcs%2Fpcs/jobs/artifacts/${PCS_BRANCH}/download?job=rpm_build%3A%20%5B${COMPOSE_ALIAS}%5D"
 
+stages:
+  - stage1
+  - stage2
+
 # avoid running duplicate pipelines
 workflow:
   rules:
@@ -34,14 +47,79 @@ workflow:
       when: never
     - if: $CI_COMMIT_BRANCH
 
-pcsd_integration_test:
+# prevent_dev_mistakes:
+#   stage: stage1
+#   script:
+#     - ./autogen.sh
+#     - ./configure
+#     # checks for potential issues:
+#     # * no nexus proxy in resoulved urls in package-lock.json files
+#     - make prevent_dev_mistakes
+
+distcheck:
   extends: .parallel
+  stage: stage1
+  script:
+    - dnf install -y autoconf automake pkgconf-pkg-config bzip2
+    - ./autogen.sh
+    - ./configure
+    - make distcheck
+    - rename --verbose .tar. ".${BASE_IMAGE_NAME}.tar." pcs-web-ui*.tar.*
+    - mkdir -p dist && cp -v pcs-web-ui*.tar.* dist/
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+
+rpm_build:
+  extends: .parallel
+  stage: stage1
   script:
     #
     #
-    # check no nexus proxy in resoulved urls in package-lock.json files
+    # Install current version of pcs
+    # to determine location for pcs-web-ui location (via pkg-conf).
     #
-    - make check_sources
+    # https://docs.gitlab.com/ee/api/job_artifacts.html#download-the-artifacts-archive
+    - >
+        curl \
+          --fail-with-body \
+          --location \
+          --insecure \
+          --output artifacts.zip \
+          --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+          "${PCS_ARTIFACTS_URL}"
+    - unzip artifacts.zip
+    - dnf install -y rpms/pcs-*.rpm
+    - rm -rf rpms/ artifacts.zip
+    #
+    #
+    # Create pcs-web-ui rpm installable to pcsd
+    # Unlike in pcs, there is no CI_BRANCH environment variable. In pcs,
+    # CI_BRANCH helps a user to differentiate between rpm for e.g. fedora and
+    # RHEL. Webui is running inside a browser and currently does not matter what
+    # OS is used.
+    #
+    - dnf install -y autoconf automake pkgconf-pkg-config bzip2 rpm-build
+    - ./autogen.sh
+    - ./configure
+    - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
+    - make rpm/pcs-web-ui.spec
+    - dnf builddep -y rpm/pcs-web-ui.spec
+    - make rpm
+    - mkdir -p rpms
+    - cp -v $(find rpm  -type f -name '*.rpm' -not -name '*.src.rpm') rpms/
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - rpms
+
+pcsd_integration_test:
+  extends: .parallel
+  stage: stage2
+  needs:
+    - rpm_build
+  script:
     #
     #
     # install playwright dependencies
@@ -73,36 +151,33 @@ pcsd_integration_test:
       npm
       cockpit-bridge
       fence-agents-all
+      libappstream-glib
     #
     #
     # install current version of pcs
     #
     # https://docs.gitlab.com/ee/api/job_artifacts.html#download-the-artifacts-archive
-    - "curl --fail-with-body --location --insecure --output artifacts.zip --header \"JOB-TOKEN: ${CI_JOB_TOKEN}\" \"${PCS_ARTIFACTS_URL}\""
+    - >
+        curl \
+          --fail-with-body \
+          --location \
+          --insecure \
+          --output artifacts.zip \
+          --header "JOB-TOKEN: ${CI_JOB_TOKEN}" \
+          "${PCS_ARTIFACTS_URL}"
     - unzip artifacts.zip
-    - "dnf install -y rpms/pcs-*.rpm"
+    - dnf install -y rpms/pcs-*.rpm
     - rm -rf rpms/ artifacts.zip
     #
     #
-    # build and install webui
+    # install webui
     #
-    - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
-    - make modules-prepare
-    - make modules-patch
-    - export BUILD_USE_CURRENT_NODE_MODULES=true
-    #
-    - export BUILD_DIR="$(pwd)"/build-standalone
-    - make build
-    - mv "$BUILD_DIR" /usr/lib64/pcsd/public/ui
-    #
-    - export BUILD_FOR_COCKPIT=true
-    - export BUILD_DIR="$(pwd)"/build-cockpit
-    - make build
-    - mv "$BUILD_DIR" /usr/share/cockpit/ha-cluster
+    - dnf install -y rpms/pcs-web-ui*.rpm
     #
     #
     # prepare environment for test (all)
     #
+    - make init_nexus NEXUS_CERT_PATH="${NEXUS_CERT_PATH}"
     - make test-modules-prepare
     - export PCSD_PROTOCOL_1=https
     - export PCSD_HOST_1=localhost
