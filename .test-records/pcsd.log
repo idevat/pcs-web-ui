@@ -1,0 +1,789 @@
+I, [2024-11-17T23:10:23.006 #00328]     INFO -- : Config files sync started
+I, [2024-11-17T23:10:23.006 #00328]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-17T23:20:23.004 #00329]     INFO -- : Config files sync started
+I, [2024-11-17T23:20:23.005 #00329]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-17T23:30:23.004 #00330]     INFO -- : Config files sync started
+I, [2024-11-17T23:30:23.004 #00330]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-17T23:40:23.006 #00331]     INFO -- : Config files sync started
+I, [2024-11-17T23:40:23.007 #00331]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-17T23:50:23.003 #00332]     INFO -- : Config files sync started
+I, [2024-11-17T23:50:23.003 #00332]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:00:23.005 #00333]     INFO -- : Config files sync started
+I, [2024-11-18T00:00:23.005 #00333]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:10:23.004 #00334]     INFO -- : Config files sync started
+I, [2024-11-18T00:10:23.004 #00334]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:20:23.007 #00335]     INFO -- : Config files sync started
+I, [2024-11-18T00:20:23.008 #00335]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:30:23.005 #00336]     INFO -- : Config files sync started
+I, [2024-11-18T00:30:23.006 #00336]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:40:23.002 #00337]     INFO -- : Config files sync started
+I, [2024-11-18T00:40:23.002 #00337]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T00:50:23.004 #00338]     INFO -- : Config files sync started
+I, [2024-11-18T00:50:23.004 #00338]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T11:45:15.117 #00339]     INFO -- : Config files sync started
+I, [2024-11-18T11:45:15.118 #00339]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T11:55:15.005 #00340]     INFO -- : Config files sync started
+I, [2024-11-18T11:55:15.006 #00340]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:05:15.004 #00341]     INFO -- : Config files sync started
+I, [2024-11-18T12:05:15.005 #00341]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:15:15.008 #00342]     INFO -- : Config files sync started
+I, [2024-11-18T12:15:15.009 #00342]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:25:15.009 #00343]     INFO -- : Config files sync started
+I, [2024-11-18T12:25:15.009 #00343]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:35:15.003 #00344]     INFO -- : Config files sync started
+I, [2024-11-18T12:35:15.004 #00344]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:45:15.005 #00345]     INFO -- : Config files sync started
+I, [2024-11-18T12:45:15.005 #00345]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T12:55:15.006 #00346]     INFO -- : Config files sync started
+I, [2024-11-18T12:55:15.006 #00346]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:05:15.004 #00347]     INFO -- : Config files sync started
+I, [2024-11-18T13:05:15.004 #00347]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:15:15.006 #00348]     INFO -- : Config files sync started
+I, [2024-11-18T13:15:15.007 #00348]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:25:15.002 #00349]     INFO -- : Config files sync started
+I, [2024-11-18T13:25:15.002 #00349]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:35:15.005 #00350]     INFO -- : Config files sync started
+I, [2024-11-18T13:35:15.006 #00350]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:45:15.007 #00351]     INFO -- : Config files sync started
+I, [2024-11-18T13:45:15.007 #00351]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T13:55:15.006 #00352]     INFO -- : Config files sync started
+I, [2024-11-18T13:55:15.007 #00352]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:05:15.004 #00353]     INFO -- : Config files sync started
+I, [2024-11-18T14:05:15.005 #00353]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:15:15.005 #00354]     INFO -- : Config files sync started
+I, [2024-11-18T14:15:15.006 #00354]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:25:15.005 #00355]     INFO -- : Config files sync started
+I, [2024-11-18T14:25:15.005 #00355]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:35:15.001 #00356]     INFO -- : Config files sync started
+I, [2024-11-18T14:35:15.002 #00356]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:45:15.005 #00357]     INFO -- : Config files sync started
+I, [2024-11-18T14:45:15.005 #00357]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T14:55:15.002 #00358]     INFO -- : Config files sync started
+I, [2024-11-18T14:55:15.002 #00358]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:05:15.026 #00359]     INFO -- : Config files sync started
+I, [2024-11-18T15:05:15.027 #00359]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:15:15.029 #00360]     INFO -- : Config files sync started
+I, [2024-11-18T15:15:15.030 #00360]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:25:15.012 #00361]     INFO -- : Config files sync started
+I, [2024-11-18T15:25:15.013 #00361]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:35:15.014 #00362]     INFO -- : Config files sync started
+I, [2024-11-18T15:35:15.015 #00362]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:45:15.012 #00363]     INFO -- : Config files sync started
+I, [2024-11-18T15:45:15.012 #00363]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T15:55:15.006 #00364]     INFO -- : Config files sync started
+I, [2024-11-18T15:55:15.006 #00364]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:05:15.009 #00365]     INFO -- : Config files sync started
+I, [2024-11-18T16:05:15.010 #00365]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:15:15.013 #00366]     INFO -- : Config files sync started
+I, [2024-11-18T16:15:15.015 #00366]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:25:15.012 #00367]     INFO -- : Config files sync started
+I, [2024-11-18T16:25:15.013 #00367]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:35:15.024 #00368]     INFO -- : Config files sync started
+I, [2024-11-18T16:35:15.024 #00368]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:45:15.014 #00369]     INFO -- : Config files sync started
+I, [2024-11-18T16:45:15.015 #00369]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T16:55:15.009 #00370]     INFO -- : Config files sync started
+I, [2024-11-18T16:55:15.010 #00370]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:05:15.005 #00371]     INFO -- : Config files sync started
+I, [2024-11-18T17:05:15.006 #00371]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:15:15.003 #00372]     INFO -- : Config files sync started
+I, [2024-11-18T17:15:15.003 #00372]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:25:15.006 #00373]     INFO -- : Config files sync started
+I, [2024-11-18T17:25:15.007 #00373]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:35:15.005 #00374]     INFO -- : Config files sync started
+I, [2024-11-18T17:35:15.005 #00374]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:45:15.004 #00375]     INFO -- : Config files sync started
+I, [2024-11-18T17:45:15.005 #00375]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T17:55:15.010 #00376]     INFO -- : Config files sync started
+I, [2024-11-18T17:55:15.011 #00376]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:05:15.020 #00377]     INFO -- : Config files sync started
+I, [2024-11-18T18:05:15.023 #00377]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:15:15.050 #00378]     INFO -- : Config files sync started
+I, [2024-11-18T18:15:15.051 #00378]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:25:15.006 #00379]     INFO -- : Config files sync started
+I, [2024-11-18T18:25:15.007 #00379]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:35:15.006 #00380]     INFO -- : Config files sync started
+I, [2024-11-18T18:35:15.007 #00380]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:45:15.003 #00381]     INFO -- : Config files sync started
+I, [2024-11-18T18:45:15.003 #00381]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T18:55:15.003 #00382]     INFO -- : Config files sync started
+I, [2024-11-18T18:55:15.004 #00382]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T19:05:15.003 #00383]     INFO -- : Config files sync started
+I, [2024-11-18T19:05:15.004 #00383]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T19:15:15.006 #00384]     INFO -- : Config files sync started
+I, [2024-11-18T19:15:15.006 #00384]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T19:25:15.003 #00385]     INFO -- : Config files sync started
+I, [2024-11-18T19:25:15.004 #00385]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T19:35:15.002 #00386]     INFO -- : Config files sync started
+I, [2024-11-18T19:35:15.003 #00386]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-18T19:45:15.001 #00387]     INFO -- : Config files sync started
+I, [2024-11-18T19:45:15.001 #00387]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+W, [2024-11-18T19:55:08.580 #00000]  WARNING -- : Caught signal: 15, shutting down
+I, [2024-11-18T19:55:08.656 #00000]     INFO -- : Scheduler is correctly terminated.
+I, [2024-11-18T19:55:15.383 #00000]     INFO -- : Scheduler was successfully initialized.
+D, [2024-11-18T19:55:15.383 #00000]    DEBUG -- : Scheduler initialized with config: SchedulerConfig(worker_count=10, max_worker_count=20, worker_reset_limit=100, deadlock_threshold_timeout=5, task_config=TaskConfig(abandoned_timeout=60, unresponsive_timeout=3600, deletion_timeout=60))
+I, [2024-11-18T19:55:15.470 #00000]     INFO -- : Starting server...
+I, [2024-11-18T19:55:15.508 #00000]     INFO -- : Binding socket for address '*' and port '2224'
+I, [2024-11-18T19:55:15.523 #00000]     INFO -- : Server is listening
+D, [2024-11-18T19:55:15.532 #00000]    DEBUG -- : Ruby daemon request (id: 1) type: 'sync_configs'
+D, [2024-11-18T19:55:15.606 #00000]    DEBUG -- : Ruby daemon response (id: 1) (without logs): '{"next": 1731956715}'
+D, [2024-11-18T19:55:15.606 #00001]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T19:55:15.607 #00001]     INFO -- : Config files sync started
+I, [2024-11-18T19:55:15.607 #00001]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-18T19:55:15.610 #00001]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T19:55:18.202 #00000]     INFO -- : Worker#226428: Worker initialized.
+I, [2024-11-18T19:55:18.221 #00000]     INFO -- : Worker#226427: Worker initialized.
+I, [2024-11-18T19:55:18.262 #00000]     INFO -- : Worker#226426: Worker initialized.
+I, [2024-11-18T19:55:18.308 #00000]     INFO -- : Worker#226424: Worker initialized.
+I, [2024-11-18T19:55:18.328 #00000]     INFO -- : Worker#226430: Worker initialized.
+I, [2024-11-18T19:55:18.330 #00000]     INFO -- : Worker#226425: Worker initialized.
+I, [2024-11-18T19:55:18.356 #00000]     INFO -- : Worker#226432: Worker initialized.
+I, [2024-11-18T19:55:18.368 #00000]     INFO -- : Worker#226431: Worker initialized.
+I, [2024-11-18T19:55:18.388 #00000]     INFO -- : Worker#226429: Worker initialized.
+I, [2024-11-18T19:55:18.398 #00000]     INFO -- : Worker#226433: Worker initialized.
+W, [2024-11-18T19:55:29.863 #00000]  WARNING -- : SSL Error on 45 ('192.168.122.1', 45188): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] ssl/tls alert certificate unknown (_ssl.c:1000)
+W, [2024-11-18T19:55:29.864 #00000]  WARNING -- : SSL Error on 46 ('192.168.122.1', 45196): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] ssl/tls alert certificate unknown (_ssl.c:1000)
+W, [2024-11-18T19:55:32.846 #00000]  WARNING -- : SSL Error on 45 ('192.168.122.1', 45204): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] ssl/tls alert certificate unknown (_ssl.c:1000)
+W, [2024-11-18T19:55:32.853 #00000]  WARNING -- : SSL Error on 46 ('192.168.122.1', 45212): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] ssl/tls alert certificate unknown (_ssl.c:1000)
+I, [2024-11-18T19:55:32.866 #00000]     INFO -- : 200 GET /ui/ (192.168.122.1) 2.70ms
+W, [2024-11-18T19:55:32.964 #00000]  WARNING -- : 401 GET /favicon.ico (192.168.122.1) 1.65ms
+D, [2024-11-18T20:05:15.003 #00000]    DEBUG -- : Ruby daemon request (id: 2) type: 'sync_configs'
+D, [2024-11-18T20:05:15.004 #00000]    DEBUG -- : Ruby daemon response (id: 2) (without logs): '{"next": 1731957315}'
+D, [2024-11-18T20:05:15.005 #00002]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T20:05:15.005 #00002]     INFO -- : Config files sync started
+I, [2024-11-18T20:05:15.005 #00002]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-18T20:05:15.005 #00002]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-18T20:15:15.004 #00000]    DEBUG -- : Ruby daemon request (id: 3) type: 'sync_configs'
+D, [2024-11-18T20:15:15.007 #00000]    DEBUG -- : Ruby daemon response (id: 3) (without logs): '{"next": 1731957915}'
+D, [2024-11-18T20:15:15.007 #00003]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T20:15:15.007 #00003]     INFO -- : Config files sync started
+I, [2024-11-18T20:15:15.007 #00003]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-18T20:15:15.007 #00003]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-18T20:25:15.006 #00000]    DEBUG -- : Ruby daemon request (id: 4) type: 'sync_configs'
+D, [2024-11-18T20:25:15.009 #00000]    DEBUG -- : Ruby daemon response (id: 4) (without logs): '{"next": 1731958515}'
+D, [2024-11-18T20:25:15.009 #00004]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T20:25:15.009 #00004]     INFO -- : Config files sync started
+I, [2024-11-18T20:25:15.009 #00004]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-18T20:25:15.010 #00004]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-18T20:35:15.011 #00000]    DEBUG -- : Ruby daemon request (id: 5) type: 'sync_configs'
+D, [2024-11-18T20:35:15.018 #00000]    DEBUG -- : Ruby daemon response (id: 5) (without logs): '{"next": 1731959115}'
+D, [2024-11-18T20:35:15.019 #00005]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-18T20:35:15.019 #00005]     INFO -- : Config files sync started
+I, [2024-11-18T20:35:15.019 #00005]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-18T20:35:15.020 #00005]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:07:17.450 #00000]    DEBUG -- : Ruby daemon request (id: 6) type: 'sync_configs'
+D, [2024-11-19T10:07:17.478 #00000]    DEBUG -- : Ruby daemon response (id: 6) (without logs): '{"next": 1732007837}'
+D, [2024-11-19T10:07:17.479 #00006]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:07:17.533 #00006]     INFO -- : Config files sync started
+I, [2024-11-19T10:07:17.533 #00006]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:07:17.533 #00006]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:17:17.007 #00000]    DEBUG -- : Ruby daemon request (id: 7) type: 'sync_configs'
+D, [2024-11-19T10:17:17.015 #00000]    DEBUG -- : Ruby daemon response (id: 7) (without logs): '{"next": 1732008437}'
+D, [2024-11-19T10:17:17.015 #00007]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:17:17.016 #00007]     INFO -- : Config files sync started
+I, [2024-11-19T10:17:17.016 #00007]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:17:17.016 #00007]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:27:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 8) type: 'sync_configs'
+D, [2024-11-19T10:27:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 8) (without logs): '{"next": 1732009037}'
+D, [2024-11-19T10:27:17.014 #00008]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:27:17.015 #00008]     INFO -- : Config files sync started
+I, [2024-11-19T10:27:17.015 #00008]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:27:17.015 #00008]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:37:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 9) type: 'sync_configs'
+D, [2024-11-19T10:37:17.017 #00000]    DEBUG -- : Ruby daemon response (id: 9) (without logs): '{"next": 1732009637}'
+D, [2024-11-19T10:37:17.018 #00009]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:37:17.019 #00009]     INFO -- : Config files sync started
+I, [2024-11-19T10:37:17.020 #00009]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:37:17.020 #00009]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:47:17.004 #00000]    DEBUG -- : Ruby daemon request (id: 10) type: 'sync_configs'
+D, [2024-11-19T10:47:17.007 #00000]    DEBUG -- : Ruby daemon response (id: 10) (without logs): '{"next": 1732010237}'
+D, [2024-11-19T10:47:17.008 #00010]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:47:17.008 #00010]     INFO -- : Config files sync started
+I, [2024-11-19T10:47:17.008 #00010]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:47:17.008 #00010]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T10:57:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 11) type: 'sync_configs'
+D, [2024-11-19T10:57:17.031 #00000]    DEBUG -- : Ruby daemon response (id: 11) (without logs): '{"next": 1732010837}'
+D, [2024-11-19T10:57:17.032 #00011]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T10:57:17.032 #00011]     INFO -- : Config files sync started
+I, [2024-11-19T10:57:17.033 #00011]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T10:57:17.033 #00011]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:07:17.003 #00000]    DEBUG -- : Ruby daemon request (id: 12) type: 'sync_configs'
+D, [2024-11-19T11:07:17.008 #00000]    DEBUG -- : Ruby daemon response (id: 12) (without logs): '{"next": 1732011437}'
+D, [2024-11-19T11:07:17.009 #00012]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:07:17.009 #00012]     INFO -- : Config files sync started
+I, [2024-11-19T11:07:17.009 #00012]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:07:17.009 #00012]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:17:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 13) type: 'sync_configs'
+D, [2024-11-19T11:17:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 13) (without logs): '{"next": 1732012037}'
+D, [2024-11-19T11:17:17.015 #00013]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:17:17.015 #00013]     INFO -- : Config files sync started
+I, [2024-11-19T11:17:17.015 #00013]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:17:17.015 #00013]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:27:17.003 #00000]    DEBUG -- : Ruby daemon request (id: 14) type: 'sync_configs'
+D, [2024-11-19T11:27:17.007 #00000]    DEBUG -- : Ruby daemon response (id: 14) (without logs): '{"next": 1732012637}'
+D, [2024-11-19T11:27:17.007 #00014]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:27:17.007 #00014]     INFO -- : Config files sync started
+I, [2024-11-19T11:27:17.007 #00014]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:27:17.007 #00014]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:37:17.002 #00000]    DEBUG -- : Ruby daemon request (id: 15) type: 'sync_configs'
+D, [2024-11-19T11:37:17.004 #00000]    DEBUG -- : Ruby daemon response (id: 15) (without logs): '{"next": 1732013237}'
+D, [2024-11-19T11:37:17.004 #00015]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:37:17.004 #00015]     INFO -- : Config files sync started
+I, [2024-11-19T11:37:17.004 #00015]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:37:17.004 #00015]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:47:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 16) type: 'sync_configs'
+D, [2024-11-19T11:47:17.015 #00000]    DEBUG -- : Ruby daemon response (id: 16) (without logs): '{"next": 1732013837}'
+D, [2024-11-19T11:47:17.016 #00016]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:47:17.016 #00016]     INFO -- : Config files sync started
+I, [2024-11-19T11:47:17.016 #00016]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:47:17.016 #00016]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T11:57:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 17) type: 'sync_configs'
+D, [2024-11-19T11:57:17.015 #00000]    DEBUG -- : Ruby daemon response (id: 17) (without logs): '{"next": 1732014437}'
+D, [2024-11-19T11:57:17.016 #00017]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T11:57:17.016 #00017]     INFO -- : Config files sync started
+I, [2024-11-19T11:57:17.017 #00017]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T11:57:17.018 #00017]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:07:17.007 #00000]    DEBUG -- : Ruby daemon request (id: 18) type: 'sync_configs'
+D, [2024-11-19T12:07:17.011 #00000]    DEBUG -- : Ruby daemon response (id: 18) (without logs): '{"next": 1732015037}'
+D, [2024-11-19T12:07:17.011 #00018]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:07:17.011 #00018]     INFO -- : Config files sync started
+I, [2024-11-19T12:07:17.011 #00018]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:07:17.011 #00018]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:17:17.008 #00000]    DEBUG -- : Ruby daemon request (id: 19) type: 'sync_configs'
+D, [2024-11-19T12:17:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 19) (without logs): '{"next": 1732015637}'
+D, [2024-11-19T12:17:17.014 #00019]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:17:17.014 #00019]     INFO -- : Config files sync started
+I, [2024-11-19T12:17:17.014 #00019]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:17:17.014 #00019]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:27:17.007 #00000]    DEBUG -- : Ruby daemon request (id: 20) type: 'sync_configs'
+D, [2024-11-19T12:27:17.013 #00000]    DEBUG -- : Ruby daemon response (id: 20) (without logs): '{"next": 1732016237}'
+D, [2024-11-19T12:27:17.014 #00020]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:27:17.014 #00020]     INFO -- : Config files sync started
+I, [2024-11-19T12:27:17.014 #00020]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:27:17.014 #00020]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:37:17.008 #00000]    DEBUG -- : Ruby daemon request (id: 21) type: 'sync_configs'
+D, [2024-11-19T12:37:17.013 #00000]    DEBUG -- : Ruby daemon response (id: 21) (without logs): '{"next": 1732016837}'
+D, [2024-11-19T12:37:17.013 #00021]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:37:17.013 #00021]     INFO -- : Config files sync started
+I, [2024-11-19T12:37:17.014 #00021]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:37:17.014 #00021]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:47:17.011 #00000]    DEBUG -- : Ruby daemon request (id: 22) type: 'sync_configs'
+D, [2024-11-19T12:47:17.018 #00000]    DEBUG -- : Ruby daemon response (id: 22) (without logs): '{"next": 1732017437}'
+D, [2024-11-19T12:47:17.019 #00022]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:47:17.019 #00022]     INFO -- : Config files sync started
+I, [2024-11-19T12:47:17.019 #00022]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:47:17.019 #00022]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T12:57:17.005 #00000]    DEBUG -- : Ruby daemon request (id: 23) type: 'sync_configs'
+D, [2024-11-19T12:57:17.007 #00000]    DEBUG -- : Ruby daemon response (id: 23) (without logs): '{"next": 1732018037}'
+D, [2024-11-19T12:57:17.007 #00023]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T12:57:17.007 #00023]     INFO -- : Config files sync started
+I, [2024-11-19T12:57:17.008 #00023]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T12:57:17.008 #00023]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:07:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 24) type: 'sync_configs'
+D, [2024-11-19T13:07:17.019 #00000]    DEBUG -- : Ruby daemon response (id: 24) (without logs): '{"next": 1732018637}'
+D, [2024-11-19T13:07:17.020 #00024]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:07:17.020 #00024]     INFO -- : Config files sync started
+I, [2024-11-19T13:07:17.021 #00024]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:07:17.021 #00024]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:17:17.004 #00000]    DEBUG -- : Ruby daemon request (id: 25) type: 'sync_configs'
+D, [2024-11-19T13:17:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 25) (without logs): '{"next": 1732019237}'
+D, [2024-11-19T13:17:17.014 #00025]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:17:17.014 #00025]     INFO -- : Config files sync started
+I, [2024-11-19T13:17:17.014 #00025]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:17:17.014 #00025]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:27:17.011 #00000]    DEBUG -- : Ruby daemon request (id: 26) type: 'sync_configs'
+D, [2024-11-19T13:27:17.017 #00000]    DEBUG -- : Ruby daemon response (id: 26) (without logs): '{"next": 1732019837}'
+D, [2024-11-19T13:27:17.018 #00026]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:27:17.018 #00026]     INFO -- : Config files sync started
+I, [2024-11-19T13:27:17.018 #00026]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:27:17.018 #00026]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:37:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 27) type: 'sync_configs'
+D, [2024-11-19T13:37:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 27) (without logs): '{"next": 1732020437}'
+D, [2024-11-19T13:37:17.015 #00027]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:37:17.015 #00027]     INFO -- : Config files sync started
+I, [2024-11-19T13:37:17.015 #00027]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:37:17.015 #00027]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:47:17.008 #00000]    DEBUG -- : Ruby daemon request (id: 28) type: 'sync_configs'
+D, [2024-11-19T13:47:17.015 #00000]    DEBUG -- : Ruby daemon response (id: 28) (without logs): '{"next": 1732021037}'
+D, [2024-11-19T13:47:17.016 #00028]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:47:17.016 #00028]     INFO -- : Config files sync started
+I, [2024-11-19T13:47:17.016 #00028]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:47:17.016 #00028]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T13:57:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 29) type: 'sync_configs'
+D, [2024-11-19T13:57:17.014 #00000]    DEBUG -- : Ruby daemon response (id: 29) (without logs): '{"next": 1732021637}'
+D, [2024-11-19T13:57:17.014 #00029]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T13:57:17.014 #00029]     INFO -- : Config files sync started
+I, [2024-11-19T13:57:17.014 #00029]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T13:57:17.015 #00029]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:07:17.011 #00000]    DEBUG -- : Ruby daemon request (id: 30) type: 'sync_configs'
+D, [2024-11-19T14:07:17.021 #00000]    DEBUG -- : Ruby daemon response (id: 30) (without logs): '{"next": 1732022237}'
+D, [2024-11-19T14:07:17.021 #00030]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:07:17.021 #00030]     INFO -- : Config files sync started
+I, [2024-11-19T14:07:17.021 #00030]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:07:17.021 #00030]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:17:17.008 #00000]    DEBUG -- : Ruby daemon request (id: 31) type: 'sync_configs'
+D, [2024-11-19T14:17:17.017 #00000]    DEBUG -- : Ruby daemon response (id: 31) (without logs): '{"next": 1732022837}'
+D, [2024-11-19T14:17:17.017 #00031]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:17:17.018 #00031]     INFO -- : Config files sync started
+I, [2024-11-19T14:17:17.018 #00031]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:17:17.018 #00031]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:27:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 32) type: 'sync_configs'
+D, [2024-11-19T14:27:17.013 #00000]    DEBUG -- : Ruby daemon response (id: 32) (without logs): '{"next": 1732023437}'
+D, [2024-11-19T14:27:17.013 #00032]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:27:17.014 #00032]     INFO -- : Config files sync started
+I, [2024-11-19T14:27:17.014 #00032]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:27:17.014 #00032]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:37:17.004 #00000]    DEBUG -- : Ruby daemon request (id: 33) type: 'sync_configs'
+D, [2024-11-19T14:37:17.008 #00000]    DEBUG -- : Ruby daemon response (id: 33) (without logs): '{"next": 1732024037}'
+D, [2024-11-19T14:37:17.009 #00033]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:37:17.009 #00033]     INFO -- : Config files sync started
+I, [2024-11-19T14:37:17.009 #00033]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:37:17.009 #00033]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:47:17.005 #00000]    DEBUG -- : Ruby daemon request (id: 34) type: 'sync_configs'
+D, [2024-11-19T14:47:17.009 #00000]    DEBUG -- : Ruby daemon response (id: 34) (without logs): '{"next": 1732024637}'
+D, [2024-11-19T14:47:17.009 #00034]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:47:17.009 #00034]     INFO -- : Config files sync started
+I, [2024-11-19T14:47:17.010 #00034]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:47:17.010 #00034]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T14:57:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 35) type: 'sync_configs'
+D, [2024-11-19T14:57:17.013 #00000]    DEBUG -- : Ruby daemon response (id: 35) (without logs): '{"next": 1732025237}'
+D, [2024-11-19T14:57:17.014 #00035]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T14:57:17.014 #00035]     INFO -- : Config files sync started
+I, [2024-11-19T14:57:17.014 #00035]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T14:57:17.014 #00035]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:07:17.005 #00000]    DEBUG -- : Ruby daemon request (id: 36) type: 'sync_configs'
+D, [2024-11-19T15:07:17.007 #00000]    DEBUG -- : Ruby daemon response (id: 36) (without logs): '{"next": 1732025837}'
+D, [2024-11-19T15:07:17.008 #00036]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:07:17.008 #00036]     INFO -- : Config files sync started
+I, [2024-11-19T15:07:17.008 #00036]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:07:17.008 #00036]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:17:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 37) type: 'sync_configs'
+D, [2024-11-19T15:17:17.021 #00000]    DEBUG -- : Ruby daemon response (id: 37) (without logs): '{"next": 1732026437}'
+D, [2024-11-19T15:17:17.021 #00037]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:17:17.022 #00037]     INFO -- : Config files sync started
+I, [2024-11-19T15:17:17.022 #00037]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:17:17.022 #00037]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:27:17.004 #00000]    DEBUG -- : Ruby daemon request (id: 38) type: 'sync_configs'
+D, [2024-11-19T15:27:17.007 #00000]    DEBUG -- : Ruby daemon response (id: 38) (without logs): '{"next": 1732027037}'
+D, [2024-11-19T15:27:17.007 #00038]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:27:17.007 #00038]     INFO -- : Config files sync started
+I, [2024-11-19T15:27:17.007 #00038]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:27:17.007 #00038]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:37:17.010 #00000]    DEBUG -- : Ruby daemon request (id: 39) type: 'sync_configs'
+D, [2024-11-19T15:37:17.017 #00000]    DEBUG -- : Ruby daemon response (id: 39) (without logs): '{"next": 1732027637}'
+D, [2024-11-19T15:37:17.017 #00039]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:37:17.018 #00039]     INFO -- : Config files sync started
+I, [2024-11-19T15:37:17.018 #00039]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:37:17.018 #00039]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:47:17.009 #00000]    DEBUG -- : Ruby daemon request (id: 40) type: 'sync_configs'
+D, [2024-11-19T15:47:17.015 #00000]    DEBUG -- : Ruby daemon response (id: 40) (without logs): '{"next": 1732028237}'
+D, [2024-11-19T15:47:17.016 #00040]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:47:17.016 #00040]     INFO -- : Config files sync started
+I, [2024-11-19T15:47:17.016 #00040]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:47:17.016 #00040]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T15:57:17.012 #00000]    DEBUG -- : Ruby daemon request (id: 41) type: 'sync_configs'
+D, [2024-11-19T15:57:17.036 #00000]    DEBUG -- : Ruby daemon response (id: 41) (without logs): '{"next": 1732028837}'
+D, [2024-11-19T15:57:17.037 #00041]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T15:57:17.037 #00041]     INFO -- : Config files sync started
+I, [2024-11-19T15:57:17.037 #00041]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T15:57:17.038 #00041]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T19:26:47.771 #00000]    DEBUG -- : Ruby daemon request (id: 42) type: 'sync_configs'
+D, [2024-11-19T19:26:47.775 #00000]    DEBUG -- : Ruby daemon response (id: 42) (without logs): '{"next": 1732041407}'
+D, [2024-11-19T19:26:47.776 #00042]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T19:26:47.776 #00042]     INFO -- : Config files sync started
+I, [2024-11-19T19:26:47.776 #00042]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T19:26:47.776 #00042]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T19:36:47.011 #00000]    DEBUG -- : Ruby daemon request (id: 43) type: 'sync_configs'
+D, [2024-11-19T19:36:47.033 #00000]    DEBUG -- : Ruby daemon response (id: 43) (without logs): '{"next": 1732042007}'
+D, [2024-11-19T19:36:47.033 #00043]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T19:36:47.034 #00043]     INFO -- : Config files sync started
+I, [2024-11-19T19:36:47.034 #00043]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T19:36:47.034 #00043]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T19:46:47.004 #00000]    DEBUG -- : Ruby daemon request (id: 44) type: 'sync_configs'
+D, [2024-11-19T19:46:47.017 #00000]    DEBUG -- : Ruby daemon response (id: 44) (without logs): '{"next": 1732042607}'
+D, [2024-11-19T19:46:47.018 #00044]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T19:46:47.018 #00044]     INFO -- : Config files sync started
+I, [2024-11-19T19:46:47.018 #00044]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T19:46:47.018 #00044]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+D, [2024-11-19T19:56:47.004 #00000]    DEBUG -- : Ruby daemon request (id: 45) type: 'sync_configs'
+D, [2024-11-19T19:56:47.014 #00000]    DEBUG -- : Ruby daemon response (id: 45) (without logs): '{"next": 1732043207}'
+D, [2024-11-19T19:56:47.014 #00045]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-19T19:56:47.015 #00045]     INFO -- : Config files sync started
+I, [2024-11-19T19:56:47.015 #00045]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+D, [2024-11-19T19:56:47.015 #00045]    DEBUG -- : Cannot read config '/var/lib/pcsd/cfgsync_ctl': No such file or directory @ rb_sysopen - /var/lib/pcsd/cfgsync_ctl
+I, [2024-11-23T19:36:16.035 #00000]     INFO -- : Scheduler was successfully initialized.
+I, [2024-11-23T19:36:16.094 #00000]     INFO -- : Starting server...
+I, [2024-11-23T19:36:16.102 #00000]     INFO -- : Binding socket for address '*' and port '2224'
+I, [2024-11-23T19:36:16.110 #00000]     INFO -- : Server is listening
+I, [2024-11-23T19:36:16.110 #00000]     INFO -- : Notifying systemd we are running (socket '/run/systemd/notify')
+I, [2024-11-23T19:36:16.138 #00001]     INFO -- : Config files sync started
+I, [2024-11-23T19:36:16.138 #00001]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-23T19:36:18.228 #00000]     INFO -- : Worker#58712: Worker initialized.
+I, [2024-11-23T19:36:18.228 #00000]     INFO -- : Worker#58716: Worker initialized.
+I, [2024-11-23T19:36:18.253 #00000]     INFO -- : Worker#58713: Worker initialized.
+I, [2024-11-23T19:36:18.267 #00000]     INFO -- : Worker#58718: Worker initialized.
+I, [2024-11-23T19:36:18.274 #00000]     INFO -- : Worker#58720: Worker initialized.
+I, [2024-11-23T19:36:18.285 #00000]     INFO -- : Worker#58711: Worker initialized.
+I, [2024-11-23T19:36:18.296 #00000]     INFO -- : Worker#58717: Worker initialized.
+I, [2024-11-23T19:36:18.303 #00000]     INFO -- : Worker#58719: Worker initialized.
+I, [2024-11-23T19:36:18.312 #00000]     INFO -- : Worker#58714: Worker initialized.
+I, [2024-11-23T19:36:18.317 #00000]     INFO -- : Worker#58715: Worker initialized.
+I, [2024-11-23T19:36:56.527 #00000]     INFO -- : 200 POST /remote/auth (127.0.0.1) 63.62ms
+I, [2024-11-23T19:46:16.009 #00002]     INFO -- : Config files sync started
+I, [2024-11-23T19:46:16.009 #00002]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-23T19:56:16.006 #00003]     INFO -- : Config files sync started
+I, [2024-11-23T19:56:16.006 #00003]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-23T20:06:16.001 #00004]     INFO -- : Config files sync started
+I, [2024-11-23T20:06:16.001 #00004]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-23T20:16:16.007 #00005]     INFO -- : Config files sync started
+I, [2024-11-23T20:16:16.008 #00005]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T12:54:24.054 #00006]     INFO -- : Config files sync started
+I, [2024-11-24T12:54:24.054 #00006]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:04:24.011 #00007]     INFO -- : Config files sync started
+I, [2024-11-24T13:04:24.012 #00007]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:14:24.003 #00008]     INFO -- : Config files sync started
+I, [2024-11-24T13:14:24.003 #00008]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:24:24.006 #00009]     INFO -- : Config files sync started
+I, [2024-11-24T13:24:24.006 #00009]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:34:24.006 #00010]     INFO -- : Config files sync started
+I, [2024-11-24T13:34:24.006 #00010]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:44:24.006 #00011]     INFO -- : Config files sync started
+I, [2024-11-24T13:44:24.006 #00011]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T13:54:24.010 #00012]     INFO -- : Config files sync started
+I, [2024-11-24T13:54:24.011 #00012]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:04:24.002 #00013]     INFO -- : Config files sync started
+I, [2024-11-24T14:04:24.003 #00013]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:14:24.006 #00014]     INFO -- : Config files sync started
+I, [2024-11-24T14:14:24.006 #00014]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:24:24.005 #00015]     INFO -- : Config files sync started
+I, [2024-11-24T14:24:24.008 #00015]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:34:24.009 #00016]     INFO -- : Config files sync started
+I, [2024-11-24T14:34:24.010 #00016]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:44:24.009 #00017]     INFO -- : Config files sync started
+I, [2024-11-24T14:44:24.010 #00017]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T14:54:24.006 #00018]     INFO -- : Config files sync started
+I, [2024-11-24T14:54:24.007 #00018]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:04:24.006 #00019]     INFO -- : Config files sync started
+I, [2024-11-24T15:04:24.007 #00019]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:14:24.006 #00020]     INFO -- : Config files sync started
+I, [2024-11-24T15:14:24.006 #00020]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:24:24.002 #00021]     INFO -- : Config files sync started
+I, [2024-11-24T15:24:24.003 #00021]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:34:24.003 #00022]     INFO -- : Config files sync started
+I, [2024-11-24T15:34:24.003 #00022]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:44:24.002 #00023]     INFO -- : Config files sync started
+I, [2024-11-24T15:44:24.003 #00023]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T15:54:24.006 #00024]     INFO -- : Config files sync started
+I, [2024-11-24T15:54:24.006 #00024]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:04:24.009 #00025]     INFO -- : Config files sync started
+I, [2024-11-24T16:04:24.009 #00025]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:14:24.008 #00026]     INFO -- : Config files sync started
+I, [2024-11-24T16:14:24.009 #00026]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:24:24.005 #00027]     INFO -- : Config files sync started
+I, [2024-11-24T16:24:24.006 #00027]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:34:24.004 #00028]     INFO -- : Config files sync started
+I, [2024-11-24T16:34:24.005 #00028]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:44:24.007 #00029]     INFO -- : Config files sync started
+I, [2024-11-24T16:44:24.008 #00029]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T16:54:24.010 #00030]     INFO -- : Config files sync started
+I, [2024-11-24T16:54:24.013 #00030]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:04:24.004 #00031]     INFO -- : Config files sync started
+I, [2024-11-24T17:04:24.005 #00031]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:14:24.004 #00032]     INFO -- : Config files sync started
+I, [2024-11-24T17:14:24.005 #00032]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:24:24.006 #00033]     INFO -- : Config files sync started
+I, [2024-11-24T17:24:24.007 #00033]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:34:24.009 #00034]     INFO -- : Config files sync started
+I, [2024-11-24T17:34:24.010 #00034]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:44:24.007 #00035]     INFO -- : Config files sync started
+I, [2024-11-24T17:44:24.007 #00035]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T17:54:24.005 #00036]     INFO -- : Config files sync started
+I, [2024-11-24T17:54:24.005 #00036]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:04:24.003 #00037]     INFO -- : Config files sync started
+I, [2024-11-24T18:04:24.004 #00037]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:14:24.009 #00038]     INFO -- : Config files sync started
+I, [2024-11-24T18:14:24.010 #00038]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:24:24.009 #00039]     INFO -- : Config files sync started
+I, [2024-11-24T18:24:24.010 #00039]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:34:24.005 #00040]     INFO -- : Config files sync started
+I, [2024-11-24T18:34:24.006 #00040]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:44:24.005 #00041]     INFO -- : Config files sync started
+I, [2024-11-24T18:44:24.005 #00041]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T18:54:24.007 #00042]     INFO -- : Config files sync started
+I, [2024-11-24T18:54:24.008 #00042]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:04:24.011 #00043]     INFO -- : Config files sync started
+I, [2024-11-24T19:04:24.012 #00043]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:14:24.004 #00044]     INFO -- : Config files sync started
+I, [2024-11-24T19:14:24.004 #00044]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:24:24.005 #00045]     INFO -- : Config files sync started
+I, [2024-11-24T19:24:24.005 #00045]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:34:24.009 #00046]     INFO -- : Config files sync started
+I, [2024-11-24T19:34:24.009 #00046]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:44:24.009 #00047]     INFO -- : Config files sync started
+I, [2024-11-24T19:44:24.010 #00047]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T19:54:24.005 #00048]     INFO -- : Config files sync started
+I, [2024-11-24T19:54:24.005 #00048]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-24T20:04:24.005 #00049]     INFO -- : Config files sync started
+I, [2024-11-24T20:04:24.006 #00049]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T09:21:42.853 #00050]     INFO -- : Config files sync started
+I, [2024-11-25T09:21:42.853 #00050]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T09:31:42.012 #00051]     INFO -- : Config files sync started
+I, [2024-11-25T09:31:42.014 #00051]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T09:41:42.008 #00052]     INFO -- : Config files sync started
+I, [2024-11-25T09:41:42.009 #00052]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T09:51:42.010 #00053]     INFO -- : Config files sync started
+I, [2024-11-25T09:51:42.012 #00053]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:01:42.007 #00054]     INFO -- : Config files sync started
+I, [2024-11-25T10:01:42.007 #00054]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:11:42.005 #00055]     INFO -- : Config files sync started
+I, [2024-11-25T10:11:42.005 #00055]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:21:42.010 #00056]     INFO -- : Config files sync started
+I, [2024-11-25T10:21:42.011 #00056]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:31:42.011 #00057]     INFO -- : Config files sync started
+I, [2024-11-25T10:31:42.012 #00057]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:41:42.003 #00058]     INFO -- : Config files sync started
+I, [2024-11-25T10:41:42.004 #00058]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T10:51:42.007 #00059]     INFO -- : Config files sync started
+I, [2024-11-25T10:51:42.008 #00059]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:01:42.005 #00060]     INFO -- : Config files sync started
+I, [2024-11-25T11:01:42.006 #00060]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:11:42.004 #00061]     INFO -- : Config files sync started
+I, [2024-11-25T11:11:42.005 #00061]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:21:42.009 #00062]     INFO -- : Config files sync started
+I, [2024-11-25T11:21:42.010 #00062]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:31:42.009 #00063]     INFO -- : Config files sync started
+I, [2024-11-25T11:31:42.010 #00063]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:41:42.008 #00064]     INFO -- : Config files sync started
+I, [2024-11-25T11:41:42.008 #00064]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T11:51:42.005 #00065]     INFO -- : Config files sync started
+I, [2024-11-25T11:51:42.006 #00065]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:01:42.005 #00066]     INFO -- : Config files sync started
+I, [2024-11-25T12:01:42.006 #00066]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:11:42.006 #00067]     INFO -- : Config files sync started
+I, [2024-11-25T12:11:42.006 #00067]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:21:42.005 #00068]     INFO -- : Config files sync started
+I, [2024-11-25T12:21:42.006 #00068]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:31:42.006 #00069]     INFO -- : Config files sync started
+I, [2024-11-25T12:31:42.006 #00069]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:41:42.010 #00070]     INFO -- : Config files sync started
+I, [2024-11-25T12:41:42.011 #00070]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T12:51:42.009 #00071]     INFO -- : Config files sync started
+I, [2024-11-25T12:51:42.009 #00071]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:01:42.006 #00072]     INFO -- : Config files sync started
+I, [2024-11-25T13:01:42.008 #00072]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:11:42.009 #00073]     INFO -- : Config files sync started
+I, [2024-11-25T13:11:42.010 #00073]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:21:42.003 #00074]     INFO -- : Config files sync started
+I, [2024-11-25T13:21:42.003 #00074]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:31:42.006 #00075]     INFO -- : Config files sync started
+I, [2024-11-25T13:31:42.006 #00075]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:41:42.011 #00076]     INFO -- : Config files sync started
+I, [2024-11-25T13:41:42.012 #00076]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T13:51:42.021 #00077]     INFO -- : Config files sync started
+I, [2024-11-25T13:51:42.022 #00077]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:01:42.013 #00078]     INFO -- : Config files sync started
+I, [2024-11-25T14:01:42.015 #00078]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:11:42.014 #00079]     INFO -- : Config files sync started
+I, [2024-11-25T14:11:42.015 #00079]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:21:42.007 #00080]     INFO -- : Config files sync started
+I, [2024-11-25T14:21:42.007 #00080]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:31:42.005 #00081]     INFO -- : Config files sync started
+I, [2024-11-25T14:31:42.005 #00081]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:41:42.004 #00082]     INFO -- : Config files sync started
+I, [2024-11-25T14:41:42.004 #00082]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T14:51:42.013 #00083]     INFO -- : Config files sync started
+I, [2024-11-25T14:51:42.014 #00083]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:01:42.009 #00084]     INFO -- : Config files sync started
+I, [2024-11-25T15:01:42.010 #00084]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:11:42.010 #00085]     INFO -- : Config files sync started
+I, [2024-11-25T15:11:42.011 #00085]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:21:42.009 #00086]     INFO -- : Config files sync started
+I, [2024-11-25T15:21:42.010 #00086]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:31:42.007 #00087]     INFO -- : Config files sync started
+I, [2024-11-25T15:31:42.008 #00087]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:41:42.005 #00088]     INFO -- : Config files sync started
+I, [2024-11-25T15:41:42.005 #00088]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T15:51:42.009 #00089]     INFO -- : Config files sync started
+I, [2024-11-25T15:51:42.010 #00089]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+W, [2024-11-25T16:00:08.978 #00000]  WARNING -- : SSL Error on 45 ('192.168.122.1', 50034): [SSL: SSLV3_ALERT_CERTIFICATE_UNKNOWN] ssl/tls alert certificate unknown (_ssl.c:1000)
+I, [2024-11-25T16:01:42.017 #00090]     INFO -- : Config files sync started
+I, [2024-11-25T16:01:42.018 #00090]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T16:11:42.007 #00091]     INFO -- : Config files sync started
+I, [2024-11-25T16:11:42.007 #00091]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T16:21:42.006 #00092]     INFO -- : Config files sync started
+I, [2024-11-25T16:21:42.007 #00092]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T16:31:42.007 #00093]     INFO -- : Config files sync started
+I, [2024-11-25T16:31:42.008 #00093]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T16:41:42.006 #00094]     INFO -- : Config files sync started
+I, [2024-11-25T16:41:42.006 #00094]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-25T16:51:42.003 #00095]     INFO -- : Config files sync started
+I, [2024-11-25T16:51:42.003 #00095]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T09:36:01.986 #00096]     INFO -- : Config files sync started
+I, [2024-11-26T09:36:01.986 #00096]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T09:46:01.007 #00097]     INFO -- : Config files sync started
+I, [2024-11-26T09:46:01.007 #00097]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T09:56:01.003 #00098]     INFO -- : Config files sync started
+I, [2024-11-26T09:56:01.004 #00098]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:06:01.003 #00099]     INFO -- : Config files sync started
+I, [2024-11-26T10:06:01.003 #00099]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:16:01.006 #00100]     INFO -- : Config files sync started
+I, [2024-11-26T10:16:01.007 #00100]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:26:01.002 #00101]     INFO -- : Config files sync started
+I, [2024-11-26T10:26:01.002 #00101]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:36:01.003 #00102]     INFO -- : Config files sync started
+I, [2024-11-26T10:36:01.003 #00102]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:46:01.004 #00103]     INFO -- : Config files sync started
+I, [2024-11-26T10:46:01.005 #00103]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T10:56:01.006 #00104]     INFO -- : Config files sync started
+I, [2024-11-26T10:56:01.006 #00104]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:06:01.005 #00105]     INFO -- : Config files sync started
+I, [2024-11-26T11:06:01.005 #00105]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:16:01.002 #00106]     INFO -- : Config files sync started
+I, [2024-11-26T11:16:01.003 #00106]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:26:01.010 #00107]     INFO -- : Config files sync started
+I, [2024-11-26T11:26:01.011 #00107]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:36:01.008 #00108]     INFO -- : Config files sync started
+I, [2024-11-26T11:36:01.009 #00108]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:46:01.005 #00109]     INFO -- : Config files sync started
+I, [2024-11-26T11:46:01.006 #00109]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T11:56:01.004 #00110]     INFO -- : Config files sync started
+I, [2024-11-26T11:56:01.005 #00110]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:06:01.002 #00111]     INFO -- : Config files sync started
+I, [2024-11-26T12:06:01.002 #00111]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:16:01.006 #00112]     INFO -- : Config files sync started
+I, [2024-11-26T12:16:01.006 #00112]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:26:01.009 #00113]     INFO -- : Config files sync started
+I, [2024-11-26T12:26:01.010 #00113]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:36:01.004 #00114]     INFO -- : Config files sync started
+I, [2024-11-26T12:36:01.004 #00114]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:46:01.007 #00115]     INFO -- : Config files sync started
+I, [2024-11-26T12:46:01.007 #00115]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T12:56:01.004 #00116]     INFO -- : Config files sync started
+I, [2024-11-26T12:56:01.005 #00116]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:06:01.007 #00117]     INFO -- : Config files sync started
+I, [2024-11-26T13:06:01.008 #00117]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:16:01.011 #00118]     INFO -- : Config files sync started
+I, [2024-11-26T13:16:01.012 #00118]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:26:01.006 #00119]     INFO -- : Config files sync started
+I, [2024-11-26T13:26:01.006 #00119]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:36:01.005 #00120]     INFO -- : Config files sync started
+I, [2024-11-26T13:36:01.006 #00120]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:46:01.002 #00121]     INFO -- : Config files sync started
+I, [2024-11-26T13:46:01.002 #00121]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T13:56:01.003 #00122]     INFO -- : Config files sync started
+I, [2024-11-26T13:56:01.003 #00122]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:06:01.003 #00123]     INFO -- : Config files sync started
+I, [2024-11-26T14:06:01.003 #00123]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:16:01.003 #00124]     INFO -- : Config files sync started
+I, [2024-11-26T14:16:01.004 #00124]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:26:01.006 #00125]     INFO -- : Config files sync started
+I, [2024-11-26T14:26:01.006 #00125]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:36:01.003 #00126]     INFO -- : Config files sync started
+I, [2024-11-26T14:36:01.003 #00126]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:46:01.003 #00127]     INFO -- : Config files sync started
+I, [2024-11-26T14:46:01.003 #00127]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T14:56:01.003 #00128]     INFO -- : Config files sync started
+I, [2024-11-26T14:56:01.003 #00128]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:06:01.009 #00129]     INFO -- : Config files sync started
+I, [2024-11-26T15:06:01.009 #00129]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:16:01.005 #00130]     INFO -- : Config files sync started
+I, [2024-11-26T15:16:01.006 #00130]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:26:01.012 #00131]     INFO -- : Config files sync started
+I, [2024-11-26T15:26:01.013 #00131]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:36:01.004 #00132]     INFO -- : Config files sync started
+I, [2024-11-26T15:36:01.004 #00132]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:46:01.005 #00133]     INFO -- : Config files sync started
+I, [2024-11-26T15:46:01.006 #00133]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T15:56:01.006 #00134]     INFO -- : Config files sync started
+I, [2024-11-26T15:56:01.006 #00134]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:06:01.005 #00135]     INFO -- : Config files sync started
+I, [2024-11-26T16:06:01.006 #00135]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:16:01.004 #00136]     INFO -- : Config files sync started
+I, [2024-11-26T16:16:01.004 #00136]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:26:01.002 #00137]     INFO -- : Config files sync started
+I, [2024-11-26T16:26:01.002 #00137]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:36:01.005 #00138]     INFO -- : Config files sync started
+I, [2024-11-26T16:36:01.006 #00138]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:46:01.005 #00139]     INFO -- : Config files sync started
+I, [2024-11-26T16:46:01.006 #00139]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T16:56:01.008 #00140]     INFO -- : Config files sync started
+I, [2024-11-26T16:56:01.009 #00140]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:06:01.002 #00141]     INFO -- : Config files sync started
+I, [2024-11-26T17:06:01.002 #00141]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:16:01.005 #00142]     INFO -- : Config files sync started
+I, [2024-11-26T17:16:01.005 #00142]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:26:01.003 #00143]     INFO -- : Config files sync started
+I, [2024-11-26T17:26:01.004 #00143]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:36:01.004 #00144]     INFO -- : Config files sync started
+I, [2024-11-26T17:36:01.004 #00144]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:46:01.006 #00145]     INFO -- : Config files sync started
+I, [2024-11-26T17:46:01.007 #00145]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T17:56:01.011 #00146]     INFO -- : Config files sync started
+I, [2024-11-26T17:56:01.012 #00146]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:06:01.007 #00147]     INFO -- : Config files sync started
+I, [2024-11-26T18:06:01.007 #00147]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:16:01.005 #00148]     INFO -- : Config files sync started
+I, [2024-11-26T18:16:01.006 #00148]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:26:01.005 #00149]     INFO -- : Config files sync started
+I, [2024-11-26T18:26:01.006 #00149]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:36:01.009 #00150]     INFO -- : Config files sync started
+I, [2024-11-26T18:36:01.009 #00150]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:46:01.008 #00151]     INFO -- : Config files sync started
+I, [2024-11-26T18:46:01.009 #00151]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T18:56:01.003 #00152]     INFO -- : Config files sync started
+I, [2024-11-26T18:56:01.003 #00152]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:06:01.004 #00153]     INFO -- : Config files sync started
+I, [2024-11-26T19:06:01.005 #00153]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:16:01.005 #00154]     INFO -- : Config files sync started
+I, [2024-11-26T19:16:01.005 #00154]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:26:01.006 #00155]     INFO -- : Config files sync started
+I, [2024-11-26T19:26:01.006 #00155]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:36:01.003 #00156]     INFO -- : Config files sync started
+I, [2024-11-26T19:36:01.003 #00156]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:46:01.005 #00157]     INFO -- : Config files sync started
+I, [2024-11-26T19:46:01.006 #00157]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T19:56:01.003 #00158]     INFO -- : Config files sync started
+I, [2024-11-26T19:56:01.004 #00158]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:06:01.007 #00159]     INFO -- : Config files sync started
+I, [2024-11-26T20:06:01.008 #00159]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:16:01.009 #00160]     INFO -- : Config files sync started
+I, [2024-11-26T20:16:01.010 #00160]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:26:01.005 #00161]     INFO -- : Config files sync started
+I, [2024-11-26T20:26:01.005 #00161]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:36:01.013 #00162]     INFO -- : Config files sync started
+I, [2024-11-26T20:36:01.014 #00162]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:46:01.011 #00163]     INFO -- : Config files sync started
+I, [2024-11-26T20:46:01.013 #00163]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T20:56:01.003 #00164]     INFO -- : Config files sync started
+I, [2024-11-26T20:56:01.003 #00164]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:06:01.016 #00165]     INFO -- : Config files sync started
+I, [2024-11-26T21:06:01.018 #00165]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:16:01.005 #00166]     INFO -- : Config files sync started
+I, [2024-11-26T21:16:01.006 #00166]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:26:01.016 #00167]     INFO -- : Config files sync started
+I, [2024-11-26T21:26:01.017 #00167]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:36:01.011 #00168]     INFO -- : Config files sync started
+I, [2024-11-26T21:36:01.012 #00168]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:46:01.012 #00169]     INFO -- : Config files sync started
+I, [2024-11-26T21:46:01.012 #00169]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T21:56:01.009 #00170]     INFO -- : Config files sync started
+I, [2024-11-26T21:56:01.010 #00170]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-26T22:06:01.005 #00171]     INFO -- : Config files sync started
+I, [2024-11-26T22:06:01.006 #00171]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-27T09:10:26.008 #00000]     INFO -- : Scheduler was successfully initialized.
+I, [2024-11-27T09:10:26.065 #00000]     INFO -- : Starting server...
+I, [2024-11-27T09:10:26.075 #00000]     INFO -- : Binding socket for address '*' and port '2224'
+I, [2024-11-27T09:10:26.085 #00000]     INFO -- : Server is listening
+I, [2024-11-27T09:10:26.085 #00000]     INFO -- : Notifying systemd we are running (socket '/run/systemd/notify')
+I, [2024-11-27T09:10:26.111 #00001]     INFO -- : Config files sync started
+I, [2024-11-27T09:10:26.112 #00001]     INFO -- : Config files sync skipped, this host does not seem to be in a cluster of at least 2 nodes
+I, [2024-11-27T09:10:28.077 #00000]     INFO -- : Worker#1010: Worker initialized.
+I, [2024-11-27T09:10:28.106 #00000]     INFO -- : Worker#1008: Worker initialized.
+I, [2024-11-27T09:10:28.164 #00000]     INFO -- : Worker#1009: Worker initialized.
+I, [2024-11-27T09:10:28.206 #00000]     INFO -- : Worker#1013: Worker initialized.
+I, [2024-11-27T09:10:28.250 #00000]     INFO -- : Worker#1016: Worker initialized.
+I, [2024-11-27T09:10:28.261 #00000]     INFO -- : Worker#1017: Worker initialized.
+I, [2024-11-27T09:10:28.267 #00000]     INFO -- : Worker#1014: Worker initialized.
+I, [2024-11-27T09:10:28.277 #00000]     INFO -- : Worker#1012: Worker initialized.
+I, [2024-11-27T09:10:28.281 #00000]     INFO -- : Worker#1015: Worker initialized.
+I, [2024-11-27T09:10:28.300 #00000]     INFO -- : Worker#1011: Worker initialized.

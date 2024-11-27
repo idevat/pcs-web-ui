@@ -92,6 +92,7 @@ test:
 	@cd ./packages/test && .bin/run-dev-tests.sh
 
 test-modules-prepare:
+	@cd ./packages/app && npm ci
 	@cd ./packages/test && npm ci
 	@cd ./packages/dev-backend && npm ci
 
