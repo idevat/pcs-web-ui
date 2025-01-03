@@ -172,7 +172,7 @@ pcsd_integration_test:
     #
     # install webui
     #
-    - dnf install -y rpms/pcs-web-ui*.rpm
+    - dnf install -y rpms/*.rpm
     #
     #
     # prepare environment for test (all)

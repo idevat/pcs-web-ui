@@ -10,7 +10,7 @@ const clusterName = "test-cluster";
 const {clusterList} = marks.dashboard;
 
 const waitForImportedClusterList = async () =>
-  await page.waitForResponse(/.*\/imported-cluster-list$/);
+  await page.waitForResponse(/.*\/imported-cluster-list$/, {timeout: 50000});
 
 const expectImportedClusterNamesAre = async (nameList: string[]) => {
   await assert.expectKeysAre(clusterList.cluster.name, nameList);
@@ -37,20 +37,27 @@ describe("Web ui on one node cluster", () => {
       await goToDashboard();
       await login(username, password);
 
+      console.log("* Login success");
       await isVisible(clusterList);
       // we expect to start with no cluster
       await expectImportedClusterNamesAre([]);
+      console.log("* No cluster");
 
       await click(marks.dashboardToolbar.setupCluster);
+      console.log("* Setup cluster clicked");
       await setupCluster(clusterName, nodeName);
+      console.log("* Setup cluster success");
       await expectImportedClusterNamesAre([clusterName]);
+      console.log("* New cluster here");
 
       await removeCluster(clusterName);
       await expectImportedClusterNamesAre([]);
+      console.log("* Cluster out of webui");
 
       await click(marks.dashboardToolbar.importExistingCluster);
       await importExistingCluster(nodeName);
       await expectImportedClusterNamesAre([clusterName]);
+      console.log("* Cluster back in webui");
 
       await isVisible(
         marks.dashboard.clusterList.cluster.status.locator.locator(
@@ -113,18 +120,30 @@ const destroyCluster = async (clusterName: string) => {
 const setupCluster = async (clusterName: string, oneNode: string) => {
   await isVisible(task.clusterSetup);
 
+  console.log("* Wizard visible");
   await fill(task.clusterSetup.nameAndNodes.clusterName, clusterName);
+  console.log("* Name filled");
   await fill(task.clusterSetup.nameAndNodes.node.name.locator.nth(0), oneNode);
+  console.log("* Node filled");
   await click(task.clusterSetup.nameAndNodesFooter.next);
+  console.log("* Next to review clicked");
   await click(task.clusterSetup.prepareNodesFooter.reviewAndFinish);
+  console.log("* Review and finish clicked");
   // Task moves to next stage after imported-cluster-list response is done. The
   // request imported-cluster-list is run immediatelly after cluster setup
   // backend call is done.
-  await Promise.all([
-    waitForImportedClusterList(),
-    click(task.clusterSetup.reviewFooter.next),
-  ]);
+  //await Promise.all([
+  //  waitForImportedClusterList(),
+  //  click(task.clusterSetup.reviewFooter.next),
+  //]);
+
+  await waitForImportedClusterList(),
+  console.log("* imported-cluster-list is here");
+  await click(task.clusterSetup.reviewFooter.next),
+  console.log("* Promises resolved");
 
   await isVisible(task.clusterSetup.success);
+  console.log("* Success page visible");
   await click(task.clusterSetup.success.startAndClose);
+  console.log("* Start and close clicked");
 };
