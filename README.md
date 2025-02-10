@@ -19,7 +19,7 @@ It can run in two modes:
 
 To install pcs-web-ui run the following in terminal:
 
-```sh
+```console
 ./autogen.sh
 ./configure
 make
