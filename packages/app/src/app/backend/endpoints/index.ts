@@ -41,6 +41,7 @@ import {removeConstraintRuleRemote} from "./removeConstraintRuleRemote";
 import {addConstraintRuleRemote} from "./addConstraintRuleRemote";
 import {addNodeAttrRemote} from "./addNodeAttrRemote";
 import {addMetaAttrRemote} from "./addMetaAttrRemote";
+import {apiv2Create} from "./apiv2";
 
 const endpoints = {
   addConstraintRemote,
@@ -85,6 +86,7 @@ const endpoints = {
   setResourceUtilization,
   updateResource,
   updateFenceDevice,
+  apiv2Create,
 };
 
 export type LibClusterCommands = Commands;
