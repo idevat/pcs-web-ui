@@ -21,11 +21,33 @@ export type ClusterPropertiesActions = {
     key: {clusterName: string};
   };
 
+  "CLUSTER.PROPERTIES.UPDATE.INIT": {
+    type: "CLUSTER.PROPERTIES.UPDATE.INIT";
+    key: {clusterName: string};
+    payload: {
+      clusterName: string;
+      propertyMap: Record<string, string>;
+    };
+  };
+
   "CLUSTER.PROPERTIES.UPDATE": {
     type: "CLUSTER.PROPERTIES.UPDATE";
     key: {clusterName: string};
     payload: {
       propertyMap: Record<string, string>;
     };
+  };
+  "CLUSTER.PROPERTIES.UPDATE.CLOSE": {
+    type: "CLUSTER.PROPERTIES.UPDATE.CLOSE";
+    key: {clusterName: string};
+  };
+  "CLUSTER.PROPERTIES.UPDATE.OK": {
+    type: "CLUSTER.PROPERTIES.UPDATE.OK";
+    key: {clusterName: string};
+  };
+  "CLUSTER.PROPERTIES.UPDATE.FAIL": {
+    type: "CLUSTER.PROPERTIES.UPDATE.FAIL";
+    key: {clusterName: string};
+    payload: {message: string};
   };
 };
