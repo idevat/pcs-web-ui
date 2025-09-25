@@ -1,0 +1,25 @@
+{
+  "review": {
+    "property": {}
+  },
+  "propertiesFooter": {
+    "next": {},
+    "back": {},
+    "cancel": {}
+  },
+  "reviewFooter": {
+    "next": {},
+    "back": {},
+    "cancel": {}
+  },
+  "run": {},
+  "cancel": {},
+  "success": {
+    "close": {}
+  },
+  "fail": {
+    "back": {},
+    "cancel": {},
+    "tryAgain": {}
+  }
+}
