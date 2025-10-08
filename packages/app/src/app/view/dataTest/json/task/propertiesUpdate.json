@@ -2,6 +2,12 @@
   "review": {
     "property": {}
   },
+  "properties": {
+    "map": {
+      "name": {},
+      "value": {}
+    }
+  },
   "propertiesFooter": {
     "next": {},
     "back": {},
