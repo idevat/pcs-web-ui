@@ -5,7 +5,11 @@ import type {TaskReport} from "app/view/share";
 
 import {useTaskCommon} from "../useTaskCommon";
 
-type SetupData = ActionPayload["DASHBOARD.CLUSTER.SETUP.CALL"]["setupData"];
+// Transport type "knet" is the only option supported by webui
+type SetupData = Extract<
+  ActionPayload["DASHBOARD.CLUSTER.SETUP.CALL"]["setupData"],
+  {transport_type: "knet"}
+>;
 
 const transformOnOff = (value: unknown) => (value === "on" ? "1" : "0");
 
@@ -308,7 +312,7 @@ export const useTask = () => {
             ...(force ? {force_flags: ["FORCE"]} : {}),
             transport_type: state.transportType,
             link_list: state.linkList.map(l => ({
-              linknumber: l.linknumber,
+              linknumber: `${l.linknumber}`,
               link_priority: l.link_priority,
               mcastport: l.mcastport,
               ping_interval: l.ping_interval,

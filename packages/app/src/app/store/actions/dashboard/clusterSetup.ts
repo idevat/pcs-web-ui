@@ -7,7 +7,9 @@ type KnetLinkList = NonNullable<
   Extract<SetupParams["setupData"], {transport_type: "knet"}>["link_list"]
 >;
 
-type ExtendedKnetLink = KnetLinkList[number] & {
+// Is more practical work with linenumber property as number than string
+type ExtendedKnetLink = Omit<KnetLinkList[number], "linknumber"> & {
+  linknumber: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7;
   addresses: Record<string, string>;
 };
 
