@@ -14,6 +14,11 @@
 * ACL permissions can be deleted ([RHEL-104371])
 * Fixed backend communication in cluster setup with link list ([RHEL-132569])
 
+### Changed
+
+* Deprecations in wizards are visually different from info messages
+* Messages in wizards are visually lighter
+
 [RHEL-104371]: https://issues.redhat.com/browse/RHEL-104371
 [RHEL-84112]: https://issues.redhat.com/browse/RHEL-84112
 [RHEL-84113]: https://issues.redhat.com/browse/RHEL-84113

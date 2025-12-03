@@ -51,6 +51,59 @@ app.clusterSetup((req, res) => {
   shortcut.libStd({
     code: setupData.cluster_name,
     res,
+    errors: {
+      sctp: [
+        {
+          severity: {
+            level: "ERROR",
+            force_code: null,
+          },
+          message: {
+            message: "Some error for comparison",
+            code: "SOME_CODE",
+            payload: {},
+          },
+          context: null,
+        },
+        {
+          severity: {
+            level: "WARNING",
+            force_code: null,
+          },
+          message: {
+            message: "Some warning for comparison",
+            code: "SOME_CODE",
+            payload: {},
+          },
+          context: null,
+        },
+        {
+          severity: {
+            level: "DEPRECATION",
+            force_code: null,
+          },
+          message: {
+            message:
+              "Value 'sctp' of option transport is deprecated and might be removed in a future release, therefore it should not be used",
+            code: "SOME_CODE",
+            payload: {},
+          },
+          context: null,
+        },
+        {
+          severity: {
+            level: "INFO",
+            force_code: null,
+          },
+          message: {
+            message: "Some info for comparison",
+            code: "SOME_CODE",
+            payload: {},
+          },
+          context: null,
+        },
+      ],
+    },
   });
 });
 

@@ -1,5 +1,6 @@
 import type React from "react";
 import {Alert} from "@patternfly/react-core";
+import {ArchiveIcon} from "@patternfly/react-icons";
 
 import type {types} from "app/store";
 
@@ -15,6 +16,9 @@ const severityToAlertVariant = (
     case "WARNING":
       return "warning";
 
+    case "DEPRECATION":
+      return "custom";
+
     default:
       return "info";
   }
@@ -25,12 +29,14 @@ export const TaskLibReport = (props: {
   "data-test"?: string;
 }) => {
   const {report} = props;
+  const level = "severity" in report ? report.severity.level : report.level;
+  const isDeprecation = level === "DEPRECATION";
+
   return (
     <Alert
-      variant={severityToAlertVariant(
-        "severity" in report ? report.severity.level : report.level,
-      )}
+      variant={severityToAlertVariant(level)}
       isInline
+      isPlain
       title={
         "severity" in report
           ? `${report.message.message}${
@@ -39,6 +45,8 @@ export const TaskLibReport = (props: {
           : report.message
       }
       data-test={props["data-test"]}
+      customIcon={isDeprecation ? <ArchiveIcon /> : undefined}
+      className={isDeprecation ? "pf-m-deprecated-alert" : undefined}
     />
   );
 };
