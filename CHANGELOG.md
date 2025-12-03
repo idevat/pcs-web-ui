@@ -12,11 +12,13 @@
 ### Fixed
 
 * ACL permissions can be deleted ([RHEL-104371])
+* Fixed backend communication in cluster setup with link list ([RHEL-132569])
 
 [RHEL-104371]: https://issues.redhat.com/browse/RHEL-104371
 [RHEL-84112]: https://issues.redhat.com/browse/RHEL-84112
 [RHEL-84113]: https://issues.redhat.com/browse/RHEL-84113
 [RHEL-84135]: https://issues.redhat.com/browse/RHEL-84135
+[RHEL-132569]: https://issues.redhat.com/browse/RHEL-132569
 
 ## [0.1.23] - 2025-07-07
 
