@@ -93,6 +93,35 @@ accepts additional or replacement routes for test-specific needs. Cluster status
 is built using factory functions from `dev/responses/clusterStatus/tools`
 (`cluster()`, `primitive()`, `stonith()`, `group()`, `clone()`).
 
+### Routes and response builders
+
+A **route** is an object that pairs a URL pattern with request expectations
+(payload/body/query) and a response (`json`, `text`, `status`, or `handler`).
+Routes are defined in `packages/test/src/test/tools/mock/routes/`. At teardown,
+the mock framework validates that every registered route was actually called and
+that each request's payload matched what the route expected.
+
+Many routes wrap the pcs library API. These share a common base function
+`libCluster()` (in `routes/libCluster.ts`) that builds the URL from the command
+name, attaches the payload, and defaults to a success response. Individual route
+files (e.g. `resourceCreate.ts`, `resourceEnable.ts`) are thin wrappers that
+provide typed parameters for a specific command. Payload types are derived from
+the application's `LibClusterCommands` type, so route definitions stay in sync
+with the endpoint contract.
+
+Response bodies for library commands are built using helpers in
+`packages/dev/src/dev/responses/lib.ts`:
+
+- `responses.lib.success()` — success with `data: null` (default)
+- `responses.lib.success({data: …})` — success with command-specific data
+- `responses.lib.error([…reports])` — error with a report list
+- `responses.lib.report.error({…})` — builds a single error report (with
+  sensible defaults, customizable via deep merge)
+
+The response type is derived from the application's lib shape
+(`api.PayloadOf<typeof libCallCluster>`), so mock responses conform to the same
+structure the runtime code validates against.
+
 ## Locators and assertions
 
 Tests use the same data-test mark tree as the application (see
