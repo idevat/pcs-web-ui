@@ -168,6 +168,7 @@ EXTRA_DIST		= \
 			  src/app/store/actions/resourceAgent/agent.ts \
 			  src/app/store/actions/resourceAgent/index.ts \
 			  src/app/store/actions/resourceAgent/list.ts \
+			  src/app/store/actions/resource/cibSecrets.ts \
 			  src/app/store/actions/resource/ban.ts \
 			  src/app/store/actions/resource/clear.ts \
 			  src/app/store/actions/resource/create.ts \
@@ -183,6 +184,7 @@ EXTRA_DIST		= \
 			  src/app/store/actions/user.ts \
 			  src/app/store/index.ts \
 			  src/app/store/reducers/appReducer.ts \
+			  src/app/store/reducers/cluster/cibSecrets.ts \
 			  src/app/store/reducers/cluster/clusterStatus/apiToState/index.ts \
 			  src/app/store/reducers/cluster/clusterStatus/apiToState/issues.ts \
 			  src/app/store/reducers/cluster/clusterStatus/apiToState/nodeSbd.ts \
@@ -267,6 +269,7 @@ EXTRA_DIST		= \
 			  src/app/store/sagas/clusterStart.ts \
 			  src/app/store/sagas/clusterStop.ts \
 			  src/app/store/sagas/clusterStopUtils.ts \
+			  src/app/store/sagas/cibSecrets.ts \
 			  src/app/store/sagas/cluster.ts \
 			  src/app/store/sagas/common/apiCall.ts \
 			  src/app/store/sagas/common/api.ts \
@@ -477,6 +480,7 @@ EXTRA_DIST		= \
 			  src/app/view/cluster/resources/primitive/attributes/PrimitiveAttrsFormItemWarning.tsx \
 			  src/app/view/cluster/resources/primitive/attributes/PrimitiveAttrsForm.tsx \
 			  src/app/view/cluster/resources/primitive/attributes/PrimitiveAttrsView.tsx \
+			  src/app/view/cluster/resources/primitive/attributes/CibSecretsToggle.tsx \
 			  src/app/view/cluster/resources/primitive/index.ts \
 			  src/app/view/cluster/resources/primitive/PrimitiveDetail.tsx \
 			  src/app/view/cluster/resources/primitive/PrimitiveMeta.tsx \
@@ -531,6 +535,7 @@ EXTRA_DIST		= \
 			  src/app/view/cluster/share/nvpair/NVPairListPage.tsx \
 			  src/app/view/cluster/share/nvpair/NVPairToolbar.tsx \
 			  src/app/view/cluster/share/pcmkAgent/attributes/AttributeValueSecret.tsx \
+			  src/app/view/cluster/share/pcmkAgent/attributes/AttributeValueSecretRevealed.tsx \
 			  src/app/view/cluster/share/pcmkAgent/attributes/index.ts \
 			  src/app/view/cluster/share/pcmkAgent/attributes/PcmkAgentAttrName.tsx \
 			  src/app/view/cluster/share/pcmkAgent/attributes/PcmkAgentAttrsToolbar.tsx \
@@ -637,6 +642,7 @@ EXTRA_DIST		= \
 			  src/app/view/share/dataLoadingLabel/ClusterStatusLabel.tsx \
 			  src/app/view/share/dataLoadingLabel/ClusterStatusLoadingLabel.tsx \
 			  src/app/view/share/dataLoadingLabel/index.ts \
+			  src/app/view/share/dataLoadingLabel/ageLabel.ts \
 			  src/app/view/share/dataLoadingLabel/LoadingDataAgeLabel.tsx \
 			  src/app/view/share/dataLoadingLabel/LoadingDataLabel.tsx \
 			  src/app/view/share/dataLoadingLabel/LoadingLabel.tsx \

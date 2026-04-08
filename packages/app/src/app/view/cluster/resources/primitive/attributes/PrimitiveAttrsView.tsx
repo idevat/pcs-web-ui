@@ -1,10 +1,13 @@
 import React from "react";
+import {useSelector} from "react-redux";
 import {StackItem} from "@patternfly/react-core";
 
+import {selectors} from "app/store";
 import {testMarks} from "app/view/dataTest";
 import type {Primitive} from "app/view/cluster/types";
 import {
   AttributeValueSecret,
+  AttributeValueSecretRevealed,
   PcmkAgentAttrName,
   PcmkAgentAttrsToolbar,
   isCibSecret,
@@ -15,8 +18,9 @@ import {
   AttributeList,
   AttributeValue,
 } from "app/view/share/attributes";
-import {LoadedPcmkAgent} from "app/view/share";
+import {LoadedPcmkAgent, useDispatch} from "app/view/share";
 
+import {CibSecretsToggle} from "./CibSecretsToggle";
 import {PrimitiveAttrsForm} from "./PrimitiveAttrsForm";
 
 const {attributes} = testMarks.cluster.resources.currentPrimitive;
@@ -24,8 +28,44 @@ const {pair} = attributes;
 
 export const PrimitiveAttrsView = ({primitive}: {primitive: Primitive}) => {
   const {clusterName} = useLoadedCluster();
+  const dispatch = useDispatch();
   const [isEditing, setIsEditing] = React.useState(false);
   const {filterState, filterParameters} = PcmkAgentAttrsToolbar.useState();
+  const cibSecretsState = useSelector(
+    selectors.getCibSecrets(clusterName, primitive.id),
+  );
+
+  const hasCibSecrets = Object.values(primitive.instanceAttributes).some(attr =>
+    isCibSecret(attr.value),
+  );
+
+  const secretsToggle = hasCibSecrets ? (
+    <CibSecretsToggle
+      id={`secrets-toggle-${primitive.id}`}
+      cibSecretsState={cibSecretsState}
+      onChange={checked =>
+        dispatch(
+          checked
+            ? {
+                type: "RESOURCE.CIB_SECRETS.LOAD",
+                key: {clusterName},
+                payload: {
+                  resourceId: primitive.id,
+                  attributeNames: Object.entries(primitive.instanceAttributes)
+                    .filter(([, attr]) => isCibSecret(attr.value))
+                    .map(([name]) => name),
+                },
+              }
+            : {
+                type: "RESOURCE.CIB_SECRETS.CLEAR",
+                key: {clusterName},
+                payload: {resourceId: primitive.id},
+              },
+        )
+      }
+    />
+  ) : undefined;
+
   return (
     <LoadedPcmkAgent clusterName={clusterName} agentName={primitive.agentName}>
       {agent => {
@@ -60,6 +100,7 @@ export const PrimitiveAttrsView = ({primitive}: {primitive: Primitive}) => {
                   },
                 ]}
                 filterState={filterState}
+                additionalItems={secretsToggle}
               />
             </StackItem>
             <StackItem>
@@ -73,7 +114,18 @@ export const PrimitiveAttrsView = ({primitive}: {primitive: Primitive}) => {
                     {isCibSecret(
                       primitive.instanceAttributes[parameter.name]?.value,
                     ) ? (
-                      <AttributeValueSecret {...pair.secret.mark} />
+                      cibSecretsState?.loadStatus === "LOADED" &&
+                      cibSecretsState.secrets[parameter.name] ? (
+                        <AttributeValueSecretRevealed
+                          value={cibSecretsState.secrets[parameter.name]}
+                          {...pair.secretRevealed.mark}
+                        />
+                      ) : (
+                        <AttributeValueSecret
+                          {...pair.secret.mark}
+                          isLoading={cibSecretsState?.loadStatus === "LOADING"}
+                        />
+                      )
                     ) : (
                       <AttributeValue
                         value={
