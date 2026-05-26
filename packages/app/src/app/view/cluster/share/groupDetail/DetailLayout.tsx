@@ -16,7 +16,7 @@ export const DetailLayout = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Stack hasGutter className="pf-v5-u-p-md" {...rest}>
+    <Stack hasGutter className="pf-v6-u-p-md" {...rest}>
       <StackItem>
         <Level>
           <LevelItem>{caption}</LevelItem>

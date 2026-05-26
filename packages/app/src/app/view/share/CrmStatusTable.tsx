@@ -39,7 +39,7 @@ export const CrmStatusTable = ({
     return <EmptyStateNoItem title={emptyMessage} canAdd={false} />;
   }
   return (
-    <Table className={`pf-v5-c-table ${tableGridClassName}`}>
+    <Table className={`pf-v6-c-table ${tableGridClassName}`}>
       <Thead noWrap>
         <Tr>
           <Th data-label={rowObject.header}>{rowObject.header}</Th>

@@ -20,7 +20,7 @@ export const AttributeValue = ({
     return (
       <DescriptionListDescription
         data-test={dataTest}
-        style={{color: "var(--pf-v5-global--Color--200)"}}
+        style={{color: "var(--pf-t--global--text--color--subtle)"}}
       >
         <div>{defaultValue}</div>
         <div style={{fontStyle: "italic"}}>Default value</div>

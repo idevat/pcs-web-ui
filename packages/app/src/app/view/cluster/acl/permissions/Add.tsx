@@ -17,7 +17,7 @@ export const Add = (props: {
         ])
       }
       icon={<PlusCircleIcon />}
-      className="pf-v5-u-mt-sm"
+      className="pf-v6-u-mt-sm"
       data-test={props["data-test"]}
     >
       Add permission
