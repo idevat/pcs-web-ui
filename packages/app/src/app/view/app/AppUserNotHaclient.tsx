@@ -4,8 +4,6 @@ import {
   EmptyStateActions,
   EmptyStateBody,
   EmptyStateFooter,
-  EmptyStateHeader,
-  EmptyStateIcon,
   PageSection,
 } from "@patternfly/react-core";
 import {LockIcon} from "@patternfly/react-icons";
@@ -17,13 +15,13 @@ export const AppUserNotHaclient = () => {
     <Page>
       {_notifications => (
         <>
-          <PageSection variant="light">
-            <EmptyState style={{margin: "auto"}}>
-              <EmptyStateIcon icon={LockIcon} />
-              <EmptyStateHeader
-                titleText="Access permissions needed"
-                headingLevel="h1"
-              />
+          <PageSection>
+            <EmptyState
+              style={{margin: "auto"}}
+              icon={LockIcon}
+              titleText="Access permissions needed"
+              headingLevel="h1"
+            >
               <EmptyStateBody>
                 To access HA clusters management you need to be in the group
                 haclient or gain administrative access.

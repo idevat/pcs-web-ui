@@ -1,5 +1,5 @@
 import type React from "react";
-import {StackItem, TextContent, Title} from "@patternfly/react-core";
+import {Content, StackItem, Title} from "@patternfly/react-core";
 
 export const DetailViewSection = ({
   children,
@@ -11,9 +11,9 @@ export const DetailViewSection = ({
   return (
     <StackItem className="pf-v5-u-mb-xl">
       {caption && (
-        <TextContent>
+        <Content>
           <Title headingLevel={"h2"}>{caption}</Title>
-        </TextContent>
+        </Content>
       )}
       {children}
     </StackItem>

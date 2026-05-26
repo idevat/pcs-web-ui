@@ -14,7 +14,6 @@ export const ClusterToolbar = (props: {
 }) => {
   return (
     <PageSection
-      variant="light"
       style={{paddingTop: "0"}}
       data-test={props["data-test"]}
       hasShadowBottom

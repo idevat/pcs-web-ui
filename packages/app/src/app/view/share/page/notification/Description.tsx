@@ -1,4 +1,4 @@
-import {List, ListItem, Text} from "@patternfly/react-core";
+import {Content, List, ListItem} from "@patternfly/react-core";
 
 import type {Notification} from "./types";
 
@@ -7,7 +7,7 @@ export const Description = ({details}: {details: Notification["details"]}) => {
     <>
       {details && details.type === "LIST" && details.items.length > 0 && (
         <>
-          <Text component="p">{details.title}</Text>
+          <Content component="p">{details.title}</Content>
           <List>
             {details.items.map((item, i) => (
               <ListItem key={i}>{item}</ListItem>

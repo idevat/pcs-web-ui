@@ -1,10 +1,5 @@
 import type React from "react";
-import {
-  EmptyState,
-  EmptyStateBody,
-  EmptyStateIcon,
-  Title,
-} from "@patternfly/react-core";
+import {EmptyState, EmptyStateBody} from "@patternfly/react-core";
 import {PlusCircleIcon, SearchIcon} from "@patternfly/react-icons";
 
 export const EmptyStateNoItem = (props: {
@@ -14,11 +9,13 @@ export const EmptyStateNoItem = (props: {
   "data-test"?: string;
 }) => {
   return (
-    <EmptyState style={{margin: "auto"}} data-test={props["data-test"]}>
-      <EmptyStateIcon icon={props.canAdd ? PlusCircleIcon : SearchIcon} />
-      <Title size="lg" headingLevel="h3">
-        {props.title}
-      </Title>
+    <EmptyState
+      style={{margin: "auto"}}
+      data-test={props["data-test"]}
+      icon={props.canAdd ? PlusCircleIcon : SearchIcon}
+      titleText={props.title}
+      headingLevel="h3"
+    >
       {props.message && <EmptyStateBody>{props.message}</EmptyStateBody>}
     </EmptyState>
   );

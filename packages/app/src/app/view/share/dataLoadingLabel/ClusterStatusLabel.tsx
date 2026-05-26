@@ -15,7 +15,7 @@ const statusMap: Record<
     description: "all nodes are online and some nodes has quorum",
   },
   degraded: {
-    color: "gold",
+    color: "yellow",
     description: "some (not all) nodes are online and some nodes has quorum",
   },
   inoperative: {

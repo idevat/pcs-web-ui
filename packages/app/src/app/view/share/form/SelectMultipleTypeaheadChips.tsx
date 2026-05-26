@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  Chip,
-  ChipGroup,
+  Label,
+  LabelGroup,
   MenuToggle,
   type MenuToggleElement,
   Select,
@@ -88,19 +88,19 @@ export const SelectMultiTypeahead = (props: {
           isExpanded={isOpen}
           aria-controls={mkId("-listbox")}
         >
-          <ChipGroup aria-label="Current selections">
+          <LabelGroup aria-label="Current selections">
             {props.selected.map((selection, index) => (
-              <Chip
+              <Label
                 key={index}
-                onClick={event => {
+                onClose={event => {
                   event.stopPropagation();
                   onSelect(selection);
                 }}
               >
                 {selection}
-              </Chip>
+              </Label>
             ))}
-          </ChipGroup>
+          </LabelGroup>
         </TextInputGroupMain>
       </TextInputGroup>
     </MenuToggle>

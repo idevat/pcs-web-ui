@@ -1,14 +1,12 @@
 import type React from "react";
 import {Switch as PfSwitch} from "@patternfly/react-core";
 
-type Props = React.ComponentProps<typeof PfSwitch>;
-
 export const Switch = (props: {
   "aria-label"?: string;
   id?: string;
   isChecked?: boolean;
-  isDisabled?: Props["isDisabled"];
-  labelOff?: Props["labelOff"];
+  isDisabled?: boolean;
+  labelOff?: React.ReactNode;
   label?: React.ReactNode;
   onChange?: (checked: boolean) => void;
   "data-test"?: string;
@@ -21,8 +19,11 @@ export const Switch = (props: {
         id={props.id}
         isChecked={props.isChecked}
         isDisabled={props.isDisabled}
-        labelOff={props.labelOff}
-        label={props.label}
+        label={
+          !props.isChecked && props.labelOff !== undefined
+            ? props.labelOff
+            : props.label
+        }
         onChange={onChange ? (_event, checked) => onChange(checked) : onChange}
       />
     </span>

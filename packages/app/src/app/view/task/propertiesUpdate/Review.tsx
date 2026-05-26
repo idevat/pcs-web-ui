@@ -3,7 +3,7 @@ import {testMarks} from "app/view/dataTest";
 import {ReviewItem, ReviewList} from "app/view/share";
 
 import {useTask} from "./useTask";
-import {Stack, StackItem, Text, TextContent} from "@patternfly/react-core";
+import {Content, Stack, StackItem} from "@patternfly/react-core";
 
 const {review} = testMarks.task.propertiesUpdate;
 
@@ -23,9 +23,7 @@ export const Review = () => {
   return (
     <Stack hasGutter>
       <StackItem>
-        <TextContent>
-          <Text component="h2">Review cluster properties changes</Text>
-        </TextContent>
+        <Content component="h2">Review cluster properties changes</Content>
       </StackItem>
       <StackItem>
         <ReviewList>

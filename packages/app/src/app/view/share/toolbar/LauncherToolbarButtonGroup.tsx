@@ -13,7 +13,7 @@ export const LauncherToolbarButtonGroup = ({
 }) => {
   return (
     <LauncherGroup items={items}>
-      <ToolbarGroup variant="button-group">
+      <ToolbarGroup variant="action-group">
         {items.map((item, i) => (
           <ToolbarItem key={i}>
             <Launcher item={item}>

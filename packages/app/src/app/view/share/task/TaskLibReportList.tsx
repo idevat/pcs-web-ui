@@ -1,5 +1,5 @@
 import type React from "react";
-import {Text, TextContent} from "@patternfly/react-core";
+import {Content} from "@patternfly/react-core";
 
 import {TaskLibReport} from "./TaskLibReport";
 import type {TaskReport} from "./TaskReport";
@@ -15,9 +15,7 @@ export const TaskLibReportList = (props: {
 
   return (
     <div data-test={props["data-test"]}>
-      <TextContent>
-        <Text component="h3">Messages</Text>
-      </TextContent>
+      <Content component="h3">Messages</Content>
       {props.reports.map(
         props.renderReport ??
           ((report, i) => <TaskLibReport key={i} report={report} />),

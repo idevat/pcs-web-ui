@@ -45,6 +45,7 @@ export const getConfig = async ({
       ".jpg": "file",
       ".gif": "file",
       ".bmp": "file",
+      ".svg": "dataurl",
       ".woff": "file",
       ".woff2": "file",
     },

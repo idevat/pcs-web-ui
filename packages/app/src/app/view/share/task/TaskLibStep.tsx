@@ -1,5 +1,5 @@
 import type React from "react";
-import {Stack, StackItem, Text, TextContent} from "@patternfly/react-core";
+import {Content, Stack, StackItem} from "@patternfly/react-core";
 
 import {TaskLibReportList} from "./TaskLibReportList";
 
@@ -12,9 +12,7 @@ export const TaskLibStep = (props: {
   return (
     <Stack hasGutter data-test={props["data-test"]}>
       <StackItem>
-        <TextContent>
-          <Text component="h2">{props.title}</Text>
-        </TextContent>
+        <Content component="h2">{props.title}</Content>
       </StackItem>
       <StackItem>{props.children}</StackItem>
       <StackItem>

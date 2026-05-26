@@ -3,7 +3,6 @@ import {
   EmptyState,
   Progress,
   ProgressMeasureLocation,
-  Title,
 } from "@patternfly/react-core";
 
 export const TaskProgress = ({
@@ -14,10 +13,7 @@ export const TaskProgress = ({
   progressTitle?: string;
 }) => {
   return (
-    <EmptyState>
-      <Title headingLevel="h4" size="lg">
-        {title}
-      </Title>
+    <EmptyState titleText={title} headingLevel="h4">
       <Progress
         value={50}
         title={progressTitle}

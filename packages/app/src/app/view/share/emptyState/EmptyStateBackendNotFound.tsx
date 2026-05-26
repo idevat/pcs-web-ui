@@ -4,16 +4,15 @@ import {
   EmptyStateActions,
   EmptyStateBody,
   EmptyStateFooter,
-  EmptyStateHeader,
 } from "@patternfly/react-core";
 
 export const EmptyStateBackendNotFound = () => {
   return (
-    <EmptyState style={{margin: "auto"}}>
-      <EmptyStateHeader
-        titleText="Pcsd server (backend) not found."
-        headingLevel="h1"
-      />
+    <EmptyState
+      style={{margin: "auto"}}
+      titleText="Pcsd server (backend) not found."
+      headingLevel="h1"
+    >
       <EmptyStateBody>
         To use HA Cluster Management, make sure pcsd service is running.
       </EmptyStateBody>

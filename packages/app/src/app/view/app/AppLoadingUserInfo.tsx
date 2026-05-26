@@ -7,7 +7,7 @@ export const AppLoadingUserInfo = () => {
     <Page>
       {_notifications => (
         <>
-          <PageSection variant="light">
+          <PageSection>
             <EmptyStateSpinner title="Loading user info..." />
           </PageSection>
         </>

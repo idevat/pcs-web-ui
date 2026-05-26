@@ -33,7 +33,7 @@ export const Header = () => {
       <MastheadContent>
         <Toolbar isFullHeight isStatic>
           <ToolbarContent>
-            <ToolbarGroup align={{default: "alignRight"}}>
+            <ToolbarGroup align={{default: "alignEnd"}}>
               <ToolbarItem>
                 <UserMenu />
               </ToolbarItem>

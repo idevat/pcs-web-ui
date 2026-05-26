@@ -1,19 +1,14 @@
-import {
-  EmptyState,
-  EmptyStateBody,
-  EmptyStateIcon,
-  EmptyStateVariant,
-  Title,
-} from "@patternfly/react-core";
+import {EmptyState, EmptyStateBody} from "@patternfly/react-core";
 import {SearchIcon} from "@patternfly/react-icons";
 
 export const DrawerEmpty = () => {
   return (
-    <EmptyState variant={EmptyStateVariant.full}>
-      <EmptyStateIcon icon={SearchIcon} />
-      <Title headingLevel="h2" size="lg">
-        No alerts found
-      </Title>
+    <EmptyState
+      variant="full"
+      icon={SearchIcon}
+      titleText="No alerts found"
+      headingLevel="h2"
+    >
       <EmptyStateBody>There are currently no alerts.</EmptyStateBody>
     </EmptyState>
   );
