@@ -1,5 +1,4 @@
 import {NotificationBadge as PfNotificationBadge} from "@patternfly/react-core";
-import {AttentionBellIcon, BellIcon} from "@patternfly/react-icons";
 
 import {testMarks} from "app/view/dataTest";
 
@@ -16,8 +15,6 @@ export const Badge = ({
     n => !n.isRead && n.severity === "ERROR",
   ).length;
 
-  const icon = unreadErrorCount > 0 ? <AttentionBellIcon /> : <BellIcon />;
-
   return (
     <PfNotificationBadge
       variant={
@@ -32,7 +29,7 @@ export const Badge = ({
       aria-label="Notifications"
       {...testMarks.notifications.badge.mark}
     >
-      {icon} Notifications
+      Notifications
     </PfNotificationBadge>
   );
 };

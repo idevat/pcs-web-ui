@@ -51,7 +51,6 @@ export const ConstraintRow = ({
             aria-labelledby="check-action-item1 check-action-action1"
             id="check-action-action1"
             aria-label="Actions"
-            isPlainButtonAction
           >
             <Button
               onClick={() => setShowConfirm(true)}

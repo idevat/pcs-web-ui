@@ -1,11 +1,5 @@
 import type React from "react";
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Text,
-  TextContent,
-} from "@patternfly/react-core";
+import {Card, CardBody, CardHeader, Content} from "@patternfly/react-core";
 
 import {Table} from "app/view/share";
 
@@ -19,9 +13,7 @@ export const NodeServiceCard = ({
   return (
     <Card>
       <CardHeader>
-        <TextContent>
-          <Text component="h2"> {label}</Text>
-        </TextContent>
+        <Content component="h2"> {label}</Content>
       </CardHeader>
       <CardBody>
         <Table isCompact isBorderless>

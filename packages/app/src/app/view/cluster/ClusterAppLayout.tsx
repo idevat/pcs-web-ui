@@ -80,7 +80,7 @@ export const ClusterAppLayout = ({
     <Page>
       {notifications => (
         <>
-          <PageSection variant="light">
+          <PageSection>
             <Stack hasGutter>
               <PageToolbar
                 breadcrumbs={breadcrumbs}

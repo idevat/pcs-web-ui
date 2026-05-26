@@ -1,4 +1,4 @@
-import {Form, FormFieldGroup, Text, TextContent} from "@patternfly/react-core";
+import {Content, Form, FormFieldGroup} from "@patternfly/react-core";
 
 import {testMarks} from "app/view/dataTest";
 import {
@@ -30,9 +30,7 @@ export const TransportOptions = () => {
   return (
     <TaskLibStep title="Transport options" reports={allReports}>
       <Form>
-        <TextContent>
-          <Text component="h3">Knet options</Text>
-        </TextContent>
+        <Content component="h3">Knet options</Content>
         <FormFieldGroup {...options.mark}>
           <FormSelectSimple
             label="Ip version"
@@ -78,9 +76,7 @@ export const TransportOptions = () => {
           />
         </FormFieldGroup>
 
-        <TextContent>
-          <Text component="h3">Compression</Text>
-        </TextContent>
+        <Content component="h3">Compression</Content>
         <FormFieldGroup {...compression.mark}>
           <FormText
             label="Model"
@@ -109,9 +105,7 @@ export const TransportOptions = () => {
             {...compression.level.mark}
           />
         </FormFieldGroup>
-        <TextContent>
-          <Text component="h3">Crypto</Text>
-        </TextContent>
+        <Content component="h3">Crypto</Content>
         <FormFieldGroup {...crypto.mark}>
           <FormRadios
             label="Model"

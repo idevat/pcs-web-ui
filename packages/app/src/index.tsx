@@ -15,7 +15,6 @@ import "@patternfly/react-styles/css/components/Alert/alert-group.css";
 import "@patternfly/react-styles/css/components/Card/card.css";
 import "@patternfly/react-styles/css/components/Content/content.css";
 import "@patternfly/react-styles/css/components/Radio/radio.css";
-import "@patternfly/react-styles/css/components/Select/select.css";
 
 import {App} from "app/view";
 import * as colorScheme from "app/view/colorScheme";

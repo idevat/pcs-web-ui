@@ -55,7 +55,7 @@ export const ClusterPropertiesPage = () => {
   const launchDisable = useLauncherDisableClusterNotRunning();
   return (
     <>
-      <PageSection variant="light" style={{paddingTop: "0"}} hasShadowBottom>
+      <PageSection style={{paddingTop: "0"}} hasShadowBottom>
         <ToolbarFilterTextGroupPair
           textSearchId="cluster-properties-name"
           groupName="Importance"

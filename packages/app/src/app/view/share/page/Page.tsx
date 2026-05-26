@@ -26,7 +26,8 @@ export const Page = ({
   return (
     <>
       <PfPage
-        header={showMasthead && <Header />}
+        masthead={showMasthead ? <Header /> : undefined}
+        sidebar={null}
         notificationDrawer={
           <Notification.Drawer
             notificationList={notificationList}

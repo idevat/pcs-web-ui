@@ -35,7 +35,7 @@ export const AttributeValueSecret = ({
   ) {
     return (
       <DescriptionListDescription>
-        <Label color="gold" icon={<UnlockIcon />} isCompact>
+        <Label color="yellow" icon={<UnlockIcon />} isCompact>
           {revealed(cibSecretsState.secrets[parameterName])}
         </Label>
       </DescriptionListDescription>
@@ -44,7 +44,7 @@ export const AttributeValueSecret = ({
 
   return (
     <DescriptionListDescription>
-      <Label color="gold" icon={<LockIcon />} isCompact>
+      <Label color="yellow" icon={<LockIcon />} isCompact>
         {hidden("CIB secret")}
         {cibSecretsState?.loadStatus === "LOADING" && <Spinner size="sm" />}
       </Label>

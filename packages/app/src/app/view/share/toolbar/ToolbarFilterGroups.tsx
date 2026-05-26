@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  type ToolbarChip,
-  type ToolbarChipGroup,
+  type ToolbarLabel,
+  type ToolbarLabelGroup,
   ToolbarFilter,
 } from "@patternfly/react-core";
 
@@ -66,13 +66,13 @@ export const ToolbarFilterGroups = ({
   );
 
   const unselect = React.useCallback(
-    (_category: string | ToolbarChipGroup, chip: ToolbarChip | string) =>
-      setSelected({...options, [chip.toString()]: false}),
+    (_category: string | ToolbarLabelGroup, label: ToolbarLabel | string) =>
+      setSelected({...options, [label.toString()]: false}),
     [options, setSelected],
   );
 
   const unselectAll = React.useCallback(
-    (_category: string | ToolbarChipGroup) =>
+    (_category: string | ToolbarLabelGroup) =>
       setSelected(unselectAllOptions(options)),
     [options, setSelected],
   );
@@ -81,9 +81,9 @@ export const ToolbarFilterGroups = ({
 
   return (
     <ToolbarFilter
-      chips={groupList.filter(group => options[group])}
-      deleteChip={unselect}
-      deleteChipGroup={unselectAll}
+      labels={groupList.filter(group => options[group])}
+      deleteLabel={unselect}
+      deleteLabelGroup={unselectAll}
       categoryName={name}
     >
       <SelectCheckboxes

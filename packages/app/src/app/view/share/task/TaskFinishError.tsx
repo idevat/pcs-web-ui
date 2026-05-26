@@ -4,12 +4,8 @@ import {
   EmptyStateActions,
   EmptyStateBody,
   EmptyStateFooter,
-  EmptyStateIcon,
-  Title,
 } from "@patternfly/react-core";
 import {ExclamationCircleIcon} from "@patternfly/react-icons";
-
-import * as palette from "app/view/share/palette";
 
 export const TaskFinishError = (props: {
   title: React.ReactNode;
@@ -19,11 +15,13 @@ export const TaskFinishError = (props: {
   "data-test"?: string;
 }) => {
   return (
-    <EmptyState data-test={props["data-test"] ?? "task-error"}>
-      <EmptyStateIcon icon={ExclamationCircleIcon} color={palette.ERROR} />
-      <Title headingLevel="h4" size="lg">
-        {props.title}
-      </Title>
+    <EmptyState
+      data-test={props["data-test"] ?? "task-error"}
+      status="danger"
+      icon={ExclamationCircleIcon}
+      titleText={props.title}
+      headingLevel="h4"
+    >
       <EmptyStateBody>{props.message}</EmptyStateBody>
 
       <EmptyStateFooter>

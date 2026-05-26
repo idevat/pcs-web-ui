@@ -1,20 +1,16 @@
-import {
-  EmptyState,
-  EmptyStateBody,
-  EmptyStateIcon,
-  Title,
-} from "@patternfly/react-core";
+import {EmptyState, EmptyStateBody} from "@patternfly/react-core";
 import {CheckCircleIcon} from "@patternfly/react-icons";
-
-import * as palette from "app/view/share/palette";
 
 export const IssueListEmpty = () => {
   return (
-    <EmptyState variant="sm" style={{margin: "auto"}}>
-      <EmptyStateIcon icon={CheckCircleIcon} color={palette.SUCCESS} />
-      <Title size="lg" headingLevel="h3">
-        No issues
-      </Title>
+    <EmptyState
+      variant="sm"
+      style={{margin: "auto"}}
+      status="success"
+      icon={CheckCircleIcon}
+      titleText="No issues"
+      headingLevel="h3"
+    >
       <EmptyStateBody>Pcsd has not detected any issue here</EmptyStateBody>
     </EmptyState>
   );
