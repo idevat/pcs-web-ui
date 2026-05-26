@@ -25,7 +25,8 @@ export const LoginPage = () => {
       loginTitle="Please log in"
       textContent="HA Cluster Management"
       style={{
-        backgroundColor: "var(--pf-v5-global--BackgroundColor--dark-100)",
+        backgroundColor:
+          "var(--pf-t--global--background--color--inverse--default)",
       }}
       {...testMarks.login.mark}
     >

@@ -57,7 +57,7 @@ export const DashboardClusterMenu = ({clusterName}: {clusterName: string}) => {
             titleVariant: "warning",
             description: (
               <>
-                <div className="pf-v5-u-mb-sm">
+                <div className="pf-v6-u-mb-sm">
                   The cluster will be stopped and all its configuration files
                   will be deleted.
                 </div>

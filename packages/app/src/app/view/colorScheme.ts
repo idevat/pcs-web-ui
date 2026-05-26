@@ -8,9 +8,9 @@ const set = (forcedStyle?: string) => {
     style === "dark" ||
     (style === "auto" && window.matchMedia?.(mediaQuery).matches)
   ) {
-    document.documentElement.classList.add("pf-v5-theme-dark");
+    document.documentElement.classList.add("pf-v6-theme-dark");
   } else {
-    document.documentElement.classList.remove("pf-v5-theme-dark");
+    document.documentElement.classList.remove("pf-v6-theme-dark");
   }
 };
 

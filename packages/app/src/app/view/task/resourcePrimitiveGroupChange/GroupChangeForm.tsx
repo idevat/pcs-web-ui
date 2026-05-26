@@ -32,8 +32,8 @@ export const GroupChangeForm = () => {
     }
 
     return (
-      <Form className="pf-v5-u-mb-3xl">
-        <div className="pf-v5-u-mb-3xl">
+      <Form className="pf-v6-u-mb-3xl">
+        <div className="pf-v6-u-mb-3xl">
           <GroupSelect />
         </div>
       </Form>
@@ -41,7 +41,7 @@ export const GroupChangeForm = () => {
   }
 
   return (
-    <Form className="pf-v5-u-mb-3xl">
+    <Form className="pf-v6-u-mb-3xl">
       <Radio
         id="move-in-group"
         isChecked={action === "move-in-group"}
@@ -51,7 +51,7 @@ export const GroupChangeForm = () => {
         {...task.moveInGroup.mark}
       />
       {action === "move-in-group" && (
-        <div className="pf-v5-u-mb-md pf-v5-u-ml-lg">
+        <div className="pf-v6-u-mb-md pf-v6-u-ml-lg">
           <PositionSelect />
         </div>
       )}
@@ -76,7 +76,7 @@ export const GroupChangeForm = () => {
           />
 
           {action === "set-group" && (
-            <div className="pf-v5-u-mb-3xl pf-v5-u-ml-lg">
+            <div className="pf-v6-u-mb-3xl pf-v6-u-ml-lg">
               <GroupSelect />
             </div>
           )}

@@ -117,7 +117,7 @@ export const Configure = () => {
 
       <FormRadios
         label="Role"
-        className="pf-v5-u-mt-sm"
+        className="pf-v6-u-mt-sm"
         id="role"
         options={[
           "no limitation",
