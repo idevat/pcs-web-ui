@@ -1,5 +1,5 @@
-import React from "react";
-import {Modal} from "app/view/share/Modal";
+import type React from "react";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "app/view/share/Modal";
 
 import type {selectors} from "app/store";
 
@@ -7,7 +7,6 @@ import {TaskContextProvider} from "./TaskContext";
 import {TaskProgress} from "./TaskProgress";
 
 type TaskContextProps = React.ComponentProps<typeof TaskContextProvider>;
-type ModalProps = React.ComponentProps<typeof Modal>;
 
 export const TaskSimpleOldApi = (props: {
   close: TaskContextProps["value"]["close"];
@@ -22,7 +21,7 @@ export const TaskSimpleOldApi = (props: {
   success: React.ReactNode;
   fail: React.ReactNode;
 
-  title?: ModalProps["title"];
+  title?: React.ReactNode;
   "data-test"?: string;
 }) => {
   return (
@@ -35,22 +34,20 @@ export const TaskSimpleOldApi = (props: {
     >
       <Modal
         variant="medium"
-        title={props.title ?? props.taskLabel}
         isOpen
         onClose={props.close}
-        actions={[
-          <React.Fragment key="footer">
-            {props.response !== "" ? null : props.footer}
-          </React.Fragment>,
-        ]}
         data-test={props["data-test"]}
       >
-        {props.response === "" && props.configure}
-        {props.response === "sending" && (
-          <TaskProgress title={props.waitTitle} />
-        )}
-        {props.response === "ok" && props.success}
-        {props.response === "fail" && props.fail}
+        <ModalHeader title={props.title ?? props.taskLabel} />
+        <ModalBody>
+          {props.response === "" && props.configure}
+          {props.response === "sending" && (
+            <TaskProgress title={props.waitTitle} />
+          )}
+          {props.response === "ok" && props.success}
+          {props.response === "fail" && props.fail}
+        </ModalBody>
+        {props.response === "" && <ModalFooter>{props.footer}</ModalFooter>}
       </Modal>
     </TaskContextProvider>
   );

@@ -1,5 +1,5 @@
-import React from "react";
-import {Modal} from "app/view/share/Modal";
+import type React from "react";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "app/view/share/Modal";
 
 import type {selectors} from "app/store";
 
@@ -20,19 +20,14 @@ export const TaskSimple = ({
   children: React.ReactNode;
   task: Parameters<typeof selectors.getTask>[0];
   taskLabel: string;
-  title?: React.ComponentProps<typeof Modal>["title"];
+  title?: React.ReactNode;
 }) => {
   return (
     <TaskContextProvider value={{task, close, taskLabel}}>
-      <Modal
-        variant="medium"
-        title={title ?? taskLabel}
-        isOpen
-        onClose={close}
-        actions={[<React.Fragment key="footer">{footer}</React.Fragment>]}
-        data-test={dataTest}
-      >
-        {children}
+      <Modal variant="medium" isOpen onClose={close} data-test={dataTest}>
+        <ModalHeader title={title ?? taskLabel} />
+        <ModalBody>{children}</ModalBody>
+        <ModalFooter>{footer}</ModalFooter>
       </Modal>
     </TaskContextProvider>
   );
