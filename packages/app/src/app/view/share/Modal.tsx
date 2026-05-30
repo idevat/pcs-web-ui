@@ -1,6 +1,11 @@
 import type React from "react";
 import {forwardRef} from "react";
-import {Modal as PfModal} from "@patternfly/react-core";
+import {
+  Modal as PfModal,
+  ModalBody as PfModalBody,
+  ModalFooter as PfModalFooter,
+  ModalHeader as PfModalHeader,
+} from "@patternfly/react-core";
 
 type ModalProps = Omit<React.ComponentProps<typeof PfModal>, "ref">;
 
@@ -16,3 +21,7 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>((props, ref) => {
     />
   );
 });
+
+export const ModalHeader = PfModalHeader;
+export const ModalBody = PfModalBody;
+export const ModalFooter = PfModalFooter;

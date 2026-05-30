@@ -1,5 +1,5 @@
-import React from "react";
-import {Modal} from "app/view/share/Modal";
+import type React from "react";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "app/view/share/Modal";
 
 import type {selectors} from "app/store";
 
@@ -8,7 +8,6 @@ import {TaskContextProvider} from "./TaskContext";
 
 type TaskResultProps = React.ComponentProps<typeof TaskResultLib>;
 type TaskContextProps = React.ComponentProps<typeof TaskContextProvider>;
-type ModalProps = React.ComponentProps<typeof Modal>;
 
 export const TaskSimpleLib = (props: {
   close: TaskContextProps["value"]["close"];
@@ -24,7 +23,7 @@ export const TaskSimpleLib = (props: {
   communicationError: TaskResultProps["communicationError"];
   reports: TaskResultProps["reports"];
 
-  title?: ModalProps["title"];
+  title?: React.ReactNode;
   "data-test"?: string;
 }) => {
   return (
@@ -37,25 +36,25 @@ export const TaskSimpleLib = (props: {
     >
       <Modal
         variant="medium"
-        title={props.title ?? props.taskLabel}
         isOpen
         onClose={props.close}
-        actions={[
-          <React.Fragment key="footer">
-            {props.response !== "no-response" ? null : props.footer}
-          </React.Fragment>,
-        ]}
         data-test={props["data-test"]}
       >
-        {props.response === "no-response" && props.configure}
-        {props.response !== "no-response" && (
-          <TaskResultLib
-            response={props.response}
-            success={props.success}
-            unsuccess={props.unsuccess}
-            communicationError={props.communicationError}
-            reports={props.reports}
-          />
+        <ModalHeader title={props.title ?? props.taskLabel} />
+        <ModalBody>
+          {props.response === "no-response" && props.configure}
+          {props.response !== "no-response" && (
+            <TaskResultLib
+              response={props.response}
+              success={props.success}
+              unsuccess={props.unsuccess}
+              communicationError={props.communicationError}
+              reports={props.reports}
+            />
+          )}
+        </ModalBody>
+        {props.response === "no-response" && (
+          <ModalFooter>{props.footer}</ModalFooter>
         )}
       </Modal>
     </TaskContextProvider>
