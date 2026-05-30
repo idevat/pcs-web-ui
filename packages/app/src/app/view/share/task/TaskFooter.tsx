@@ -1,4 +1,9 @@
-import type React from "react";
+import React from "react";
+import {
+  ActionList,
+  ActionListGroup,
+  ActionListItem,
+} from "@patternfly/react-core";
 import {WizardFooter as PfWizardFooter} from "@patternfly/react-core/deprecated";
 
 export const TaskFooter = (
@@ -6,7 +11,15 @@ export const TaskFooter = (
 ) => {
   return (
     <div data-test={props["data-test"]}>
-      <PfWizardFooter>{props.children}</PfWizardFooter>
+      <PfWizardFooter>
+        <ActionList>
+          <ActionListGroup>
+            {React.Children.map(props.children, child =>
+              child ? <ActionListItem>{child}</ActionListItem> : null,
+            )}
+          </ActionListGroup>
+        </ActionList>
+      </PfWizardFooter>
     </div>
   );
 };
