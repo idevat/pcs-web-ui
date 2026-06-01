@@ -24,12 +24,14 @@ export const Badge = ({
             : "unread"
           : "read"
       }
-      count={unreadErrorCount}
       onClick={switchDrawer}
       aria-label="Notifications"
+      className="ha-c-notification-badge"
       {...testMarks.notifications.badge.mark}
     >
-      Notifications
+      {unreadErrorCount > 0
+        ? `Notifications ${unreadErrorCount}`
+        : "Notifications"}
     </PfNotificationBadge>
   );
 };
