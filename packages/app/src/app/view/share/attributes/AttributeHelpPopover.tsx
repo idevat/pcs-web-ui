@@ -1,7 +1,5 @@
 import type React from "react";
-import {QuestionCircleIcon} from "@patternfly/react-icons";
-import {Popover} from "@patternfly/react-core";
-import {t_global_icon_color_disabled as helpColor} from "@patternfly/react-tokens";
+import {FormGroupLabelHelp, Popover} from "@patternfly/react-core";
 
 type PopoverProps = React.ComponentProps<typeof Popover>;
 
@@ -24,7 +22,9 @@ export const AttributeHelpPopover = ({
           : null
       }
     >
-      <QuestionCircleIcon color={helpColor.var} />
+      <FormGroupLabelHelp
+        aria-label={typeof header === "string" ? header : ""}
+      />
     </Popover>
   );
 };
