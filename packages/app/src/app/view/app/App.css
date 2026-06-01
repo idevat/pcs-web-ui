@@ -236,3 +236,20 @@ body,
   --pf-v6-c-alert__title--Color: var(--pf-t--global--text--color--subtle);
   --pf-v6-c-alert__icon--Color: var(--pf-t--global--icon--color--subtle);
 }
+
+/* COMPOUND EXPAND TABLE: PF6 compound-expand button doesn't fill the full
+   cell height, making parts of the cell unclickable. Move padding from <td>
+   to the inner <button> so the clickable area covers the entire cell.
+   Variables are zeroed instead of `padding: 0` to beat PF6 selector
+   specificity (PF6 sets padding via these vars in a higher-specificity rule). */
+.pf-v6-c-table__compound-expansion-toggle {
+  height: 1px;
+  --pf-v6-c-table--cell--PaddingBlockStart: 0;
+  --pf-v6-c-table--cell--PaddingBlockEnd: 0;
+  --pf-v6-c-table--cell--PaddingInlineStart: 0;
+  --pf-v6-c-table--cell--PaddingInlineEnd: 0;
+}
+.pf-v6-c-table__compound-expansion-toggle .pf-v6-c-table__button {
+  height: 100%;
+  padding: var(--pf-v6-c-table--cell--Padding--base);
+}
