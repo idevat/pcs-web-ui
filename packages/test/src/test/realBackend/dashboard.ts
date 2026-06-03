@@ -101,10 +101,8 @@ const launchClusterItemAction = async (
   clusterName: string,
   search: (c: typeof dashboard.clusterList.cluster.actions) => Mark,
 ) => {
-  await click(
-    item.byName(dashboard.clusterList.cluster, clusterName, [
-      c => c.actions,
-      c => search(c.actions),
-    ]),
+  await dropdown(
+    item.byName(dashboard.clusterList.cluster, clusterName, c => c.actions),
+    search(dashboard.clusterList.cluster.actions),
   );
 };

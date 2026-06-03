@@ -328,6 +328,7 @@
           "locatorFor",
           "locatorRelativeFor",
           "click",
+          "dropdown",
           "isVisible",
           "isAbsent",
           "fill",

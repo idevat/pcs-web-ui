@@ -26,13 +26,15 @@ describe("ACL role remove permission task", () => {
     });
 
     await goToRole(roleId);
-    await click(
+    const {permission} = marks.cluster.acl.currentRole.detail.permissionList;
+    await dropdown(
       item.byKey(
-        marks.cluster.acl.currentRole.detail.permissionList.permission,
+        permission,
         p => p.label,
         permissionXpath1Label,
-        [p => p.actions, p => p.actions.remove],
+        p => p.actions,
       ),
+      permission.actions.remove,
     );
     await appConfirm.run(confirmTitle);
     await isVisible(marks.notifications.toast.success);

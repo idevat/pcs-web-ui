@@ -18,20 +18,6 @@ const fenceAgentName = "fence_xvm";
 const resourceAgentName = "systemd:crond";
 const resourceId = "A";
 
-const {clusterList} = marks.dashboard;
-
-export const launchClusterItemAction = async (
-  clusterName: string,
-  search: (c: typeof clusterList.cluster.actions) => Mark,
-) => {
-  await click(
-    item.byName(clusterList.cluster, clusterName, [
-      c => c.actions,
-      c => search(c.actions),
-    ]),
-  );
-};
-
 describe("Web ui on one node cluster", () => {
   it(
     "should succeed with essential features",

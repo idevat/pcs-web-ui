@@ -17,11 +17,9 @@ const {notifications} = marks;
 
 const launchClusterRemove = async () => {
   await goToDashboard();
-  await click(
-    item.byName(importedCluster, clusterName, [
-      c => c.actions,
-      c => c.actions.remove,
-    ]),
+  await dropdown(
+    item.byName(importedCluster, clusterName, c => c.actions),
+    importedCluster.actions.remove,
   );
   await click(marks.task.confirm.run);
 };

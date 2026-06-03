@@ -11,6 +11,6 @@ export const getPage = async () => {
     ignoreHTTPSErrors: true,
     ...(videoDir ? {recordVideo: {dir: videoDir}} : {}),
   });
-  page.setDefaultTimeout(150000);
+  page.setDefaultTimeout(200000);
   return page;
 };

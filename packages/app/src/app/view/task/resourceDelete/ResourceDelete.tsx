@@ -40,7 +40,9 @@ export const ResourceDelete = () => {
           <TaskButtonCancel {...task.cancel.mark} />
         </>
       }
-      configure={<>Deletes the specified resource</>}
+      configure={
+        <span {...task.description.mark}>Deletes the specified resource</span>
+      }
       success={<Success />}
       fail={
         <TaskFinishError

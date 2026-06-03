@@ -24,11 +24,9 @@ const {permission: permissionMark} = marks.cluster.permissions;
 
 const launchRemove = async (name: string) => {
   await goToPermissions();
-  await click(
-    item.byName(permissionMark, name, [
-      permission => permission.actions,
-      permission => permission.actions.remove,
-    ]),
+  await dropdown(
+    item.byName(permissionMark, name, p => p.actions),
+    permissionMark.actions.remove,
   );
 };
 const confirmTitle = (permissionName: string) =>
