@@ -13,7 +13,7 @@ const nodeName = process.env.PCSD_NODE_1 || "";
 const clusterName = "test-cluster";
 
 const fenceDeviceId = "F1";
-const fenceAgentName = "fence_xvm";
+const fenceAgentName = "fence_kdump";
 
 const resourceAgentName = "systemd:crond";
 const resourceId = "A";
