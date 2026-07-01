@@ -1,6 +1,7 @@
 # PCS version compatibility
 | pcs-web-ui | pcs |
 |------------|-----|
+|[0.1.25]|[0.12.3], [0.11.12]|
 |[0.1.24.1]|[v0.12.2], [v0.11.11]|
 |[0.1.24]|[v0.12.2], [v0.11.11]|
 |[0.1.23]|[v0.12.1], [v0.11.10]|
@@ -28,6 +29,7 @@
 |[0.1.2]|[v0.10.5], [v0.10.4]|
 |[0.1.1]|[v0.10.2], [v0.10.3]|
 
+[0.1.25]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.25
 [0.1.24.1]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.24.1
 [0.1.24]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.24
 [0.1.23]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.23
@@ -54,6 +56,8 @@
 [0.1.3]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.3
 [0.1.2]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.2
 [0.1.1]: https://github.com/ClusterLabs/pcs-web-ui/releases/tag/0.1.1
+[0.12.3]: https://github.com/ClusterLabs/pcs/releases/tag/0.12.3
+[0.11.12]: https://github.com/ClusterLabs/pcs/releases/tag/0.11.12
 [v0.12.2]: https://github.com/ClusterLabs/pcs/releases/tag/v0.12.2
 [v0.11.11]: https://github.com/ClusterLabs/pcs/releases/tag/v0.11.11
 [v0.12.1]: https://github.com/ClusterLabs/pcs/releases/tag/v0.12.1
