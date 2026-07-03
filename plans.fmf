@@ -144,7 +144,10 @@ prepare:
       - systemctl enable cockpit.socket --now
       - mkdir -p $TMT_PLAN_DATA/test-records
       - echo "NPM_CAFILE"
-      - curl --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
+      - |
+        if [ "$SKIP_NEXUS" != "true" ]; then
+          curl --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
+        fi
 
 # https://tmt.readthedocs.io/en/stable/spec/plans.html#execute
 execute:

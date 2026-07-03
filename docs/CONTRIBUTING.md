@@ -139,3 +139,10 @@ It is the CI equivalent of the checks described in
 Configuration files: `.gitlab-ci.yml` (GitLab CI job definition), `plans.fmf`
 (TMT plan — environment, preparation, execution), `tests.fmf` (individual TMT
 test steps).
+
+### Bypassing nexus proxy
+
+CI uses a nexus proxy repository for npm packages by default. When nexus is
+unavailable, set the `SKIP_NEXUS` variable to `true` in the GitLab CI pipeline
+configuration. This skips the nexus-specific `.npmrc` setup and fetches packages
+directly from the public npm registry.
