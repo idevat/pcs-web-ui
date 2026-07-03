@@ -17,7 +17,9 @@ path: /
       git fetch upstream ) || true &&
     ./autogen.sh &&
     ./configure &&
-    make init_registry NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE"
+    if [ "$SKIP_NEXUS" != "true" ]; then
+      make init_registry NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE"
+    fi
 
 /prevent_dev_mistakes:
   summary: Run make prevent_dev_mistakes
@@ -28,6 +30,10 @@ path: /
   summary: Run make distcheck
   tag: [distcheck]
   test: |
+    if [ "$SKIP_NEXUS" = "true" ]; then
+      NPM_REGISTRY=""
+      NPM_CAFILE=""
+    fi &&
     make distcheck NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE" &&
     rename --verbose .tar. ".${COMPOSE_NAME}.tar." pcs-web-ui*.tar.* &&
     mkdir -p dist &&
@@ -42,7 +48,11 @@ path: /
     - pcsd_integration_test_standalone
     - rpm_build
   test: |
-    make rpm/pcs-web-ui.spec 
+    if [ "$SKIP_NEXUS" = "true" ]; then
+      NPM_REGISTRY=""
+      NPM_CAFILE=""
+    fi &&
+    make rpm/pcs-web-ui.spec
       NPM_REGISTRY="$NPM_REGISTRY"
       NPM_CAFILE="$NPM_CAFILE" &&
     dnf builddep -y rpm/pcs-web-ui.spec &&

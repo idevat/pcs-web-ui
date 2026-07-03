@@ -28,7 +28,9 @@ task. For example: writing tests → read `docs/testing.md`; adding files → re
 `docs/architecture_store.md`; working with backend calls → read
 `docs/architecture_backend.md`; working with components or data-test marks →
 read `docs/architecture_view.md`; working with dev server or mock endpoints →
-read `docs/architecture_dev.md`.
+read `docs/architecture_dev.md`; working with CI pipeline, Testing Farm, or TMT
+configuration → read the "Continuous integration" section of
+`docs/CONTRIBUTING.md`.
 
 ## Code maturity
 
