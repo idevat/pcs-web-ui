@@ -140,6 +140,22 @@ Configuration files: `.gitlab-ci.yml` (GitLab CI job definition), `plans.fmf`
 (TMT plan — environment, preparation, execution), `tests.fmf` (individual TMT
 test steps).
 
+### Configuration flow
+
+Pipeline behavior is configured through variables at two levels:
+
+- **GitLab CI variables** (`.gitlab-ci.yml`) — variables with `options` are
+  selectable in the GitLab UI when triggering a pipeline. Selected variables are
+  passed to Testing Farm via `--environment` flags in the `tf_tests` job.
+
+- **TMT plan variables** (`plans.fmf`) — the `environment` block defines
+  variables available to all prepare steps and test scripts. The `adjust` block
+  can override variables based on TMT context (e.g. distro version). Variables
+  passed from GitLab CI via `--environment` are merged into this environment.
+
+Individual tests in `tests.fmf` can extend the environment with `environment+`
+to add test-specific variables (e.g. `PCS_WUI_TEST_TYPE` for integration tests).
+
 ### Bypassing nexus proxy
 
 CI uses a nexus proxy repository for npm packages by default. When nexus is
