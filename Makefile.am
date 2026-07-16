@@ -91,7 +91,7 @@ build:
 	if [ ! -d $(APP_BUILD)/node_modules ]; then \
 		echo "Npm registry:"; \
 		npm config get registry --prefix $(APP_BUILD);  \
-		npm ci --no-progress --prefix $(APP_BUILD); \
+		npm ci --no-audit --no-progress --prefix $(APP_BUILD); \
 	fi
 
 	${abs_top_builddir}/packages/app/.bin/build/main.sh \
@@ -110,9 +110,9 @@ test:
 	@cd ./packages/test && .bin/run-dev-tests.sh
 
 test-modules-prepare:
-	@cd ./packages/app && echo "Npm registry:" && npm config get registry && npm ci
-	@cd ./packages/test && echo "Npm registry:" && npm config get registry && npm ci
-	@cd ./packages/dev && echo "Npm registry:" && npm config get registry && npm ci
+	@cd ./packages/app && echo "Npm registry:" && npm config get registry && npm ci --no-audit
+	@cd ./packages/test && echo "Npm registry:" && npm config get registry && npm ci --no-audit
+	@cd ./packages/dev && echo "Npm registry:" && npm config get registry && npm ci --no-audit
 
 ci-cluster-test:
 	@cd ./packages/test && .bin/run-jest.sh -s -p src/test/realBackend
