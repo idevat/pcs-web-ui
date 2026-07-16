@@ -39,13 +39,16 @@ variables:
     description: Set to $TEST_FILTER to use a predefined test filter or specify
       a custom one.
     value: $TEST_FILTER
-  SKIP_NEXUS:
-    description: Skip nexus proxy repository. Set to "true" to fetch npm
-      packages directly from registry.npmjs.org
-    value: ""
-    options:
-      - ""
-      - "true"
+  NPM_REGISTRY:
+    description: >-
+      Npm proxy registry URL. Set to empty to use public registry.
+      Deleting this variable restores the default nexus URL.
+    value: "https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org"
+  NPM_CAFILE_URL:
+    description: >-
+      URL for npm registry CA certificate. Only needed with custom registry.
+      Deleting this variable restores the default certificate URL.
+    value: "https://certs.corp.redhat.com/certs/Current-IT-Root-CAs.pem"
   TFCLI_TMT_PREPARE: $ENABLE_FIPS
   TF_REQUEST_ID_FILE: /tmp/tf_request_id-$CI_JOB_ID
   TF_EXIT_CODE_FILE: /tmp/tf_exit_code-$CI_JOB_ID
@@ -160,7 +163,8 @@ tf_tests:
       --context initiator=gitlab-ci
       --secret CI_JOB_TOKEN="$CI_JOB_TOKEN"
       --environment PCS_ARTIFACTS_URL="$PCS_ARTIFACTS_URL"
-      --environment SKIP_NEXUS="$SKIP_NEXUS"
+      --environment NPM_REGISTRY="$NPM_REGISTRY"
+      --environment NPM_CAFILE_URL="$NPM_CAFILE_URL"
       --plan-filter "$TFCLI_PLAN_FILTER"
       --test-filter "$TFCLI_TEST_FILTER"
       --tmt-prepare "$TFCLI_TMT_PREPARE"
