@@ -144,7 +144,7 @@ prepare:
       - echo "NPM_CAFILE"
       - |
         if [ -n "$NPM_CAFILE_URL" ]; then
-          curl --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
+          curl --fail --location --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
         fi
 
 # https://tmt.readthedocs.io/en/stable/spec/plans.html#execute
