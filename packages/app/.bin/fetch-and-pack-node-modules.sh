@@ -35,7 +35,7 @@ fi
 echo "Npm registry:"
 npm config get registry --prefix="$temp_app_dir"
 echo Fetching node_modules:
-npm ci --prefix="$temp_app_dir"
+npm ci --no-audit --prefix="$temp_app_dir"
 # We need all supported achitectures of esbuild
 npm install --prefix="$temp_app_dir" esbuild --cpu=x64 --os=linux
 npm install --prefix="$temp_app_dir" esbuild --cpu=arm64 --os=linux

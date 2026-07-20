@@ -156,9 +156,15 @@ Pipeline behavior is configured through variables at two levels:
 Individual tests in `tests.fmf` can extend the environment with `environment+`
 to add test-specific variables (e.g. `PCS_WUI_TEST_TYPE` for integration tests).
 
-### Bypassing nexus proxy
+### Npm registry configuration
 
-CI uses a nexus proxy repository for npm packages by default. When nexus is
-unavailable, set the `SKIP_NEXUS` variable to `true` in the GitLab CI pipeline
-configuration. This skips the nexus-specific `.npmrc` setup and fetches packages
-directly from the public npm registry.
+CI uses a nexus proxy registry for npm packages by default (`NPM_REGISTRY` is
+set in `.gitlab-ci.yml`). To fetch packages directly from the public npm
+registry instead, set `NPM_REGISTRY` to an empty value in the GitLab CI
+pipeline configuration. Note that *deleting* the variable (trash icon) restores
+the default nexus URL defined in `.gitlab-ci.yml` — to disable the proxy, the
+value must be explicitly cleared.
+
+When `NPM_REGISTRY` is set, the CA certificate is downloaded automatically from
+the URL specified by `NPM_CAFILE_URL`. The same delete-vs-clear distinction
+applies to `NPM_CAFILE_URL`.

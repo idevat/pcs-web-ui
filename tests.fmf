@@ -17,24 +17,28 @@ path: /
       git fetch upstream ) || true &&
     ./autogen.sh &&
     ./configure &&
-    if [ "$SKIP_NEXUS" != "true" ]; then
-      make init_registry NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE"
+    if [ -n "$NPM_REGISTRY" ]; then
+      cafile_arg=""
+      if [ -n "$NPM_CAFILE_URL" ]; then
+        cafile_arg="NPM_CAFILE=$NPM_CAFILE"
+      fi
+      make init_registry NPM_REGISTRY="$NPM_REGISTRY" $cafile_arg
     fi
 
 /prevent_dev_mistakes:
   summary: Run make prevent_dev_mistakes
   tag: [prevent_dev_mistakes]
-  test: npm ci && make test-modules-prepare && make prevent_dev_mistakes
+  test: npm ci --no-audit && make test-modules-prepare && make prevent_dev_mistakes
 
 /distcheck:
   summary: Run make distcheck
   tag: [distcheck]
   test: |
-    if [ "$SKIP_NEXUS" = "true" ]; then
-      NPM_REGISTRY=""
-      NPM_CAFILE=""
-    fi &&
-    make distcheck NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE" &&
+    cafile_arg=""
+    if [ -n "$NPM_CAFILE_URL" ]; then
+      cafile_arg="NPM_CAFILE=$NPM_CAFILE"
+    fi
+    make distcheck NPM_REGISTRY="$NPM_REGISTRY" $cafile_arg &&
     rename --verbose .tar. ".${COMPOSE_NAME}.tar." pcs-web-ui*.tar.* &&
     mkdir -p dist &&
     cp -v pcs-web-ui*.tar.* dist/ &&
@@ -48,15 +52,15 @@ path: /
     - pcsd_integration_test_standalone
     - rpm_build
   test: |
-    if [ "$SKIP_NEXUS" = "true" ]; then
-      NPM_REGISTRY=""
-      NPM_CAFILE=""
-    fi &&
+    cafile_arg=""
+    if [ -n "$NPM_CAFILE_URL" ]; then
+      cafile_arg="NPM_CAFILE=$NPM_CAFILE"
+    fi
     make rpm/pcs-web-ui.spec
       NPM_REGISTRY="$NPM_REGISTRY"
-      NPM_CAFILE="$NPM_CAFILE" &&
+      $cafile_arg &&
     dnf builddep -y rpm/pcs-web-ui.spec &&
-    make rpm NPM_REGISTRY="$NPM_REGISTRY" NPM_CAFILE="$NPM_CAFILE" &&
+    make rpm NPM_REGISTRY="$NPM_REGISTRY" $cafile_arg &&
     mkdir -p rpms &&
     cp -v $(find rpm  -type f -name '*.rpm' -not -name '*.src.rpm') rpms/ &&
     cp -rv rpms "$TMT_PLAN_DATA" &&

@@ -14,9 +14,7 @@ environment:
   PCS_WUI_TESTS_HEADLESS: true
   PCS_WUI_TEST_TIMEOUT: 200000
   PCS_DESTROY_OPTION: --yes
-  NPM_REGISTRY: https://repository.engineering.redhat.com/nexus/repository/registry.npmjs.org
-  NPM_CAFILE_URL: https://certs.corp.redhat.com/certs/Current-IT-Root-CAs.pem
-  NPM_CAFILE: "$TMT_PLAN_DATA/Current-IT-Root-CAs.pem"
+  NPM_CAFILE: "$TMT_PLAN_DATA/npm-registry-ca.pem"
 
 adjust:
   - when: initiator != gitlab-ci
@@ -145,8 +143,8 @@ prepare:
       - mkdir -p $TMT_PLAN_DATA/test-records
       - echo "NPM_CAFILE"
       - |
-        if [ "$SKIP_NEXUS" != "true" ]; then
-          curl --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
+        if [ -n "$NPM_CAFILE_URL" ]; then
+          curl --fail --location --create-dirs -o "$NPM_CAFILE" "$NPM_CAFILE_URL"
         fi
 
 # https://tmt.readthedocs.io/en/stable/spec/plans.html#execute
