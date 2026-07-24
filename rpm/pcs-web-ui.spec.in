@@ -19,6 +19,9 @@ BuildRequires: make
 BuildRequires: npm
 
 Requires: pcs
+%if 0%{?rhel} >= 10
+Requires: pcs-standalone-webui-provider
+%endif
 
 %description
 pcs-web-ui is web interface for pcs, which is a corosync and pacemaker
@@ -31,10 +34,8 @@ License: GPL-2.0-only AND CC0-1.0
 
 BuildRequires: libappstream-glib
 
-Requires: cockpit
-%if 0%{?rhel} >= 10
-Requires: pcs-standalone-webui-provider
-%endif
+Requires: pcs
+Requires: cockpit-bridge
 
 %description -n %{pkg_cockpit_ha_cluster}
 Cockpit application for managing Pacemaker based clusters. Uses
