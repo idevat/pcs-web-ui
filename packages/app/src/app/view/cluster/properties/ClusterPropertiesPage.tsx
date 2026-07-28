@@ -55,7 +55,7 @@ export const ClusterPropertiesPage = () => {
   const launchDisable = useLauncherDisableClusterNotRunning();
   return (
     <>
-      <PageSection variant="light" style={{paddingTop: "0"}} hasShadowBottom>
+      <PageSection style={{paddingTop: "0"}} hasShadowBottom>
         <ToolbarFilterTextGroupPair
           textSearchId="cluster-properties-name"
           groupName="Importance"
@@ -92,7 +92,7 @@ export const ClusterPropertiesPage = () => {
                         isInline
                         variant="warning"
                         title="Cannot get cluster properties values from stopped cluster"
-                        className="pf-v5-u-mb-sm"
+                        className="pf-v6-u-mb-sm"
                       >
                         <ClusterStoppedInfo
                           startButton="link"

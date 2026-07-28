@@ -30,9 +30,9 @@ export const FormGroup = ({
   className?: FormGroupProps["className"];
   children?: React.ReactNode;
 }) => {
-  const labelIcon = popover
+  const labelHelp = popover
     ? {
-        labelIcon: (
+        labelHelp: (
           <AttributeHelpPopover
             header={popover.header}
             body={popover.body}
@@ -49,7 +49,7 @@ export const FormGroup = ({
       isRequired={isRequired}
       className={className}
       isInline={isInline}
-      {...labelIcon}
+      {...labelHelp}
     >
       {children}
       {validated === "error" && <FormError errorText={helperTextInvalid} />}

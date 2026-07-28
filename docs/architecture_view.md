@@ -72,6 +72,55 @@ type from the selector rather than writing it manually. Manual types risk gettin
 out of sync when the selector's shape changes. For cluster selectors use
 `ExtractClusterSelector<typeof selectorFn>`.
 
+## Styling
+
+The project has a single CSS file for all custom styles:
+`packages/app/src/app/view/app/App.css`. There are no per-component CSS files
+and no CSS-in-JS.
+
+### PatternFly CSS
+
+PatternFly React components automatically import their own CSS — each
+component's JS module imports a `.mjs` file from `@patternfly/react-styles`,
+which in turn imports the corresponding `.css`. esbuild picks this up and
+bundles the CSS with no manual action needed.
+
+Two things still require explicit imports in the application entry point
+(`src/index.tsx`):
+
+- **Base styles** — `@patternfly/react-core/dist/styles/base.css` (reset,
+  typography, scrollbar). No component imports this.
+- **Utility CSS** — classes like `pf-v6-u-mt-sm` or `pf-v6-u-h-100` are
+  applied via `className` strings, not through React components, so their CSS
+  is not auto-imported. Each utility category (spacing, sizing, flex) has its
+  own stylesheet in `@patternfly/react-styles/css/utilities/`.
+
+### Custom CSS classes
+
+Project-specific CSS classes use the `ha-` prefix (for "HA" — High
+Availability) to distinguish them from PatternFly classes. The naming follows
+PatternFly's BEM-like convention:
+
+- Components: `ha-c-*` (e.g. `ha-c-panel__tree-view`, `ha-c-tree-view`)
+- Modifiers: `ha-m-*` (e.g. `ha-m-full-height`, `ha-m-active`)
+- Utilities: `ha-u-*` (e.g. `ha-u-status-danger`)
+
+### Dark mode
+
+Dark theme works by toggling the `pf-v6-theme-dark` CSS class on the `<html>`
+element. The `colorScheme` module (`view/colorScheme.ts`) supports three modes:
+"auto" (follows OS preference via `prefers-color-scheme` media query), "dark",
+and "light". The user's choice is persisted in localStorage under a key provided
+by the adapter.
+
+In standalone mode, the application owns theme switching — a user menu toggle
+dispatches custom events for cross-tab synchronization. In Cockpit mode, Cockpit
+controls the theme and the adapter only listens, never dispatches.
+
+PatternFly handles dark mode automatically through its CSS custom properties.
+Custom CSS that needs dark mode awareness uses `:where(.pf-v6-theme-dark)` as a
+selector (zero specificity).
+
 ## Data-test system
 
 Source: `packages/app/src/app/view/dataTest/`
@@ -246,8 +295,8 @@ decides *how* to mark it.
 
 Most PatternFly components forward unknown props to their root DOM node, so
 passing `data-test` directly works fine. A few components, however, forward
-unknown props to an internal element instead — for example, PF5 `Switch`
-spreads extra props onto its hidden `<input>`, not the outer `<label>`.
+unknown props to an internal element instead — for example, `Switch` spreads
+extra props onto its hidden `<input>`, not the outer `<label>`.
 
 When this happens, wrap the component in a plain element that carries the mark:
 

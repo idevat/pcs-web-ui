@@ -12,6 +12,7 @@ declare global {
   var isVisible: typeof locatorTools.isVisible;
   var isAbsent: typeof locatorTools.isAbsent;
   var fill: typeof locatorTools.fill;
+  var dropdown: typeof locatorTools.dropdown;
   var select: typeof locatorTools.select;
   var appConfirm: typeof locatorTools.appConfirm;
   var radioGroup: typeof locatorTools.radioGroup;
@@ -51,6 +52,7 @@ export default async () => {
   global.item = locatorTools.item;
   global.click = locatorTools.click;
   global.fill = locatorTools.fill;
+  global.dropdown = locatorTools.dropdown;
   global.select = locatorTools.select;
   global.appConfirm = locatorTools.appConfirm;
   global.radioGroup = locatorTools.radioGroup;

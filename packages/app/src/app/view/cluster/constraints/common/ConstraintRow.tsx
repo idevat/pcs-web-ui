@@ -8,7 +8,7 @@ import {
   DataListItemRow,
   DataListToggle,
 } from "@patternfly/react-core";
-import {Modal} from "app/view/share";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "app/view/share";
 import {TrashIcon} from "@patternfly/react-icons";
 
 import type {Action} from "app/store";
@@ -51,7 +51,6 @@ export const ConstraintRow = ({
             aria-labelledby="check-action-item1 check-action-action1"
             id="check-action-action1"
             aria-label="Actions"
-            isPlainButtonAction
           >
             <Button
               onClick={() => setShowConfirm(true)}
@@ -62,12 +61,13 @@ export const ConstraintRow = ({
             {showConfirm && (
               <Modal
                 variant="small"
-                title="Delete constraint"
                 isOpen
                 onClose={() => setShowConfirm(false)}
-                actions={[
+              >
+                <ModalHeader title="Delete constraint" />
+                <ModalBody>{`Delete constraint "${id}"?`}</ModalBody>
+                <ModalFooter>
                   <Button
-                    key="confirm"
                     variant="primary"
                     onClick={() => {
                       dispatch(
@@ -81,17 +81,11 @@ export const ConstraintRow = ({
                     }}
                   >
                     Delete
-                  </Button>,
-                  <Button
-                    key="cancel"
-                    variant="link"
-                    onClick={() => setShowConfirm(false)}
-                  >
+                  </Button>
+                  <Button variant="link" onClick={() => setShowConfirm(false)}>
                     Cancel
-                  </Button>,
-                ]}
-              >
-                {`Delete constraint "${id}"?`}
+                  </Button>
+                </ModalFooter>
               </Modal>
             )}
           </DataListAction>

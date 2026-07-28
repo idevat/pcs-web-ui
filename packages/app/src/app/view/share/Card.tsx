@@ -15,7 +15,7 @@ export const Card = ({
   return (
     <PfCard
       isPlain={isPlain}
-      className="pf-v5-u-mb-sm pf-v5-u-mr-sm"
+      className="pf-v6-u-mb-sm pf-v6-u-mr-sm"
       {...(dataTest ? {"data-test": dataTest} : {})}
     >
       {title && <CardTitle>{title}</CardTitle>}

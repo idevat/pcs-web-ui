@@ -15,7 +15,7 @@ export const ClusterAppBreadcrumbs = ({
 }) => {
   const {navigate, resolveLocation} = useLocation();
   return (
-    <Breadcrumb {...breadcrumbs.mark} className="pf-v5-u-pb-xs">
+    <Breadcrumb {...breadcrumbs.mark} className="pf-v6-u-pb-xs">
       <BreadcrumbItem
         to={resolveLocation(location.dashboard)}
         component="a"
@@ -30,7 +30,7 @@ export const ClusterAppBreadcrumbs = ({
         Clusters
       </BreadcrumbItem>
       <BreadcrumbItem isActive>
-        <span className="pf-v5-u-mr-sm">
+        <span className="pf-v6-u-mr-sm">
           <strong {...breadcrumbs.clusterName.mark}>{clusterName}</strong>
         </span>
         {status}

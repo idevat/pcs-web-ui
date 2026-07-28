@@ -14,13 +14,13 @@ const mockWithDashboard = (routeList: mock.Route[] = []) => {
   });
 };
 
+const {cluster} = marks.dashboard.clusterList;
+
 const launchDestroy = async () => {
   await goToDashboard();
-  await click(
-    item.byName(marks.dashboard.clusterList.cluster, clusterName, [
-      c => c.actions,
-      c => c.actions.destroy,
-    ]),
+  await dropdown(
+    item.byName(cluster, clusterName, c => c.actions),
+    cluster.actions.destroy,
   );
 };
 

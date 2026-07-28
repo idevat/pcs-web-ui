@@ -83,20 +83,33 @@ export const fill = async (mark: Mark, value: string) => {
 
 // The following functions deal with some patternfly inaccessibilites
 
+// PF6 renders dropdown/select menus in a portal outside the trigger's DOM
+// subtree. Only one menu can be open at a time, so page-level locators are
+// unambiguous.
+
+export const dropdown = async (trigger: Mark | Locator, action: Mark) => {
+  await (isLocator(trigger) ? trigger : locatorFor(trigger)).click();
+  await locatorFor(action).click();
+};
+
 export const select = async (
   mark: Mark,
   value: string | undefined,
   nth = 0,
 ) => {
   await click(mark);
-  await locatorFor(mark).locator(`//*[text()="${value}"]`).nth(nth).click();
+  await locatorFor(mark)
+    .locator("xpath=/ancestor::body")
+    .getByRole("option", {name: value, exact: true})
+    .nth(nth)
+    .click();
 };
 
 const appConfirmTitleIs = async (title: string) =>
   await isVisible(
     marks.task.confirm.locator.locator(
       "xpath=/parent::*//*[" +
-        "contains(@class, 'pf-v5-c-modal-box__title-text')" +
+        "contains(@class, 'pf-v6-c-modal-box__title-text')" +
         ` and text()='${title}'` +
         "]",
     ),
@@ -117,7 +130,7 @@ export const appConfirm = {
 
 export const taskTitle = (taskMark: Mark) =>
   locatorFor(taskMark).locator(
-    "//*[contains(@class, 'pf-v5-c-wizard__title-text')]",
+    "//*[contains(@class, 'pf-v6-c-wizard__title-text')]",
   );
 
 export const radioGroup = async (mark: Mark, value: string) => {
@@ -127,7 +140,7 @@ export const radioGroup = async (mark: Mark, value: string) => {
 export const fieldError = (mark: Mark) =>
   locatorFor(mark).locator(
     "xpath=/parent::*/descendant-or-self::*[" +
-      'contains(@class, "pf-v5-m-error")' +
+      'contains(@class, "pf-v6-m-error")' +
       ' or contains(@class, "pf-m-error")' +
       "]",
   );

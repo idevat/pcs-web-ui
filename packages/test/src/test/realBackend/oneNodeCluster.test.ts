@@ -13,24 +13,10 @@ const nodeName = process.env.PCSD_NODE_1 || "";
 const clusterName = "test-cluster";
 
 const fenceDeviceId = "F1";
-const fenceAgentName = "fence_xvm";
+const fenceAgentName = "fence_kdump";
 
 const resourceAgentName = "systemd:crond";
 const resourceId = "A";
-
-const {clusterList} = marks.dashboard;
-
-export const launchClusterItemAction = async (
-  clusterName: string,
-  search: (c: typeof clusterList.cluster.actions) => Mark,
-) => {
-  await click(
-    item.byName(clusterList.cluster, clusterName, [
-      c => c.actions,
-      c => search(c.actions),
-    ]),
-  );
-};
 
 describe("Web ui on one node cluster", () => {
   it(

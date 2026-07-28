@@ -79,7 +79,7 @@ export const NodesAuthForm = (props: {
                 Use one password for all nodes
               </StackItem>
             )}
-            <table className="pf-v5-c-table pf-v5-m-compact pf-v5-m-grid-md pf-v5-m-no-border-rows">
+            <table className="pf-v6-c-table pf-v6-m-compact pf-v6-m-grid-md pf-v6-m-no-border-rows">
               <thead>
                 <tr>
                   <th>Node</th>
@@ -100,7 +100,7 @@ export const NodesAuthForm = (props: {
                       </td>
                       <td>{props.inputPassword(nodeName, passwordId, i)}</td>
                       <td>{props.inputAddress(nodeName, addressId, i)}</td>
-                      <td className="pf-v5-m-width-10">
+                      <td className="pf-v6-m-width-10">
                         {props.inputPort(nodeName, portId, i)}
                       </td>
                     </tr>

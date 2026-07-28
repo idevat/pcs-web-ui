@@ -1,7 +1,7 @@
 import React from "react";
 import {Popover} from "@patternfly/react-core";
 import {QuestionCircleIcon} from "@patternfly/react-icons";
-import {global_disabled_color_100 as helpColor} from "@patternfly/react-tokens";
+import {t_global_icon_color_disabled as helpColor} from "@patternfly/react-tokens";
 
 import {age, ageLabel} from "app/view/share";
 

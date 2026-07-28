@@ -88,8 +88,9 @@ test file without imports:
 - **`marks`** — typed data-test locator tree (mirrors the application's mark
   structure)
 - **`item`** — utilities for finding items in lists by name, key, id, or index
-- **DOM interaction**: `click`, `fill`, `select`, `isVisible`, `isAbsent`,
-  `radioGroup`, `appConfirm`, `fieldError`, `locatorFor`, `locatorRelativeFor`
+- **DOM interaction**: `click`, `fill`, `select`, `dropdown`, `isVisible`,
+  `isAbsent`, `radioGroup`, `appConfirm`, `fieldError`, `locatorFor`,
+  `locatorRelativeFor`
 - **Navigation**: `goToDashboard`, `goToCluster`
 - **`login`** — authentication helper
 
@@ -169,13 +170,25 @@ Key patterns:
 - **`assert.nvPairIs(pairMark, name, value)`** — shorthand built on
   `item.byName` that finds a pair by name and checks its value
 
+## Techniques
+
+### Locating dropdown and select menu items
+
+*When: a test needs to interact with a PatternFly dropdown or select menu.*
+
+PatternFly 6 renders dropdown and select menus in a portal outside the
+trigger's DOM subtree. This means locators scoped to the trigger element will
+not find menu items. Use the `dropdown` and `select` globals which handle this
+automatically — `select` escapes to `<body>` before searching, and `dropdown`
+uses page-level locators for the action mark.
+
 ## Troubleshooting
 
 ### `click(mark)` or `isVisible(mark)` times out on a PatternFly component
 
 Playwright waits for the target element to be visible before clicking. If a
 PatternFly component forwards the `data-test` attribute to a hidden internal
-element (e.g. PF5 `Switch` puts it on its visually-hidden `<input>`), the
+element (e.g. `Switch` puts it on its visually-hidden `<input>`), the
 locator will never resolve. The fix is to wrap the component in a plain element
 carrying the mark — see [Marking PatternFly
 components](architecture_view.md#marking-patternfly-components).

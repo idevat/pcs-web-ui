@@ -57,6 +57,7 @@ export const InstanceAttrsForm = () => {
                 <Alert
                   variant="info"
                   isInline
+                  className="pf-v6-u-mb-sm"
                   title={
                     "No instance attribute is required." +
                     " Other available attributes can be added."

@@ -1,10 +1,10 @@
 import {
-  global_danger_color_100 as dangerColor,
-  global_danger_color_100 as dangerColorLight,
-  global_success_color_200 as successColor,
-  global_disabled_color_100 as unknownColor,
-  global_warning_color_200 as warningColor,
-  global_warning_color_100 as warningColorLight,
+  t_global_icon_color_status_danger_default as dangerColor,
+  t_global_icon_color_status_danger_default as dangerColorLight,
+  t_global_icon_color_status_success_default as successColor,
+  t_global_icon_color_disabled as unknownColor,
+  t_global_icon_color_status_warning_default as warningColor,
+  t_global_text_color_status_warning_default as warningColorLight,
 } from "@patternfly/react-tokens";
 
 export const SUCCESS = successColor.var;

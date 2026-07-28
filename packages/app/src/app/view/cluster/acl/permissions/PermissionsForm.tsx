@@ -25,25 +25,25 @@ export const PermissionsForm = (props: {
         <table>
           <thead>
             <tr>
-              <th className="pf-v5-u-pb-md">Scope Type</th>
-              <th className="pf-v5-u-pb-md">Scope</th>
-              <th className="pf-v5-u-pb-md">Kind</th>
+              <th className="pf-v6-u-pb-md">Scope Type</th>
+              <th className="pf-v6-u-pb-md">Scope</th>
+              <th className="pf-v6-u-pb-md">Kind</th>
               <th />
             </tr>
           </thead>
           <tbody>
             {props.permissionList.map((permission, i) => (
               <tr key={i}>
-                <td className="pf-v5-u-pr-sm pf-v5-u-pb-sm">
+                <td className="pf-v6-u-pr-sm pf-v6-u-pb-sm">
                   {props.scopeType(permission, i)}
                 </td>
-                <td className="pf-v5-u-pr-md pf-v5-u-pb-sm">
+                <td className="pf-v6-u-pr-md pf-v6-u-pb-sm">
                   {props.scope(permission, i)}
                 </td>
-                <td className="pf-v5-u-pr-md pf-v5-u-pb-sm">
+                <td className="pf-v6-u-pr-md pf-v6-u-pb-sm">
                   {props.kind(permission, i)}
                 </td>
-                <td className="pf-v5-u-pb-sm">{props.remove(permission, i)}</td>
+                <td className="pf-v6-u-pb-sm">{props.remove(permission, i)}</td>
               </tr>
             ))}
           </tbody>

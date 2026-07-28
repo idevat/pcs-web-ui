@@ -25,7 +25,7 @@ export const DataListItemWithMenu = (props: {
           dataListCells={<DataListCell>{props.children}</DataListCell>}
         />
         <DataListAction
-          className="pf-v5-u-pr-md"
+          className="pf-v6-u-pr-md"
           id={`${listName}-${props.item}-menu`}
           aria-labelledby={`${listName}-${props.item}-menu`}
           aria-label={`${tools.labelize(listName)} ${props.item} menu`}

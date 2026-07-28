@@ -28,7 +28,7 @@ export const GroupSelect = () => {
         }
         selected={groupId}
         offeredOptions={candidateGroupsIds}
-        className="pf-v5-u-mb-xl"
+        className="pf-v6-u-mb-xl"
         {...targetGroup.mark}
       />
 

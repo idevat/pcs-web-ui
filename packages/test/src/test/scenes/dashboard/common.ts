@@ -4,7 +4,8 @@ export const launchClusterItemAction = async (
   clusterName: string,
   search: (c: typeof cluster.actions) => Mark,
 ) => {
-  await click(
-    item.byName(cluster, clusterName, [c => c.actions, c => search(c.actions)]),
+  await dropdown(
+    item.byName(cluster, clusterName, c => c.actions),
+    search(cluster.actions),
   );
 };

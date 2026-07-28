@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
 import {Button} from "@patternfly/react-core";
-import {Modal} from "app/view/share/Modal";
+import {Modal, ModalBody, ModalFooter, ModalHeader} from "app/view/share/Modal";
 
 import {testMarks} from "app/view/dataTest";
 import {tools} from "app/store";
@@ -22,15 +22,16 @@ export const LaunchedConfirm = ({
   const {confirm} = item;
   const run = "run" in confirm ? confirm.run : () => dispatch(confirm.action);
   return (
-    <Modal
-      variant="small"
-      title={confirm.title}
-      titleIconVariant={confirm.titleVariant}
-      isOpen
-      onClose={closeConfirm}
-      actions={[
+    <Modal variant="small" isOpen onClose={closeConfirm} {...task.confirm.mark}>
+      <ModalHeader
+        title={confirm.title}
+        titleIconVariant={confirm.titleVariant}
+      />
+      <ModalBody>
+        <span {...task.confirm.description.mark}>{confirm.description}</span>
+      </ModalBody>
+      <ModalFooter>
         <Button
-          key="confirm"
           variant="primary"
           onClick={() => {
             run();
@@ -39,19 +40,15 @@ export const LaunchedConfirm = ({
           {...task.confirm.run.mark}
         >
           {labelize(confirm.label ?? item.label ?? item.name)}
-        </Button>,
+        </Button>
         <Button
-          key="cancel"
           variant="link"
           onClick={closeConfirm}
           {...task.confirm.cancel.mark}
         >
           Cancel
-        </Button>,
-      ]}
-      {...task.confirm.mark}
-    >
-      <span {...task.confirm.description.mark}>{confirm.description}</span>
+        </Button>
+      </ModalFooter>
     </Modal>
   );
 };

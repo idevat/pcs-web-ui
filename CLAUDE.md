@@ -57,8 +57,8 @@ Use `npx biome lint --error-on-warnings ./`, `npx biome format ./`, and
   (sections "Two kinds of components" and "Data-test system") when working with
   `data-test` marks.
 
-- **PatternFly version.** The project uses PatternFly 5. When choosing
-  components, consult the PatternFly 5 documentation and design guidelines.
+- **PatternFly version.** The project uses PatternFly 6. When choosing
+  components, consult the PatternFly 6 documentation and design guidelines.
 
 ## Documentation style
 
