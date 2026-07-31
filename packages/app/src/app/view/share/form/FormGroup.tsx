@@ -4,6 +4,7 @@ import {FormGroup as PfFormGroup} from "@patternfly/react-core";
 import {AttributeHelpPopover} from "app/view/share/attributes";
 
 import {FormError} from "./FormError";
+import {FormWarning} from "./FormWarning";
 
 type FormGroupProps = React.ComponentProps<typeof PfFormGroup>;
 export const FormGroup = ({
@@ -15,6 +16,7 @@ export const FormGroup = ({
   isInline,
   isValid = true,
   showValidationErrors = false,
+  helperTextWarning,
   popover,
   className,
 }: {
@@ -26,6 +28,7 @@ export const FormGroup = ({
   isInline?: FormGroupProps["isInline"];
   isValid?: boolean;
   showValidationErrors?: boolean;
+  helperTextWarning?: React.ReactNode;
   popover?: React.ComponentProps<typeof AttributeHelpPopover>;
   className?: FormGroupProps["className"];
   children?: React.ReactNode;
@@ -53,6 +56,7 @@ export const FormGroup = ({
     >
       {children}
       {validated === "error" && <FormError errorText={helperTextInvalid} />}
+      {helperTextWarning && <FormWarning warningText={helperTextWarning} />}
     </PfFormGroup>
   );
 };

@@ -663,6 +663,7 @@ EXTRA_DIST		= \
 			  src/app/view/share/form/FormSelectSimple.tsx \
 			  src/app/view/share/form/FormSwitch.tsx \
 			  src/app/view/share/form/FormText.tsx \
+			  src/app/view/share/form/FormWarning.tsx \
 			  src/app/view/share/form/index.ts \
 			  src/app/view/share/form/Radio.tsx \
 			  src/app/view/share/form/SelectCheckboxes.tsx \

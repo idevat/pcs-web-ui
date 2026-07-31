@@ -138,6 +138,11 @@ export const TransportOptions = () => {
                 >,
               })
             }
+            helperTextWarning={
+              cryptoOptions.hash === "none"
+                ? "Disabling hash is deprecated. This option will be removed in a future version."
+                : undefined
+            }
             {...crypto.hash.mark}
           />
 
@@ -153,6 +158,11 @@ export const TransportOptions = () => {
                   typeof cryptoOptions.cipher
                 >,
               })
+            }
+            helperTextWarning={
+              cryptoOptions.cipher === "none"
+                ? "Disabling cipher is deprecated. This option will be removed in a future version."
+                : undefined
             }
             {...crypto.cipher.mark}
           />

@@ -131,20 +131,32 @@ export const crypto: Partial<Record<keyof CryptoOptions, Help>> = {
   hash: {
     header: "Hash",
     body: (
-      <p>
-        This specifies which HMAC authentication should be used to authenticate
-        all messages.
-      </p>
+      <>
+        <p>
+          This specifies which HMAC authentication should be used to
+          authenticate all messages.
+        </p>
+        <p>
+          Setting this to "none" is deprecated and will be removed in a future
+          version.
+        </p>
+      </>
     ),
     defaultValue: "sha256",
   },
   cipher: {
     header: "Cipher",
     body: (
-      <p>
-        This specifies which cipher should be used to encrypt all messages.
-        Enabling Cipher requires also enabling of Hash.
-      </p>
+      <>
+        <p>
+          This specifies which cipher should be used to encrypt all messages.
+          Enabling Cipher requires also enabling of Hash.
+        </p>
+        <p>
+          Setting this to "none" is deprecated and will be removed in a future
+          version.
+        </p>
+      </>
     ),
     defaultValue: "aes256",
   },

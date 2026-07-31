@@ -17,6 +17,7 @@ export const FormSelectSimple = <OPT extends string>(props: {
   isRequired?: FormGroupProps["isRequired"];
   placeholderText?: string;
   helperTextInvalid?: React.ReactNode;
+  helperTextWarning?: React.ReactNode;
   isValid?: boolean;
   showValidationErrors?: boolean;
 }) => {
@@ -33,6 +34,7 @@ export const FormSelectSimple = <OPT extends string>(props: {
     placeholderText = undefined,
     popover = undefined,
     helperTextInvalid = null,
+    helperTextWarning,
   } = props;
   return (
     <FormGroup
@@ -42,6 +44,7 @@ export const FormSelectSimple = <OPT extends string>(props: {
       className={className}
       isRequired={isRequired}
       helperTextInvalid={helperTextInvalid}
+      helperTextWarning={helperTextWarning}
       isValid={isValid}
       showValidationErrors={showValidationErrors}
     >
