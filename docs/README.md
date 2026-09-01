@@ -22,6 +22,8 @@ structure, design intent, and implementation choices.
    infrastructure, locators and assertions
 5. [dependencies.md](dependencies.md) — dependency strategy, history, and
    package-lock file locations
+6. [cve-investigation.md](cve-investigation.md) — how to determine whether a
+   CVE actually affects the production application
 
 ## Documentation philosophy
 
