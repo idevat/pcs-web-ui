@@ -1,3 +1,5 @@
+import {CLUSTER_KEY} from "app/store/clusterStorageKey";
+
 import type {ClusterStorageItem, Root} from "../types";
 
 import {
@@ -56,9 +58,9 @@ type ClusterInfo =
     };
 
 export const getClusterStoreInfo =
-  (clusterName: string) =>
+  (_clusterName: string) =>
   (state: Root): ClusterInfo => {
-    const clusterStoreItem = state.clusterStorage[clusterName];
+    const clusterStoreItem = state.clusterStorage[CLUSTER_KEY];
     if (clusterStoreItem === undefined) {
       // A very short init period before first cluster request action is run.
       return {
@@ -94,17 +96,17 @@ type PcmkAgent =
   ClusterStorageItem["pcmkAgents"][keyof ClusterStorageItem["pcmkAgents"]];
 
 export const getResourceAgentMap =
-  (clusterName: string) =>
+  (_clusterName: string) =>
   (state: Root): ClusterStorageItem["resourceAgentMap"]["data"] =>
-    state.clusterStorage[clusterName]?.resourceAgentMap.data ?? null;
+    state.clusterStorage[CLUSTER_KEY]?.resourceAgentMap.data ?? null;
 
 export const getFenceAgentList =
-  (clusterName: string) =>
+  (_clusterName: string) =>
   (state: Root): ClusterStorageItem["fenceAgentList"]["data"] =>
-    state.clusterStorage[clusterName]?.fenceAgentList.data ?? null;
+    state.clusterStorage[CLUSTER_KEY]?.fenceAgentList.data ?? null;
 
 export const getAgentInfo =
-  (clusterName: string, agentName: string) =>
+  (_clusterName: string, agentName: string) =>
   (
     state: Root,
   ): {
@@ -112,7 +114,7 @@ export const getAgentInfo =
     isAgentLoaded: boolean;
     isAgentLoadFailed: boolean;
   } | null => {
-    const clusterStoreItem = state.clusterStorage[clusterName];
+    const clusterStoreItem = state.clusterStorage[CLUSTER_KEY];
     if (clusterStoreItem === undefined) {
       return null;
     }

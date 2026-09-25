@@ -1,5 +1,5 @@
 import {clusterStatus} from "app/backend";
-import type {Action} from "app/store/actions";
+import {CLUSTER_KEY} from "app/store/clusterStorageKey";
 import {getClusterStoreInfo} from "app/store/selectors";
 
 import {api, dataLoad, fork, put, select} from "./common";
@@ -51,24 +51,16 @@ export const clusterDataSyncOptions: Parameters<typeof dataLoad.manage>[0] = {
   REFRESH,
   SUCCESS: "CLUSTER.STATUS.FETCH.OK",
   FAIL: "CLUSTER.STATUS.FETCH.FAIL",
-  refresh: (clusterName = "") => ({
+  refresh: () => ({
     type: REFRESH,
-    key: {clusterName},
+    key: {clusterName: CLUSTER_KEY},
   }),
   fetch: fetchClusterData,
-  getSyncId: (action: Action) => {
-    switch (action.type) {
-      case "CLUSTER.STATUS.SYNC":
-      case "CLUSTER.STATUS.SYNC.STOP":
-      case "CLUSTER.STATUS.FETCH.OK":
-      case "CLUSTER.STATUS.FETCH.FAIL":
-      case "CLUSTER.STATUS.REFRESH":
-        return action.key.clusterName;
-
-      default:
-        return "";
-    }
-  },
+  // Single-cluster model: all sync actions map to a single sync regardless of
+  // the clusterName they carry, so a refresh keyed by the real cluster name
+  // still reaches the polling started under CLUSTER_KEY. The full removal of
+  // syncMap/getSyncId happens in a follow-up simplification step.
+  getSyncId: () => CLUSTER_KEY,
 };
 
 export default [fork(dataLoad.manage, clusterDataSyncOptions)];
