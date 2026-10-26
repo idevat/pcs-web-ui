@@ -172,7 +172,6 @@ EXTRA_DIST		= \
 			  src/app/store/actions/task/taskOpenClose.ts \
 			  src/app/store/actions/username.ts \
 			  src/app/store/actions/user.ts \
-			  src/app/store/clusterStorageKey.ts \
 			  src/app/store/index.ts \
 			  src/app/store/reducers/appReducer.ts \
 			  src/app/store/reducers/cluster/cibSecrets.ts \
