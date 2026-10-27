@@ -3,10 +3,10 @@ import {Provider} from "react-redux";
 import {setupStore} from "app/store";
 import {Router} from "app/view/share";
 import {TaskContainer} from "app/view/task";
+import {ClusterApp} from "app/view/cluster";
 
 import {EnsureLogin} from "./login";
 import {EnsurePermissions} from "./EnsurePermissions";
-import {AppRouter} from "./AppRouter";
 import "./App.css";
 
 export const App = ({
@@ -19,7 +19,7 @@ export const App = ({
       <EnsurePermissions>
         <Router base="/ui">
           <TaskContainer />
-          <AppRouter />
+          <ClusterApp />
         </Router>
       </EnsurePermissions>
     </EnsureLogin>

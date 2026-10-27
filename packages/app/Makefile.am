@@ -305,7 +305,6 @@ EXTRA_DIST		= \
 			  src/app/@types/index.d.ts \
 			  src/app/view/app/App.css \
 			  src/app/view/app/AppLoadingUserInfo.tsx \
-			  src/app/view/app/AppRouter.tsx \
 			  src/app/view/app/App.tsx \
 			  src/app/view/app/AppUserNotHaclient.tsx \
 			  src/app/view/app/EnsurePermissions.tsx \
