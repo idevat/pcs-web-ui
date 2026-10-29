@@ -23,6 +23,7 @@ const parserUrlEncoded = express.urlencoded({extended: false});
 const parserJson = express.json();
 
 export type Handler = (_req: Request, _res: Response) => void;
+export type {Request, Response};
 
 // biome-ignore lint/suspicious/noExplicitAny: don't care
 type R = any;
