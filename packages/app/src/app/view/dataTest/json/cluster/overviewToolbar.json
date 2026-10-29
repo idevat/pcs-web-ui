@@ -1,4 +1,8 @@
 {
   "startCluster": {},
-  "stopCluster": {}
+  "stopCluster": {},
+  "dropdown": {
+    "setupCluster": {},
+    "destroyCluster": {}
+  }
 }

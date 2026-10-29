@@ -22,6 +22,7 @@ import * as libCallTask from "./libCallTask";
 import * as nodeStartStop from "./nodeStartStop";
 import * as nodeAdd from "./nodeAdd";
 import * as clusterSetup from "./clusterSetup";
+import * as clusterDestroy from "./clusterDestroy";
 import * as permissionsSave from "./permissionsSave";
 import * as resourceClone from "./resourceClone";
 import * as nvpairSave from "./nvpairSave";
@@ -60,6 +61,7 @@ function* rootSaga() {
       clusterSetup.sendKnownHostsToNodeSaga,
     ),
     takeEvery("DASHBOARD.CLUSTER.SETUP.CALL", clusterSetup.setup),
+    takeEvery("DASHBOARD.CLUSTER.DESTROY", clusterDestroy.clusterDestroy),
     takeEvery("CONSTRAINT.SINGLE.CREATE", constraints.create),
     takeEvery("CONSTRAINT.DELETE", constraints.deleteConstraint),
     takeEvery("CONSTRAINT.DELETE.RULE", constraints.deleteConstraintRule),

@@ -37,6 +37,7 @@ import fenceDevices from "./json/cluster/fenceDevices.json";
 import fenceDevicesToolbar from "./json/cluster/fenceDevicesToolbar.json";
 import forbiden from "./json/cluster/forbiden.json";
 import loading from "./json/cluster/loading.json";
+import noCluster from "./json/cluster/noCluster.json";
 import nodes from "./json/cluster/nodes.json";
 import nodesToolbar from "./json/cluster/nodesToolbar.json";
 import overview from "./json/cluster/overview.json";
@@ -70,6 +71,7 @@ export const structure = {
     loading,
     overview,
     overviewToolbar,
+    noCluster,
     nodes,
     nodesToolbar,
     resources,

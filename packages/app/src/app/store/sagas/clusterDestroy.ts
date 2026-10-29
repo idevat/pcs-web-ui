@@ -1,7 +1,7 @@
 import {destroyCluster} from "app/backend";
 import type {ActionMap} from "app/store/actions";
 
-import {api, processError, putNotification} from "./common";
+import {api, processError, putNotification, put} from "./common";
 
 export function* clusterDestroy({
   payload,
@@ -14,5 +14,6 @@ export function* clusterDestroy({
     return;
   }
 
+  yield put({type: "CLUSTER.STATUS.REFRESH"});
   yield putNotification("SUCCESS", "Cluster destroyed");
 }

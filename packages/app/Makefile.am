@@ -527,6 +527,7 @@ EXTRA_DIST		= \
 			  src/app/view/dataTest/json/cluster/fenceDevicesToolbar.json \
 			  src/app/view/dataTest/json/cluster/forbiden.json \
 			  src/app/view/dataTest/json/cluster/loading.json \
+			  src/app/view/dataTest/json/cluster/noCluster.json \
 			  src/app/view/dataTest/json/cluster/nodes.json \
 			  src/app/view/dataTest/json/cluster/nodesToolbar.json \
 			  src/app/view/dataTest/json/cluster/nvpairs.json \

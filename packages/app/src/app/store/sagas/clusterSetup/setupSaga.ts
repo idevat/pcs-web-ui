@@ -63,4 +63,6 @@ export function* setup({
     type: "DASHBOARD.CLUSTER.SETUP.CALL.OK",
     payload: {reports: payload.report_list},
   });
+
+  yield put({type: "CLUSTER.STATUS.REFRESH"});
 }

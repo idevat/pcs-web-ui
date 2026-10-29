@@ -1,4 +1,5 @@
 import {
+  Alert,
   Divider,
   Flex,
   FlexItem,
@@ -7,7 +8,7 @@ import {
 } from "@patternfly/react-core";
 
 import {testMarks} from "app/view/dataTest";
-import {Card, ClusterToolbar} from "app/view/share";
+import {Card, ClusterToolbar, LauncherDropdown} from "app/view/share";
 import {useOpenTask} from "app/view/task";
 import {useLoadedCluster} from "app/view/cluster/share";
 
@@ -45,6 +46,52 @@ export const ClusterOverviewPage = () => {
             ...overviewToolbar.stopCluster.mark,
           },
         ]}
+        dropdown={
+          <LauncherDropdown
+            items={[
+              {
+                name: "setup-cluster",
+                run: () => openTask("clusterSetup"),
+                ...overviewToolbar.dropdown.setupCluster.mark,
+              },
+              {
+                name: "destroy-cluster",
+                confirm: {
+                  title: "Destroy the cluster?",
+                  titleVariant: "warning",
+                  description: (
+                    <>
+                      <div className="pf-v6-u-mb-sm">
+                        The cluster will be stopped and all its configuration
+                        files will be deleted.
+                      </div>
+                      <Alert
+                        title={
+                          <div
+                            {...overviewToolbar.dropdown.destroyCluster.mark}
+                          >
+                            This command permanently removes any cluster
+                            configuration that has been created. This action
+                            cannot be undone.
+                          </div>
+                        }
+                        isPlain
+                        isInline
+                        variant="warning"
+                      />
+                    </>
+                  ),
+                  action: {
+                    type: "DASHBOARD.CLUSTER.DESTROY",
+                    payload: {clusterName: ""},
+                  },
+                },
+                ...overviewToolbar.dropdown.destroyCluster.mark,
+              },
+            ]}
+            {...overviewToolbar.dropdown.mark}
+          />
+        }
         {...overviewToolbar.mark}
       />
 
