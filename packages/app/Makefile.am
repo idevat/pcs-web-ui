@@ -113,12 +113,15 @@ EXTRA_DIST		= \
 			  src/app/store/actions/auth.ts \
 			  src/app/store/actions/cluster/acl.ts \
 			  src/app/store/actions/cluster/add.ts \
+			  src/app/store/actions/cluster/destroy.ts \
 			  src/app/store/actions/cluster/fixAuth.ts \
 			  src/app/store/actions/cluster/index.ts \
 			  src/app/store/actions/cluster/nvpairList.ts \
 			  src/app/store/actions/cluster/permissions.ts \
 			  src/app/store/actions/cluster/properties.ts \
 			  src/app/store/actions/cluster/sbd.ts \
+			  src/app/store/actions/cluster/setup.ts \
+			  src/app/store/actions/cluster/start.ts \
 			  src/app/store/actions/cluster/staticInfo.ts \
 			  src/app/store/actions/cluster/status.ts \
 			  src/app/store/actions/cluster/stop.ts \
@@ -134,9 +137,6 @@ EXTRA_DIST		= \
 			  src/app/store/actions/constraint/ticketCreate.ts \
 			  src/app/store/actions/constraint/ticketSetCreate.ts \
 			  src/app/store/actions/constraint/types.ts \
-			  src/app/store/actions/dashboard/clusterSetup.ts \
-			  src/app/store/actions/dashboard/cluster.ts \
-			  src/app/store/actions/dashboard/index.ts \
 			  src/app/store/actions/fenceAgent/agent.ts \
 			  src/app/store/actions/fenceAgent/index.ts \
 			  src/app/store/actions/fenceAgent/list.ts \

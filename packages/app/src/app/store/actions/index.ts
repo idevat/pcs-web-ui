@@ -1,7 +1,6 @@
 import type {AuthActions} from "./auth";
 import type {ClusterActions} from "./cluster";
 import type {ConstraintAction} from "./constraint";
-import type {DashboardActions} from "./dashboard";
 import type {FenceAgentActions} from "./fenceAgent";
 import type {LibActions} from "./lib";
 import type {LoginActions} from "./login";
@@ -19,7 +18,6 @@ type LeafActionMap = (
   & AuthActions
   & ClusterActions
   & ConstraintAction
-  & DashboardActions
   & FenceAgentActions
   & LibActions
   & LoginActions

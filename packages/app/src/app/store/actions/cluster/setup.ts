@@ -13,7 +13,7 @@ type ExtendedKnetLink = Omit<KnetLinkList[number], "linknumber"> & {
   addresses: Record<string, string>;
 };
 
-export type DashboardClusterSetupActions = {
+export type ClusterSetupActions = {
   "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME": {
     type: "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME";
     payload: {
