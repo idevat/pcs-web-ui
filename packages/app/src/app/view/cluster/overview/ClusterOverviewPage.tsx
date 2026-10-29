@@ -81,10 +81,7 @@ export const ClusterOverviewPage = () => {
                       />
                     </>
                   ),
-                  action: {
-                    type: "CLUSTER.DESTROY",
-                    payload: {clusterName: ""},
-                  },
+                  action: {type: "CLUSTER.DESTROY"},
                 },
                 ...overviewToolbar.dropdown.destroyCluster.mark,
               },

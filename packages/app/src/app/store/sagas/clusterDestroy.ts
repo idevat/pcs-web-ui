@@ -1,14 +1,13 @@
 import {destroyCluster} from "app/backend";
-import type {ActionMap} from "app/store/actions";
 
 import {api, processError, putNotification, put} from "./common";
 
-export function* clusterDestroy({payload}: ActionMap["CLUSTER.DESTROY"]) {
+export function* clusterDestroy() {
   const result: api.ResultOf<typeof destroyCluster> =
     yield api.authSafe(destroyCluster);
 
   if (result.type !== "OK") {
-    yield processError(result, payload.clusterName);
+    yield processError(result, "cluster destroy");
     return;
   }
 
