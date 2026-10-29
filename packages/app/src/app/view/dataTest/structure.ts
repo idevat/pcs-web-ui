@@ -52,8 +52,8 @@ import resourcesToolbar from "./json/cluster/resourcesToolbar.json";
 import sbd from "./json/cluster/sbd.json";
 import sbdToolbar from "./json/cluster/sbdToolbar.json";
 
-// Tasks (wizards) are separated from "dashboard" or "clusterDetail" because
-// theirs modality is done by element outside #root element of application.
+// Tasks (wizards) are separated from "clusterDetail" because theirs modality
+// is done by element outside #root element of application.
 //
 // Don't use names:
 // - mark
