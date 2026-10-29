@@ -34,16 +34,20 @@ export const ClusterApp = () => {
     <ClusterAppLayout
       toolbarInfo={
         <>
-          <strong
-            className="pf-v6-u-mr-sm"
-            {...clusterToolbarInfo.clusterName.mark}
-          >
-            {clusterName}
-          </strong>
-          <ClusterStatusLabel
-            status={clusterInfo.clusterStatus.data?.status ?? "unknown"}
-            {...clusterToolbarInfo.clusterStatus.mark}
-          />
+          {!clusterInfo.clusterStatus.noClusterDetected && (
+            <>
+              <strong
+                className="pf-v6-u-mr-sm"
+                {...clusterToolbarInfo.clusterName.mark}
+              >
+                {clusterName}
+              </strong>
+              <ClusterStatusLabel
+                status={clusterInfo.clusterStatus.data?.status ?? "unknown"}
+                {...clusterToolbarInfo.clusterStatus.mark}
+              />
+            </>
+          )}
           <ClusterStatusLoadingLabel
             when={clusterInfo.clusterStatus.load.when}
             isLoading={clusterInfo.clusterStatus.load.currently}
