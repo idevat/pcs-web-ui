@@ -1,5 +1,5 @@
 export type ClusterStartActions = {
-  "DASHBOARD.CLUSTER.START": {
-    type: "DASHBOARD.CLUSTER.START";
+  "CLUSTER.START": {
+    type: "CLUSTER.START";
   };
 };

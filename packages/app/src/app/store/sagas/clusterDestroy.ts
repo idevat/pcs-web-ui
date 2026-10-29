@@ -3,9 +3,7 @@ import type {ActionMap} from "app/store/actions";
 
 import {api, processError, putNotification, put} from "./common";
 
-export function* clusterDestroy({
-  payload,
-}: ActionMap["DASHBOARD.CLUSTER.DESTROY"]) {
+export function* clusterDestroy({payload}: ActionMap["CLUSTER.DESTROY"]) {
   const result: api.ResultOf<typeof destroyCluster> =
     yield api.authSafe(destroyCluster);
 

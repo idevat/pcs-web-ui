@@ -32,7 +32,7 @@ export const ClusterOverviewPage = () => {
             confirm: {
               title: "Start cluster?",
               description: "Start the cluster on all nodes",
-              action: {type: "DASHBOARD.CLUSTER.START"},
+              action: {type: "CLUSTER.START"},
             },
             ...overviewToolbar.startCluster.mark,
           },
@@ -82,7 +82,7 @@ export const ClusterOverviewPage = () => {
                     </>
                   ),
                   action: {
-                    type: "DASHBOARD.CLUSTER.DESTROY",
+                    type: "CLUSTER.DESTROY",
                     payload: {clusterName: ""},
                   },
                 },

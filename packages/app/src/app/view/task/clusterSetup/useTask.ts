@@ -6,7 +6,7 @@ import {useTaskCommon} from "../useTaskCommon";
 
 // Transport type "knet" is the only option supported by webui
 type SetupData = Extract<
-  ActionPayload["DASHBOARD.CLUSTER.SETUP.CALL"]["setupData"],
+  ActionPayload["CLUSTER.SETUP.CALL"]["setupData"],
   {transport_type: "knet"}
 >;
 
@@ -45,7 +45,7 @@ export const useTask = () => {
 
   const checkAuth = () => {
     dispatch({
-      type: "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH",
+      type: "CLUSTER.SETUP.CHECK_AUTH",
       payload: {
         nodeNameList: filledNodeNameList,
         targetNode: filledNodeNameList[0],
@@ -79,74 +79,70 @@ export const useTask = () => {
     useClusterAndNodesCheck,
 
     updateClusterName: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_CLUSTER_NAME"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
+        type: "CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
         payload,
       }),
 
-    updateNode: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_NODES"],
-    ) =>
+    updateNode: (payload: ActionPayload["CLUSTER.SETUP.UPDATE_NODES"]) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_NODES",
+        type: "CLUSTER.SETUP.UPDATE_NODES",
         payload,
       }),
 
     updateLinkKnet: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_LINK_KNET"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_LINK_KNET"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_LINK_KNET",
+        type: "CLUSTER.SETUP.UPDATE_LINK_KNET",
         payload,
       }),
 
-    setLinksKnet: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.SET_LINKS_KNET"],
-    ) =>
+    setLinksKnet: (payload: ActionPayload["CLUSTER.SETUP.SET_LINKS_KNET"]) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.SET_LINKS_KNET",
+        type: "CLUSTER.SETUP.SET_LINKS_KNET",
         payload,
       }),
 
     updateQuorumOptions: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS",
+        type: "CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS",
         payload,
       }),
 
     updateTotemOptions: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS",
+        type: "CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS",
         payload,
       }),
 
     updateTransportOptions: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS",
+        type: "CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS",
         payload,
       }),
 
     updateCompressionOptions: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS",
+        type: "CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS",
         payload,
       }),
 
     updateCryptoOptions: (
-      payload: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS"],
+      payload: ActionPayload["CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS"],
     ) =>
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS",
+        type: "CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS",
         payload,
       }),
 
@@ -154,15 +150,13 @@ export const useTask = () => {
 
     // actions
     close: () => {
-      dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.CLOSE",
-      });
+      dispatch({type: "CLUSTER.SETUP.CLOSE"});
       task.close();
     },
 
     startClusterAndClose: () => {
-      dispatch({type: "DASHBOARD.CLUSTER.START"});
-      dispatch({type: "DASHBOARD.CLUSTER.SETUP.CLOSE"});
+      dispatch({type: "CLUSTER.START"});
+      dispatch({type: "CLUSTER.SETUP.CLOSE"});
       task.close();
     },
 
@@ -170,7 +164,7 @@ export const useTask = () => {
 
     sendKnownHosts: () => {
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS",
+        type: "CLUSTER.SETUP.SEND_KNOWN_HOSTS",
         payload: {
           nodeNameList: filledNodeNameList,
           targetNode: filledNodeNameList[0],
@@ -251,7 +245,7 @@ export const useTask = () => {
       );
 
       dispatch({
-        type: "DASHBOARD.CLUSTER.SETUP.CALL",
+        type: "CLUSTER.SETUP.CALL",
         payload: {
           targetNode: filledNodeNameList[0],
           setupData: {
