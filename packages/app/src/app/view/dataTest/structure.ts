@@ -1,4 +1,4 @@
-import clusterBreadcrumbs from "./json/clusterBreadcrumbs.json";
+import clusterToolbarInfo from "./json/clusterToolbarInfo.json";
 import clusterTabs from "./json/clusterTabs.json";
 import header from "./json/header.json";
 import login from "./json/login.json";
@@ -64,7 +64,7 @@ export const structure = {
   header,
   notifications,
   login,
-  clusterBreadcrumbs,
+  clusterToolbarInfo,
   clusterTabs,
   cluster: {
     forbiden,

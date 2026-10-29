@@ -8,7 +8,6 @@ import {ClusterSourcesProvider, useClusterLoad} from "app/view/cluster/share";
 
 import {ClusterPermissionsPage, LoadedPermissionsProvider} from "./permissions";
 import {ClusterAppLayout} from "./ClusterAppLayout";
-import {ClusterAppBreadcrumbs} from "./ClusterAppBreadcrumbs";
 import {ClusterAppLoading} from "./ClusterAppLoading";
 import {ClusterAppForbidden} from "./ClusterAppForbidden";
 import {NodesPage} from "./nodes";
@@ -22,7 +21,7 @@ import {ClusterOverviewPage} from "./overview";
 import {ClusterAppBackendNotFound} from "./ClusterAppBackendNotFound";
 import {ClusterAppNoClusterOnBackend} from "./ClusterAppNoClusterOnBackend";
 
-const {clusterBreadcrumbs} = testMarks;
+const {clusterToolbarInfo} = testMarks;
 
 export const ClusterApp = () => {
   useClusterLoad();
@@ -33,22 +32,23 @@ export const ClusterApp = () => {
 
   return (
     <ClusterAppLayout
-      breadcrumbs={
-        <ClusterAppBreadcrumbs
-          clusterName={clusterName}
-          status={
-            <>
-              <ClusterStatusLabel
-                status={clusterInfo.clusterStatus.data?.status ?? "unknown"}
-                {...clusterBreadcrumbs.clusterStatus.mark}
-              />
-              <ClusterStatusLoadingLabel
-                when={clusterInfo.clusterStatus.load.when}
-                isLoading={clusterInfo.clusterStatus.load.currently}
-              />
-            </>
-          }
-        />
+      toolbarInfo={
+        <>
+          <strong
+            className="pf-v6-u-mr-sm"
+            {...clusterToolbarInfo.clusterName.mark}
+          >
+            {clusterName}
+          </strong>
+          <ClusterStatusLabel
+            status={clusterInfo.clusterStatus.data?.status ?? "unknown"}
+            {...clusterToolbarInfo.clusterStatus.mark}
+          />
+          <ClusterStatusLoadingLabel
+            when={clusterInfo.clusterStatus.load.when}
+            isLoading={clusterInfo.clusterStatus.load.currently}
+          />
+        </>
       }
     >
       {currentTab => {

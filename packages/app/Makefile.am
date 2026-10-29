@@ -339,7 +339,6 @@ EXTRA_DIST		= \
 			  src/app/view/cluster/acl/permissions/types.ts \
 			  src/app/view/cluster/acl/types.ts \
 			  src/app/view/cluster/ClusterAppBackendNotFound.tsx \
-			  src/app/view/cluster/ClusterAppBreadcrumbs.tsx \
 			  src/app/view/cluster/ClusterAppForbidden.tsx \
 			  src/app/view/cluster/ClusterAppLayout.tsx \
 			  src/app/view/cluster/ClusterAppLoading.tsx \
@@ -520,7 +519,7 @@ EXTRA_DIST		= \
 			  src/app/view/dataTest/index.ts \
 			  src/app/view/dataTest/json/cluster/acl.json \
 			  src/app/view/dataTest/json/cluster/aclToolbar.json \
-			  src/app/view/dataTest/json/clusterBreadcrumbs.json \
+			  src/app/view/dataTest/json/clusterToolbarInfo.json \
 			  src/app/view/dataTest/json/cluster/constraints.json \
 			  src/app/view/dataTest/json/cluster/constraintsToolbar.json \
 			  src/app/view/dataTest/json/cluster/fenceDevices.json \

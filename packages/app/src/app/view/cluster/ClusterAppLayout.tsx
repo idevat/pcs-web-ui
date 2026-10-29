@@ -66,10 +66,10 @@ const tabMap = {
 type TabName = keyof typeof tabMap;
 
 export const ClusterAppLayout = ({
-  breadcrumbs,
+  toolbarInfo,
   children,
 }: {
-  breadcrumbs: React.ReactNode;
+  toolbarInfo: React.ReactNode;
   children: (currentTab: TabName) => React.ReactNode;
 }) => {
   const {currentTab, matchedContext, onSelect} = useUrlTabs(
@@ -83,7 +83,7 @@ export const ClusterAppLayout = ({
           <PageSection>
             <Stack hasGutter>
               <PageToolbar
-                breadcrumbs={breadcrumbs}
+                toolbarInfo={toolbarInfo}
                 notifications={notifications}
               />
               <StackItem>
