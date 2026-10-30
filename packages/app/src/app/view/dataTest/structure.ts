@@ -1,4 +1,4 @@
-import clusterBreadcrumbs from "./json/clusterBreadcrumbs.json";
+import clusterToolbarInfo from "./json/clusterToolbarInfo.json";
 import clusterTabs from "./json/clusterTabs.json";
 import header from "./json/header.json";
 import login from "./json/login.json";
@@ -37,6 +37,7 @@ import fenceDevices from "./json/cluster/fenceDevices.json";
 import fenceDevicesToolbar from "./json/cluster/fenceDevicesToolbar.json";
 import forbiden from "./json/cluster/forbiden.json";
 import loading from "./json/cluster/loading.json";
+import noCluster from "./json/cluster/noCluster.json";
 import nodes from "./json/cluster/nodes.json";
 import nodesToolbar from "./json/cluster/nodesToolbar.json";
 import overview from "./json/cluster/overview.json";
@@ -51,8 +52,8 @@ import resourcesToolbar from "./json/cluster/resourcesToolbar.json";
 import sbd from "./json/cluster/sbd.json";
 import sbdToolbar from "./json/cluster/sbdToolbar.json";
 
-// Tasks (wizards) are separated from "dashboard" or "clusterDetail" because
-// theirs modality is done by element outside #root element of application.
+// Tasks (wizards) are separated from "clusterDetail" because theirs modality
+// is done by element outside #root element of application.
 //
 // Don't use names:
 // - mark
@@ -63,13 +64,14 @@ export const structure = {
   header,
   notifications,
   login,
-  clusterBreadcrumbs,
+  clusterToolbarInfo,
   clusterTabs,
   cluster: {
     forbiden,
     loading,
     overview,
     overviewToolbar,
+    noCluster,
     nodes,
     nodesToolbar,
     resources,

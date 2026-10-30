@@ -13,13 +13,13 @@ import {
 
 export function* setup({
   payload: {targetNode, setupData},
-}: ActionMap["DASHBOARD.CLUSTER.SETUP.CALL"]) {
+}: ActionMap["CLUSTER.SETUP.CALL"]) {
   const {result}: {result: api.ResultOf<typeof clusterSetup>} = yield race({
     result: api.authSafe(clusterSetup, {
       targetNode,
       setupData,
     }),
-    cancel: take("DASHBOARD.CLUSTER.SETUP.CALL.CANCEL"),
+    cancel: take("CLUSTER.SETUP.CALL.CANCEL"),
   });
 
   if (!result) {
@@ -27,9 +27,7 @@ export function* setup({
     return;
   }
 
-  const errorAction: Action = {
-    type: "DASHBOARD.CLUSTER.SETUP.CALL.ERROR",
-  };
+  const errorAction: Action = {type: "CLUSTER.SETUP.CALL.ERROR"};
 
   const taskLabel = "cluster setup: create cluster";
   if (result.type !== "OK") {
@@ -53,14 +51,16 @@ export function* setup({
 
   if (payload.status === "error") {
     yield put({
-      type: "DASHBOARD.CLUSTER.SETUP.CALL.FAIL",
+      type: "CLUSTER.SETUP.CALL.FAIL",
       payload: {reports: payload.report_list},
     });
     return;
   }
 
   yield put({
-    type: "DASHBOARD.CLUSTER.SETUP.CALL.OK",
+    type: "CLUSTER.SETUP.CALL.OK",
     payload: {reports: payload.report_list},
   });
+
+  yield put({type: "CLUSTER.STATUS.REFRESH"});
 }

@@ -26,7 +26,7 @@ export const ClusterStoppedInfo = ({
                       <Label color="blue">{clusterName}</Label> on all nodes
                     </span>
                   ),
-                  action: {type: "DASHBOARD.CLUSTER.START"},
+                  action: {type: "CLUSTER.START"},
                 },
                 button: {
                   variant: startButton === "button" ? "secondary" : "link",

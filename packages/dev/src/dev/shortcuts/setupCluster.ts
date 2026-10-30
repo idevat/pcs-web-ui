@@ -1,0 +1,101 @@
+import {app} from "dev/app";
+import {libStd} from "./lib";
+import {checkAuthAgainstNodes, authGuiAgainstNodes} from "./authNode";
+
+export const getSetupClusterRelated = () => {
+  checkAuthAgainstNodes({
+    //nodeName: checkValue
+    authNonsense: "nonsense",
+    authUnable: "Unable to authenticate",
+    authOffline: "Offline",
+    authOfflineA: "Offline",
+    authOfflineB: "Offline",
+    //authErr: responds 500
+    //any other: Online
+  });
+
+  authGuiAgainstNodes();
+
+  app.sendKnownHostsToNode((_req, res) => {
+    res.send("success");
+  });
+
+  app.clusterSetup((req, res) => {
+    const setupData = JSON.parse(req.body.setup_data);
+    libStd({
+      code: setupData.cluster_name,
+      res,
+      errors: {
+        sctp: [
+          {
+            severity: {
+              level: "ERROR",
+              force_code: null,
+            },
+            message: {
+              message: "Some error for comparison",
+              code: "SOME_CODE",
+              payload: {},
+            },
+            context: null,
+          },
+          {
+            severity: {
+              level: "WARNING",
+              force_code: null,
+            },
+            message: {
+              message: "Some warning for comparison",
+              code: "SOME_CODE",
+              payload: {},
+            },
+            context: null,
+          },
+          {
+            severity: {
+              level: "DEPRECATION",
+              force_code: null,
+            },
+            message: {
+              message:
+                "Value 'sctp' of option transport is deprecated and might be removed in a future release, therefore it should not be used",
+              code: "SOME_CODE",
+              payload: {},
+            },
+            context: null,
+          },
+          {
+            severity: {
+              level: "INFO",
+              force_code: null,
+            },
+            message: {
+              message: "Some info for comparison",
+              code: "SOME_CODE",
+              payload: {},
+            },
+            context: null,
+          },
+        ],
+      },
+    });
+  });
+
+  app.clusterStart((req, res) => {
+    if (req.body.name === "fail") {
+      res.status(500).send("Something wrong");
+      return;
+    }
+    if (req.body.name === "permission") {
+      res.status(403).send("Permission denied");
+      return;
+    }
+
+    if (req.body.name === "error") {
+      res.status(400).send("Unable to start node.");
+      return;
+    }
+
+    res.send("Some output");
+  });
+};

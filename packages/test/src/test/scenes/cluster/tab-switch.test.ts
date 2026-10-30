@@ -2,16 +2,17 @@ import * as cs from "dev/responses/clusterStatus/tools";
 
 import {assert, mock} from "test/tools";
 
-const {cluster, clusterBreadcrumbs, clusterTabs} = marks;
+const {cluster, clusterToolbarInfo, clusterTabs} = marks;
 
 const clusterName = "ok";
 
 const startOnOverview = async () => {
   await goToCluster();
-  // The breadcrumb cluster name comes from the polled cluster status data, so
-  // it appears only once the data has loaded (overview visible), not before.
+  // The toolbar info cluster name comes from the polled cluster status data,
+  // so it appears only once the data has loaded (overview visible), not
+  // before.
   await isVisible(cluster.overview);
-  await assert.textIs(clusterBreadcrumbs.clusterName, clusterName);
+  await assert.textIs(clusterToolbarInfo.clusterName, clusterName);
 };
 
 describe("Cluster detail tab switch", () => {

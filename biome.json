@@ -340,7 +340,6 @@
           "fieldError",
           "isLocator",
           "goToCluster",
-          "goToDashboard",
           "marks",
           "item",
           "login"

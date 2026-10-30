@@ -4,10 +4,10 @@ import {Level, LevelItem, StackItem} from "@patternfly/react-core";
 import {Badge, type types} from "../notification";
 
 export const PageToolbar = ({
-  breadcrumbs,
+  toolbarInfo,
   notifications,
 }: {
-  breadcrumbs: React.ReactNode;
+  toolbarInfo: React.ReactNode;
   notifications: {
     list: types.Notification[];
     isDrawerOpen: boolean;
@@ -17,7 +17,7 @@ export const PageToolbar = ({
   return (
     <StackItem>
       <Level>
-        <LevelItem>{breadcrumbs}</LevelItem>
+        <LevelItem>{toolbarInfo}</LevelItem>
 
         <LevelItem>
           <Badge

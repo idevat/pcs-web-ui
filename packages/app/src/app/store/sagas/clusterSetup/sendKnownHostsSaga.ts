@@ -5,14 +5,14 @@ import {api, errorMessage, processError, put, race, take} from "../common";
 
 export function* sendKnownHostsToNodeSaga({
   payload: {nodeNameList, targetNode},
-}: ActionMap["DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS"]) {
+}: ActionMap["CLUSTER.SETUP.SEND_KNOWN_HOSTS"]) {
   const {result}: {result: api.ResultOf<typeof sendKnownHostsToNode>} =
     yield race({
       result: api.authSafe(sendKnownHostsToNode, {targetNode, nodeNameList}),
       cancel: take([
-        "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
-        "DASHBOARD.CLUSTER.SETUP.UPDATE_NODES",
-        "DASHBOARD.CLUSTER.SETUP.CLOSE",
+        "CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
+        "CLUSTER.SETUP.UPDATE_NODES",
+        "CLUSTER.SETUP.CLOSE",
       ]),
     });
 
@@ -27,14 +27,12 @@ export function* sendKnownHostsToNodeSaga({
     yield processError(result, taskLabel, {
       action: () =>
         put({
-          type: "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS.FAIL",
+          type: "CLUSTER.SETUP.SEND_KNOWN_HOSTS.FAIL",
           payload: {message: errorMessage(result, taskLabel)},
         }),
       useNotification: false,
     });
     return;
   }
-  yield put({
-    type: "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS.OK",
-  });
+  yield put({type: "CLUSTER.SETUP.SEND_KNOWN_HOSTS.OK"});
 }

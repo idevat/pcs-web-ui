@@ -113,12 +113,15 @@ EXTRA_DIST		= \
 			  src/app/store/actions/auth.ts \
 			  src/app/store/actions/cluster/acl.ts \
 			  src/app/store/actions/cluster/add.ts \
+			  src/app/store/actions/cluster/destroy.ts \
 			  src/app/store/actions/cluster/fixAuth.ts \
 			  src/app/store/actions/cluster/index.ts \
 			  src/app/store/actions/cluster/nvpairList.ts \
 			  src/app/store/actions/cluster/permissions.ts \
 			  src/app/store/actions/cluster/properties.ts \
 			  src/app/store/actions/cluster/sbd.ts \
+			  src/app/store/actions/cluster/setup.ts \
+			  src/app/store/actions/cluster/start.ts \
 			  src/app/store/actions/cluster/staticInfo.ts \
 			  src/app/store/actions/cluster/status.ts \
 			  src/app/store/actions/cluster/stop.ts \
@@ -134,9 +137,6 @@ EXTRA_DIST		= \
 			  src/app/store/actions/constraint/ticketCreate.ts \
 			  src/app/store/actions/constraint/ticketSetCreate.ts \
 			  src/app/store/actions/constraint/types.ts \
-			  src/app/store/actions/dashboard/clusterSetup.ts \
-			  src/app/store/actions/dashboard/cluster.ts \
-			  src/app/store/actions/dashboard/index.ts \
 			  src/app/store/actions/fenceAgent/agent.ts \
 			  src/app/store/actions/fenceAgent/index.ts \
 			  src/app/store/actions/fenceAgent/list.ts \
@@ -305,7 +305,6 @@ EXTRA_DIST		= \
 			  src/app/@types/index.d.ts \
 			  src/app/view/app/App.css \
 			  src/app/view/app/AppLoadingUserInfo.tsx \
-			  src/app/view/app/AppRouter.tsx \
 			  src/app/view/app/App.tsx \
 			  src/app/view/app/AppUserNotHaclient.tsx \
 			  src/app/view/app/EnsurePermissions.tsx \
@@ -340,7 +339,6 @@ EXTRA_DIST		= \
 			  src/app/view/cluster/acl/permissions/types.ts \
 			  src/app/view/cluster/acl/types.ts \
 			  src/app/view/cluster/ClusterAppBackendNotFound.tsx \
-			  src/app/view/cluster/ClusterAppBreadcrumbs.tsx \
 			  src/app/view/cluster/ClusterAppForbidden.tsx \
 			  src/app/view/cluster/ClusterAppLayout.tsx \
 			  src/app/view/cluster/ClusterAppLoading.tsx \
@@ -521,13 +519,14 @@ EXTRA_DIST		= \
 			  src/app/view/dataTest/index.ts \
 			  src/app/view/dataTest/json/cluster/acl.json \
 			  src/app/view/dataTest/json/cluster/aclToolbar.json \
-			  src/app/view/dataTest/json/clusterBreadcrumbs.json \
+			  src/app/view/dataTest/json/clusterToolbarInfo.json \
 			  src/app/view/dataTest/json/cluster/constraints.json \
 			  src/app/view/dataTest/json/cluster/constraintsToolbar.json \
 			  src/app/view/dataTest/json/cluster/fenceDevices.json \
 			  src/app/view/dataTest/json/cluster/fenceDevicesToolbar.json \
 			  src/app/view/dataTest/json/cluster/forbiden.json \
 			  src/app/view/dataTest/json/cluster/loading.json \
+			  src/app/view/dataTest/json/cluster/noCluster.json \
 			  src/app/view/dataTest/json/cluster/nodes.json \
 			  src/app/view/dataTest/json/cluster/nodesToolbar.json \
 			  src/app/view/dataTest/json/cluster/nvpairs.json \

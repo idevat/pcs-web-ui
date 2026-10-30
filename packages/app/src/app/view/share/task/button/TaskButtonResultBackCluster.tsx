@@ -14,8 +14,6 @@ export const TaskButtonResultnBackCluster = () => {
       action={() => {
         dispatch({
           type: "LIB.CALL.CLUSTER.TASK.RESPONSE.RESET",
-          // ok, this component should be used only in the context of
-          // a particular cluster, not dashboard
           key: {task},
         });
       }}

@@ -15,14 +15,14 @@ import {nodeAuthWait} from "../nodeAuth";
 
 export function* checkAuthSaga({
   payload: {nodeNameList, targetNode},
-}: ActionMap["DASHBOARD.CLUSTER.SETUP.CHECK_AUTH"]) {
+}: ActionMap["CLUSTER.SETUP.CHECK_AUTH"]) {
   const {result}: {result: api.ResultOf<typeof checkAuthAgainstNodes>} =
     yield race({
       result: api.authSafe(checkAuthAgainstNodes, nodeNameList),
       cancel: take([
-        "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
-        "DASHBOARD.CLUSTER.SETUP.UPDATE_NODES",
-        "DASHBOARD.CLUSTER.SETUP.CLOSE",
+        "CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
+        "CLUSTER.SETUP.UPDATE_NODES",
+        "CLUSTER.SETUP.CLOSE",
       ]),
     });
 
@@ -32,7 +32,7 @@ export function* checkAuthSaga({
   }
 
   const errorAction = (message: string): Action => ({
-    type: "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH.FAIL",
+    type: "CLUSTER.SETUP.CHECK_AUTH.FAIL",
     payload: {message},
   });
   const taskLabel = "cluster setup: nodes authentication check";
@@ -68,7 +68,7 @@ export function* checkAuthSaga({
     )
   ) {
     yield put({
-      type: "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS",
+      type: "CLUSTER.SETUP.SEND_KNOWN_HOSTS",
       payload: {nodeNameList, targetNode},
     });
     return;
@@ -88,22 +88,22 @@ export function* checkAuthSaga({
   });
 
   yield put({
-    type: "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH.NO_AUTH",
+    type: "CLUSTER.SETUP.CHECK_AUTH.NO_AUTH",
     payload: {authProcessId},
   });
 
   const {cancel} = yield race({
     auth: call(nodeAuthWait, authProcessId),
     cancel: take([
-      "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
-      "DASHBOARD.CLUSTER.SETUP.UPDATE_NODES",
-      "DASHBOARD.CLUSTER.SETUP.CLOSE",
+      "CLUSTER.SETUP.UPDATE_CLUSTER_NAME",
+      "CLUSTER.SETUP.UPDATE_NODES",
+      "CLUSTER.SETUP.CLOSE",
     ]),
   });
 
   if (!cancel) {
     yield put({
-      type: "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS",
+      type: "CLUSTER.SETUP.SEND_KNOWN_HOSTS",
       payload: {nodeNameList, targetNode},
     });
     return;

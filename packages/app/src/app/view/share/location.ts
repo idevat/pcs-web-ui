@@ -1,5 +1,5 @@
 const root = "~/ui";
-export const dashboard = root;
+export const overview = root;
 
 export const nodeList = () => `${root}/nodes`;
 

@@ -24,7 +24,7 @@ export const Header = () => {
         <MastheadBrand
           onClick={(e: React.SyntheticEvent) => {
             e.preventDefault();
-            navigate(location.dashboard);
+            navigate(location.overview);
           }}
         >
           HA Cluster Management

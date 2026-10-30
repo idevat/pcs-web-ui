@@ -18,25 +18,21 @@ const initialState: {
   clusterAndNodesCheckMessage: string;
   authProcessId: number | null;
   showValidationErrors: boolean;
-  quorumOptions: Required<
-    ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS"]
-  >;
-  totemOptions: Required<
-    ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS"]
-  >;
+  quorumOptions: Required<ActionPayload["CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS"]>;
+  totemOptions: Required<ActionPayload["CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS"]>;
   transportOptions: Required<
-    ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS"]
+    ActionPayload["CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS"]
   >;
   compressionOptions: Required<
-    ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS"]
+    ActionPayload["CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS"]
   >;
   cryptoOptions: Required<
-    ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS"]
+    ActionPayload["CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS"]
   >;
 } & (
   | {
       transportType: "knet";
-      linkList: ActionPayload["DASHBOARD.CLUSTER.SETUP.UPDATE_LINK_KNET"][];
+      linkList: ActionPayload["CLUSTER.SETUP.UPDATE_LINK_KNET"][];
     }
   | {
       transportType: "udp" | "udpu";
@@ -100,7 +96,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
   action,
 ) => {
   switch (action.type) {
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_CLUSTER_NAME":
+    case "CLUSTER.SETUP.UPDATE_CLUSTER_NAME":
       return {
         ...state,
         clusterAndNodesCheck: "not-started",
@@ -108,7 +104,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         clusterName: action.payload.clusterName,
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_NODES":
+    case "CLUSTER.SETUP.UPDATE_NODES":
       return {
         ...state,
         nodeNameList: action.payload.nodeNameList,
@@ -117,7 +113,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         authProcessId: null,
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_LINK_KNET":
+    case "CLUSTER.SETUP.UPDATE_LINK_KNET":
       return {
         ...state,
         transportType: "knet",
@@ -126,14 +122,14 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         ),
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.SET_LINKS_KNET":
+    case "CLUSTER.SETUP.SET_LINKS_KNET":
       return {
         ...state,
         transportType: "knet",
         linkList: action.payload,
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS":
+    case "CLUSTER.SETUP.UPDATE_QUORUM_OPTIONS":
       return {
         ...state,
         quorumOptions: {
@@ -142,7 +138,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS":
+    case "CLUSTER.SETUP.UPDATE_TOTEM_OPTIONS":
       return {
         ...state,
         totemOptions: {
@@ -151,7 +147,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS":
+    case "CLUSTER.SETUP.UPDATE_KNET_TRANSPORT_OPTIONS":
       return {
         ...state,
         transportOptions: {
@@ -160,7 +156,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS":
+    case "CLUSTER.SETUP.UPDATE_KNET_COMPRESSION_OPTIONS":
       return {
         ...state,
         compressionOptions: {
@@ -169,7 +165,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS":
+    case "CLUSTER.SETUP.UPDATE_KNET_CRYPTO_OPTIONS":
       return {
         ...state,
         cryptoOptions: {
@@ -178,14 +174,14 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH":
+    case "CLUSTER.SETUP.CHECK_AUTH":
       return {
         ...state,
         clusterAndNodesCheck: "auth-check-started",
         clusterAndNodesCheckMessage: "",
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH.NO_AUTH":
+    case "CLUSTER.SETUP.CHECK_AUTH.NO_AUTH":
       return {
         ...state,
         authProcessId: action.payload.authProcessId,
@@ -193,14 +189,14 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         clusterAndNodesCheckMessage: "",
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CHECK_AUTH.FAIL":
+    case "CLUSTER.SETUP.CHECK_AUTH.FAIL":
       return {
         ...state,
         clusterAndNodesCheck: "auth-check-failed",
         clusterAndNodesCheckMessage: action.payload.message,
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS":
+    case "CLUSTER.SETUP.SEND_KNOWN_HOSTS":
       return {
         ...state,
         authProcessId: null,
@@ -208,21 +204,21 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         clusterAndNodesCheckMessage: "",
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS.OK":
+    case "CLUSTER.SETUP.SEND_KNOWN_HOSTS.OK":
       return {
         ...state,
         clusterAndNodesCheck: "success",
         clusterAndNodesCheckMessage: "",
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.SEND_KNOWN_HOSTS.FAIL":
+    case "CLUSTER.SETUP.SEND_KNOWN_HOSTS.FAIL":
       return {
         ...state,
         clusterAndNodesCheck: "send-known-hosts-fail",
         clusterAndNodesCheckMessage: action.payload.message,
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CALL":
+    case "CLUSTER.SETUP.CALL":
       return {
         ...state,
         libCall: {
@@ -231,7 +227,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CALL.RESPONSE.RESET":
+    case "CLUSTER.SETUP.CALL.RESPONSE.RESET":
       return {
         ...state,
         libCall: {
@@ -240,7 +236,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CALL.OK":
+    case "CLUSTER.SETUP.CALL.OK":
       return {
         ...state,
         libCall: {
@@ -250,7 +246,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CALL.FAIL":
+    case "CLUSTER.SETUP.CALL.FAIL":
       return {
         ...state,
         libCall: {
@@ -260,7 +256,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
         },
       };
 
-    case "DASHBOARD.CLUSTER.SETUP.CALL.ERROR":
+    case "CLUSTER.SETUP.CALL.ERROR":
       return {
         ...state,
         libCall: {
@@ -275,7 +271,7 @@ export const clusterSetup: AppReducer<typeof initialState> = (
     case "TASK.VALIDATION.HIDE":
       return {...state, showValidationErrors: false};
 
-    case "DASHBOARD.CLUSTER.SETUP.CLOSE":
+    case "CLUSTER.SETUP.CLOSE":
       return initialState;
 
     default:

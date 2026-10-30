@@ -14,6 +14,7 @@ const clusterData: AppReducer<ClusterStatusService["clusterData"]> = (
       return apiToState(action.payload);
 
     case "CLUSTER.STATUS.FETCH.FORBIDDEN":
+    case "CLUSTER.STATUS.NO_CLUSTER_DETECTED":
       return null;
 
     default:
@@ -63,6 +64,7 @@ const load: AppReducer<ClusterStatusService["load"]> = (
       return {
         ...state,
         result: "NO_CLUSTER_DETECTED",
+        when: Date.now(),
         currently: false,
       };
 
